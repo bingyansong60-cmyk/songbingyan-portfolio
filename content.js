@@ -189,6 +189,12 @@ window.portfolio = {
     "example": true
   }
 ],
+  // 案例扩展字段（按真实资料填写，不填时显示待补充）：
+  // types: ['APP','小程序'] 同一项目可包含多端；example:false 仅用于真实项目。
+  // caseStudy: {period,role,status,summary,highlightImage,highlights:[],background,
+  // problem,goal,strategies:[{problem,decision,solution}],ai,
+  // modules:[{title,conclusion,description,image,before,after}],
+  // system,adaptation,delivery,deliveryImage,result,tradeoff,next}
   projects: [
     {id:'daily',industry:'生活方式',featured:true,title:'拾光 · 生活方式 App',category:'APP',subtitle:'用轻盈的界面，收藏生活里的小美好',theme:'mint',visual:'mobile',label:'MOBILE EXPERIENCE',tags:['UI 设计','交互体验']},
     {id:'workspace',industry:'企业服务',featured:true,title:'序 · 协同工作台',category:'后台系统',subtitle:'让信息各就其位，让协作清晰有序',theme:'lilac',visual:'dashboard',label:'WORKSPACE DESIGN',tags:['后台系统','数据可视化']},
