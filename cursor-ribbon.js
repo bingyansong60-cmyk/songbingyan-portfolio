@@ -26,7 +26,7 @@
   frame=0;context.clearRect(0,0,innerWidth,innerHeight);points=points.filter(p=>time-p.time<lifetime);
   if(points.length>1){
    const first=points[0],last=points[points.length-1];const gradient=context.createLinearGradient(first.x,first.y,last.x+.01,last.y+.01);
-   gradient.addColorStop(0,'#d6c7ef');gradient.addColorStop(.33,'#efd1e5');gradient.addColorStop(.67,'#ced8f3');gradient.addColorStop(1,'#c0e5df');
+   gradient.addColorStop(0,'#d7d7d7');gradient.addColorStop(.33,'#e6e6e6');gradient.addColorStop(.67,'#dcdcdc');gradient.addColorStop(1,'#cecece');
    context.strokeStyle=gradient;context.lineCap='round';context.lineJoin='round';
    for(let layer=0;layer<2;layer++){
     for(let i=1;i<points.length;i++){
