@@ -8,8 +8,8 @@
   const thoughts=['换个角度，或许就有新发现。','留一点白，也留一点想象。','好的细节，值得再看一眼。','今天，也保持好奇心。'];let turn=0;
   button.onclick=()=>{turn++;button.style.setProperty('--star-turn',`${12+turn*90}deg`);caption.textContent=thoughts[(turn-1)%thoughts.length];caption.classList.add('inspired');if(!reduced){for(let i=0;i<7;i++){const dot=document.createElement('i');dot.className='spark-dot';dot.style.setProperty('--dx',`${Math.cos(i/7*Math.PI*2)*85}px`);dot.style.setProperty('--dy',`${Math.sin(i/7*Math.PI*2)*85}px`);dot.style.setProperty('--delay',`${i*15}ms`);button.append(dot);setTimeout(()=>dot.remove(),1000)}}};
  }
- const top=document.createElement('button');top.className='reading-top';top.type='button';top.setAttribute('aria-label','回到顶部');top.innerHTML='<span>↑</span><small>回顶部</small>';document.body.append(top);
- let queued=false;function progress(){const available=document.documentElement.scrollHeight-innerHeight;const amount=available>0?Math.min(1,Math.max(0,scrollY/available)):0;top.style.setProperty('--reading-progress',`${amount*360}deg`);top.classList.toggle('is-visible',scrollY>400);top.tabIndex=scrollY>400?0:-1;queued=false}
+ const top=document.createElement('button');top.className='reading-top';top.type='button';top.setAttribute('aria-label','回到顶部');top.title='回到顶部';top.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h12M12 20V8m-5 5 5-5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';document.body.append(top);
+ let queued=false;function progress(){top.classList.toggle('is-visible',scrollY>400);top.tabIndex=scrollY>400?0:-1;queued=false}
  addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(progress)}},{passive:true});addEventListener('resize',progress);top.onclick=()=>window.scrollTo({top:0,behavior:reduced?'instant':'smooth'});progress();
  if(!reduced&&matchMedia('(hover: hover) and (pointer: fine)').matches){
   let active=null;

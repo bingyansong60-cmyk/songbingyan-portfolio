@@ -1,0 +1,28 @@
+/* An original interactive folder containing the designer's own work. */
+.figma-hero .hero-folder{width:154px;isolation:isolate;perspective:700px;outline:none;}
+.folio-folder-scene{position:relative;display:block;height:115px;perspective:600px;}
+.folio-folder-back{position:absolute;inset:18px 0 0;border-radius:8px 11px 12px 12px;background:linear-gradient(135deg,#edc658,#d7a72c);box-shadow:inset 0 1px 1px #fff8,1px 3px 0 #b88e2b,0 14px 22px #83632024;}
+.folio-folder-back::before{content:"";position:absolute;left:0;top:-12px;width:61px;height:17px;border-radius:10px 13px 0 0;background:linear-gradient(135deg,#f1d170,#e5bc4e);}
+.folio-folder-front{position:absolute;inset:27px 0 0;z-index:3;display:flex;align-items:flex-end;padding:14px;border:1px solid #edc951;border-radius:9px 9px 12px 12px;background:repeating-linear-gradient(0deg,#fff0 0 3px,#fff1 3px 4px),linear-gradient(135deg,#ffe38a,#f1ca52 65%,#e7b938);box-shadow:inset 0 2px 1px #fff9,inset 0 -3px 0 #cc9b2730,0 4px 6px #835d1612;transform-origin:center bottom;transition:transform .5s cubic-bezier(.2,.7,.2,1);}
+.folio-folder-front::after{content:"";position:absolute;inset:auto 8px 6px;height:1px;background:#b98d2140;box-shadow:0 -3px 0 #fff5;}
+.folio-folder-front span{padding:4px 7px;background:#fff7d6c9;border:1px solid #fffa;border-radius:4px;color:#866922;font-family:inherit;font-size:8px;font-weight:500;line-height:1.3;letter-spacing:1px;box-shadow:0 1px 2px #92702112;}
+.folio-item{position:absolute;z-index:2;display:block;left:50%;bottom:31px;will-change:transform;transition:transform .55s cubic-bezier(.2,.75,.2,1),filter .4s;filter:drop-shadow(0 3px 3px #3a294b24);pointer-events:none;}
+.folio-phone{width:48px;height:78px;padding:3px;background:#fff;border:1px solid #dfd7eb;border-radius:10px;transform:translate(-55px,8px) rotate(-12deg);}
+.folio-phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top;border-radius:7px;background:#f0e9ff;}
+.folio-star{width:57px;height:57px;transform:translate(-27px,-3px) rotate(4deg);transition-delay:30ms;}
+.folio-star svg{display:block;width:100%;height:100%;overflow:visible;}
+.folio-laptop{width:90px;height:66px;transform:translate(-17px,13px) rotate(10deg);transition-delay:60ms;}
+.folio-laptop-screen{position:absolute;inset:0 6px 12px;padding:4px;border-radius:7px 7px 3px 3px;border:3px solid #fff;background:#497e88;box-shadow:inset 0 0 0 1px #315d6e;}
+.folio-laptop-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left;border-radius:2px;background:#e8f2f3;}
+.folio-laptop-base{position:absolute;bottom:1px;left:0;width:100%;height:17px;border:3px solid #fff;border-radius:2px 2px 8px 8px;background:linear-gradient(#9dc6cc,#689da6);clip-path:polygon(9% 0,91% 0,100% 80%,95% 100%,5% 100%,0 80%);}
+.folio-laptop-base::after{content:"";position:absolute;top:2px;left:36%;width:28%;height:5px;border-radius:0 0 3px 3px;background:#50828e55;}
+.figma-hero .hero-folder>small{padding-top:13px;color:#887144;font-size:11px;letter-spacing:.05em;}
+.hero-folder:focus-visible .folio-folder-scene{outline:2px solid #b69550;outline-offset:12px;border-radius:14px;}
+.hero-folder:is(:hover,:focus-visible) .folio-folder-front{transform:rotateX(-30deg) scaleY(.94);}
+.hero-folder:is(:hover,:focus-visible) .folio-phone{transform:translate(-94px,-55px) rotate(-19deg);}
+.hero-folder:is(:hover,:focus-visible) .folio-star{transform:translate(-28px,-93px) rotate(12deg);}
+.hero-folder:is(:hover,:focus-visible) .folio-laptop{transform:translate(20px,-51px) rotate(14deg);}
+.hero-folder:is(:hover,:focus-visible) .folio-item{filter:drop-shadow(0 7px 6px #3a294b26);}
+@media(max-width:700px){.figma-hero .hero-folder{transform:translateX(-50%) rotate(-2deg) scale(.68);}.figma-hero .hero-folder>small{font-size:13px;}}
+@media(hover:none){.hero-folder .folio-phone{transform:translate(-62px,-6px) rotate(-17deg);}.hero-folder .folio-star{transform:translate(-26px,-17px) rotate(8deg);}.hero-folder .folio-laptop{transform:translate(-9px,-2px) rotate(12deg);}}
+@media(prefers-reduced-motion:reduce){.folio-item,.folio-folder-front{transition:none;}}

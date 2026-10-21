@@ -10,7 +10,8 @@
   };
   function artwork(p) {
     const images = p.coverScreens?.length ? p.coverScreens : [p.cover].filter(Boolean);
-    return `<div class="project-montage montage-${esc(p.coverLayout || 'phone')} montage-count-${images.length}" aria-hidden="true">${images.map((src,i) => `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" class="montage-screen screen-${i+1}">`).join('')}</div>`;
+    const palette = p.coverPalette?.length === 2 && p.coverPalette.every(color => /^#[0-9a-f]{6}$/i.test(color)) ? ` style="--cover-start:${p.coverPalette[0]};--cover-end:${p.coverPalette[1]}"` : '';
+    return `<div${palette} class="project-montage montage-${esc(p.coverLayout || 'phone')} montage-count-${images.length}" aria-hidden="true">${images.map((src,i) => `<img src="${esc(src)}" alt="" loading="lazy" decoding="async" class="montage-screen screen-${i+1}">`).join('')}</div>`;
   }
   function imageFigure(src,label,language='zh',wide=false) {
     if (!src) return '';

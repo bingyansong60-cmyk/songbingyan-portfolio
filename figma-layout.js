@@ -2,6 +2,13 @@
   const fitViewport = () => document.documentElement.style.setProperty('--viewport-scrollbar', `${innerWidth - document.documentElement.clientWidth}px`);
   fitViewport();
   addEventListener('resize', fitViewport, {passive: true});
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const updateHeader = () => header.classList.toggle('is-scrolled', scrollY > 8);
+    addEventListener('scroll', updateHeader, {passive: true});
+    addEventListener('pageshow', updateHeader);
+    updateHeader();
+  }
   const note = document.querySelector('.hero-sticky-note');
   if (note) {
     const messages = [
@@ -30,10 +37,32 @@
   }
   const flower = document.querySelector('.hero-flower-sticker');
   if (flower) {
-    let angle = 0;
-    flower.addEventListener('click', () => {
-      angle += 180;
-      flower.style.setProperty('--flower-angle', `${angle}deg`);
+    const motion = matchMedia('(prefers-reduced-motion: reduce)');
+    const rotation = flower.querySelector('img').animate(
+      [{transform: 'rotate(0deg)'}, {transform: 'rotate(360deg)'}],
+      {duration: 12000, iterations: Infinity}
+    );
+    rotation.pause();
+    let hovering = false, focused = false, tapping = false, tapTimer;
+    const syncRotation = () => {
+      if (!motion.matches && !document.hidden && (hovering || focused || tapping)) rotation.play();
+      else rotation.pause();
+    };
+    flower.addEventListener('pointerenter', event => {
+      if (event.pointerType !== 'touch') hovering = true;
+      syncRotation();
     });
+    flower.addEventListener('pointerleave', () => { hovering = false; syncRotation(); });
+    flower.addEventListener('focus', () => { focused = flower.matches(':focus-visible'); syncRotation(); });
+    flower.addEventListener('blur', () => { focused = false; syncRotation(); });
+    flower.addEventListener('click', () => {
+      if (matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+      tapping = true;
+      clearTimeout(tapTimer);
+      syncRotation();
+      tapTimer = setTimeout(() => { tapping = false; syncRotation(); }, 3000);
+    });
+    motion.addEventListener('change', syncRotation);
+    document.addEventListener('visibilitychange', syncRotation);
   }
 })();

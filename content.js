@@ -1,6 +1,7 @@
 // 后续可将此处替换成内容管理系统的接口。封面路径支持本地图片。
 window.portfolio = {
   name: '宋冰艳',
+  launchedProjectCount: '50+',
   email: '3107177196@qq.com', // 填入真实邮箱后，“获取联系方式”即可复制邮箱。
   compactPortfolioUrl: '', // 精简版作品集 PDF 路径
   resumeUrl: '', // 如 'assets/我的简历.pdf'
@@ -198,6 +199,7 @@ window.portfolio = {
   projects: [
   {
     "id": "daily",
+    "coverPalette": ["#f3f2fb", "#dddaf1"],
     "industry": "人工智能",
     "featured": true,
     "example": false,
@@ -306,6 +308,7 @@ window.portfolio = {
   },
   {
     "id": "hzy-work",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "恒智易 AI Work",
     "category": "桌面端设计",
     "types": [
@@ -410,6 +413,7 @@ window.portfolio = {
   },
   {
     "id": "hzy-web",
+    "coverPalette": ["#f3f2fb", "#dddaf1"],
     "title": "恒智易 AI 网页版",
     "category": "网站设计",
     "types": [
@@ -502,6 +506,7 @@ window.portfolio = {
   },
   {
     "id": "hzying",
+    "coverPalette": ["#f5f2fb", "#e3daf1"],
     "title": "恒智影 AI App",
     "category": "APP 设计",
     "types": [
@@ -607,6 +612,7 @@ window.portfolio = {
   },
   {
     "id": "hzy-global",
+    "coverPalette": ["#f3f2fb", "#dddaf1"],
     "title": "恒智易 · 海外版",
     "category": "APP 设计",
     "types": [
@@ -698,6 +704,7 @@ window.portfolio = {
   },
   {
     "id": "ezvend",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "EZvend App",
     "category": "APP 设计",
     "types": [
@@ -803,6 +810,7 @@ window.portfolio = {
   },
   {
     "id": "hsh-merchant",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "恒生活 · 商家端 App",
     "category": "APP 设计",
     "types": [
@@ -908,6 +916,7 @@ window.portfolio = {
   },
   {
     "id": "grabot",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "Grabot 官网",
     "category": "网站设计",
     "types": [
@@ -1011,6 +1020,7 @@ window.portfolio = {
   },
   {
     "id": "drama",
+    "coverPalette": ["#fbf5f2", "#f1e3da"],
     "title": "短剧 · 恒生活 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -1067,6 +1077,7 @@ window.portfolio = {
   },
   {
     "id": "novel",
+    "coverPalette": ["#fbf7f2", "#f1e7da"],
     "title": "小说 · 恒生活 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -1123,6 +1134,7 @@ window.portfolio = {
   },
   {
     "id": "hsh-loan",
+    "coverPalette": ["#fbf2f3", "#f1dadd"],
     "title": "恒生活借款 · 生活板块",
     "category": "APP 设计",
     "types": [
@@ -1178,6 +1190,7 @@ window.portfolio = {
   },
   {
     "id": "hsh-life",
+    "coverPalette": ["#fbf6f2", "#f1e5da"],
     "title": "恒生活 · 智能货柜 App",
     "category": "APP 设计",
     "types": [
@@ -1233,6 +1246,7 @@ window.portfolio = {
   },
   {
     "id": "medical",
+    "coverPalette": ["#f2f7fb", "#dae9f1"],
     "title": "恒生活 · 医疗服务",
     "category": "小程序设计",
     "types": [
@@ -1289,6 +1303,7 @@ window.portfolio = {
   },
   {
     "id": "cabinet",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "恒生活 · 智能货柜小程序",
     "category": "小程序设计",
     "types": [
@@ -1345,6 +1360,7 @@ window.portfolio = {
   },
   {
     "id": "charge",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "劲来电 · 小程序",
     "category": "小程序设计",
     "types": [
@@ -1400,6 +1416,7 @@ window.portfolio = {
   },
   {
     "id": "arcade",
+    "coverPalette": ["#f2f9fb", "#daeef1"],
     "title": "小橙游艺 · 小程序",
     "category": "小程序设计",
     "types": [
@@ -1455,6 +1472,7 @@ window.portfolio = {
   },
   {
     "id": "box",
+    "coverPalette": ["#f2f7fb", "#dae9f1"],
     "title": "奇点 BOX · 商城小程序",
     "category": "小程序设计",
     "types": [
@@ -1511,6 +1529,7 @@ window.portfolio = {
   },
   {
     "id": "marble",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "弹珠 · 小程序",
     "category": "小程序设计",
     "types": [
@@ -1566,6 +1585,7 @@ window.portfolio = {
   },
   {
     "id": "blind",
+    "coverPalette": ["#fbf6f2", "#f1e6da"],
     "title": "奇点 BOX · 扫码小程序",
     "category": "小程序设计",
     "types": [
@@ -1622,6 +1642,7 @@ window.portfolio = {
   },
   {
     "id": "local",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "恒生活 · 本地生活",
     "category": "小程序设计",
     "types": [
@@ -1678,6 +1699,7 @@ window.portfolio = {
   },
   {
     "id": "deals",
+    "coverPalette": ["#fbf7f2", "#f1e8da"],
     "title": "恒生活 · 特价好物",
     "category": "小程序设计",
     "types": [
@@ -1733,6 +1755,7 @@ window.portfolio = {
   },
   {
     "id": "pos",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "海外 POS 机 · 终端",
     "category": "硬件终端设计",
     "types": [
@@ -1789,6 +1812,7 @@ window.portfolio = {
   },
   {
     "id": "wine",
+    "coverPalette": ["#fbf2f3", "#f1dadd"],
     "title": "恒生活 · 智能酒柜",
     "category": "硬件终端设计",
     "types": [
@@ -1845,6 +1869,7 @@ window.portfolio = {
   },
   {
     "id": "toy",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "潮玩盲盒机 · 终端",
     "category": "硬件终端设计",
     "types": [
@@ -1901,6 +1926,7 @@ window.portfolio = {
   },
   {
     "id": "spring",
+    "coverPalette": ["#fbf5f2", "#f1e2da"],
     "title": "恒生活 · 弹簧机终端",
     "category": "硬件终端设计",
     "types": [
@@ -1957,6 +1983,7 @@ window.portfolio = {
   },
   {
     "id": "charge-merchant",
+    "coverPalette": ["#f2f7fb", "#dae9f1"],
     "title": "劲来电 · 商家端 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2013,6 +2040,7 @@ window.portfolio = {
   },
   {
     "id": "arcade-merchant",
+    "coverPalette": ["#f2f7fb", "#dae9f1"],
     "title": "小橙游艺 · 商家端 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2068,6 +2096,7 @@ window.portfolio = {
   },
   {
     "id": "installment",
+    "coverPalette": ["#f2f3fb", "#daddf1"],
     "title": "恒生活 · 分期商城 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2124,6 +2153,7 @@ window.portfolio = {
   },
   {
     "id": "carshop",
+    "coverPalette": ["#f2f7fb", "#dae7f1"],
     "title": "恒生活 · 车商城 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2180,6 +2210,7 @@ window.portfolio = {
   },
   {
     "id": "creditmaker",
+    "coverPalette": ["#f2f9fb", "#daeef1"],
     "title": "车创客 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2246,6 +2277,7 @@ window.portfolio = {
   },
   {
     "id": "songzhen",
+    "coverPalette": ["#f2fbf8", "#daf1eb"],
     "title": "松珍心理 H5",
     "category": "H5 与运营设计",
     "types": [
@@ -2312,6 +2344,7 @@ window.portfolio = {
   },
   {
     "id": "saas",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "SaaS 后台管理系统",
     "category": "后台与数据可视化",
     "types": [
@@ -2374,6 +2407,7 @@ window.portfolio = {
   },
   {
     "id": "scrm",
+    "coverPalette": ["#f2f5fb", "#dae2f1"],
     "title": "AI SCRM 后台管理系统",
     "category": "后台与数据可视化",
     "types": [
@@ -2429,6 +2463,7 @@ window.portfolio = {
   },
   {
     "id": "taidou",
+    "coverPalette": ["#f2f7fb", "#dae9f1"],
     "title": "太逗科技官网",
     "category": "网站设计",
     "types": [
@@ -2484,6 +2519,7 @@ window.portfolio = {
   },
   {
     "id": "saas-mini",
+    "coverPalette": ["#fbf2f3", "#f1dadd"],
     "title": "SaaS 电商小程序",
     "category": "小程序设计",
     "types": [
@@ -2547,6 +2583,7 @@ window.portfolio = {
   },
   {
     "id": "kang",
+    "coverPalette": ["#fbf9f2", "#f1eeda"],
     "title": "康小主 · 小程序",
     "category": "小程序设计",
     "types": [
