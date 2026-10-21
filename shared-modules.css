@@ -16,6 +16,8 @@ body #ai .ai-list article a{font-size:12px;line-height:1.7;margin-top:18px;}
 @media(max-width:700px){body #ai{padding:45px 0;}body #ai .ai-heading{gap:12px;margin-bottom:24px;}body #ai .ai-heading h2{font-size:27px;}body #ai .ai-heading p{font-size:12px;}body #ai .ai-heading .text-link{grid-column:1;grid-row:auto;justify-self:start;margin-top:3px;}body #ai .ai-list{grid-template-columns:1fr;gap:14px;}body #ai .ai-list article{padding:22px;gap:14px;grid-template-columns:38px minmax(0,1fr);}body #ai .ai-icon{width:38px;height:38px;font-size:22px;}body #ai .ai-list h3{font-size:17px;}}
 
 /* 共享联系模块 */
+body #contact,body #contact .contact-main{border:0;}
+body:has(#contact)>footer.reference-footer{border-top:0;}
 body #contact .contact-main{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;}
 body #contact .contact-main h2{margin:0;white-space:nowrap;font-size:clamp(23px,3vw,36px);line-height:1.5;letter-spacing:-.5px;}
 body #contact .contact-main>div{display:flex;flex-direction:column;align-items:center;gap:16px;margin:0;}
