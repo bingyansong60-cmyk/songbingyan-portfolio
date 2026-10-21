@@ -1,0 +1,1 @@
+(()=>{const b=document.querySelector('.alt-flower'),p=document.querySelector('#alt-thought'),l=document.querySelector('.alt-note>span');const notes=['把复杂留给思考，<br>把简单留给用户。','AI 拓宽可能，<br>设计决定方向。','好看的背后，<br>是想得足够清楚。'];let i=0;b.addEventListener('click',()=>{i=(i+1)%notes.length;p.innerHTML=notes[i];l.textContent='✦ 灵感便签 0'+(i+1)+' / 03';});})();

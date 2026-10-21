@@ -1,0 +1,16 @@
+/* 全站共用首页导航，覆盖各页面局部样式。 */
+body header.site-header{position:sticky;top:0;z-index:40;max-width:1200px!important;height:88px!important;margin:0 auto;padding:0 30px!important;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;background:#fff;box-shadow:0 1px 0 #e7e1edb3;border:0;}
+body header.site-header .brand{font-size:15px;gap:9px;white-space:nowrap;justify-self:start;}
+body header.site-header .brand-mark{font-size:28px;color:#a788c8;}
+body header.site-header nav{position:static;transform:none;display:flex;flex-direction:row;justify-content:center;justify-self:center;align-items:center;gap:24px;width:auto;max-width:none;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;backdrop-filter:none;overflow:visible;}
+body header.site-header nav a{display:inline-flex;width:auto;height:44px;padding:8px 0;border-radius:0;font-size:13px!important;color:var(--muted);background:none;transform:none;}
+body header.site-header nav a svg{display:none;}
+body header.site-header nav .rail-label{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:transparent;color:inherit;font-size:13px;padding:0;border-radius:0;white-space:nowrap;}
+body header.site-header nav a:last-child .rail-label{font-size:12px;}
+body header.site-header nav a[aria-current="page"]{background:transparent;color:var(--brand-deep);font-weight:600;box-shadow:0 2px 0 var(--accent);}
+body header.site-header nav a:hover{background:transparent;color:var(--brand-deep);transform:none;}
+body header.site-header .figma-header-icons{gap:8px;justify-self:end;}
+html[data-theme="dark"] body header.site-header{background:#19161ef5;}
+@media(max-width:1000px){body header.site-header{gap:20px;padding:0 25px!important;}body header.site-header nav{gap:18px;}body header.site-header .brand{font-size:13px;}}
+@media(max-width:800px){body header.site-header{height:auto!important;min-height:110px;grid-template-columns:1fr auto;gap:10px 20px;padding:18px 22px 12px!important;}body header.site-header nav{grid-column:1/-1;grid-row:2;justify-self:stretch;gap:25px;}body header.site-header .figma-header-icons{grid-column:2;grid-row:1;gap:2px;}body header.site-header nav a{height:36px;}body header.site-header nav .rail-label{font-size:12px;}}
+@media(max-width:450px){body header.site-header nav{gap:0;justify-content:space-between;}body header.site-header nav a:last-child .rail-label{font-size:12px;}}
