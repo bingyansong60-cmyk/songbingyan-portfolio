@@ -10,12 +10,12 @@ const visuals = {
  travel:`<div class="travel-window"><div class="travel-nav"><b>山野 / WILD</b><span>探索目的地　 关于山野　 ↗</span></div><div class="mountains"><i></i><i></i><i></i></div><div class="travel-copy"><small>LESS NOISE. MORE NATURE.</small><h3>去山野，<br>找回自己的节奏。</h3><span>开启下一段旅程 ↗</span></div><div class="travel-bottom">01 / 山间漫游 <span>向自然，再靠近一点。</span></div></div>`
 };
 const isArchive = document.body.dataset.page === 'archive';
-let selectedType = '全部', selectedIndustry = '全部', shown = 6;
+let selectedType = '全部', selectedIndustry = '全部', shown = 12;
 const grid = document.querySelector('#project-grid');
 const types = window.PortfolioCases.types;
-const industries = ['全部','人工智能','金融','硬件','医疗','电商','潮玩','生活方式','企业服务','文旅','通用'];
-function featuredCard(p){return `<article class="featured-project"><button class="featured-project-button" data-project="${p.id}" aria-label="查看${p.title}项目详情"><div class="featured-project-heading"><h3>${p.title}</h3><p>${p.subtitle}</p><div class="featured-project-tags">${[p.category,p.industry,...p.tags].filter(Boolean).slice(0,4).map(tag=>'<span>'+tag+'</span>').join('')}</div></div><div class="featured-project-stage ${p.theme}"><div class="featured-artwork">${p.cover?'<img src="'+p.cover+'" alt="'+p.title+'封面">':visuals[p.visual]}</div><span class="featured-sticker" aria-hidden="true">${p.title.split(' · ')[0]}</span><span class="featured-symbol" aria-hidden="true">✳</span></div><span class="featured-view">查看项目 ↗</span></button></article>`}
-function card(p){if(!isArchive)return featuredCard(p);return `<article class="project"><button class="project-cover ${p.theme}" data-project="${p.id}" aria-label="查看${p.title}详情">${p.cover?`<img src="${p.cover}" alt="${p.title}封面">`:visuals[p.visual]}<span class="cover-arrow">↗</span></button><div class="project-info"><div><h3><button data-project="${p.id}">${p.title} <span>↗</span></button></h3><p>${p.subtitle}</p></div><span class="category">${window.PortfolioCases.projectTypes(p).join(' / ')} · ${p.industry || '未分类'}</span></div></article>`}
+const industries = ['全部',...new Set(data.projects.map(p=>p.industry).filter(Boolean))];
+function featuredCard(p){return `<article class="featured-project real-project"><button class="featured-project-button" data-project="${p.id}" aria-label="查看${p.title}项目详情"><div class="featured-project-heading"><span class="project-phase">${p.phase}</span><h3>${p.title}</h3><p>${p.subtitle}</p><div class="featured-project-tags">${p.tags.slice(0,3).map(tag=>'<span>'+tag+'</span>').join('')}</div></div><div class="featured-project-stage ${p.theme}">${window.PortfolioCases.artwork(p)}</div><span class="featured-view">查看项目 ↗</span></button></article>`}
+function card(p){if(!isArchive)return featuredCard(p);return `<article class="project real-project"><button class="project-cover ${p.theme}" data-project="${p.id}" aria-label="查看${p.title}详情">${window.PortfolioCases.artwork(p)}<span class="cover-arrow">↗</span></button><div class="project-info"><div><span class="project-phase">${p.phase}</span><h3><button data-project="${p.id}">${p.title} <span>↗</span></button></h3><p>${p.subtitle}</p></div><span class="category">${window.PortfolioCases.projectTypes(p).join(' / ')} · ${p.industry}</span></div></article>`}
 function renderFilters(){
  for(const [id,values,selection,field,otherField,other] of [['type-filters',types,selectedType,'category','industry',selectedIndustry],['industry-filters',industries,selectedIndustry,'industry','category',selectedType]]){
  const available=values.filter(value=>value==='全部'||data.projects.some(p=>field==='category'?window.PortfolioCases.projectTypes(p).includes(value):p[field]===value));
@@ -24,28 +24,34 @@ function renderFilters(){
 }
 
 function render(){
- const projects=isArchive?data.projects.filter(p=>(selectedType==='全部'||window.PortfolioCases.projectTypes(p).includes(selectedType))&&(selectedIndustry==='全部'||p.industry===selectedIndustry)):data.projects.filter(p=>p.featured).slice(0,6);
+ const projects=isArchive?data.projects.filter(p=>(selectedType==='全部'||window.PortfolioCases.projectTypes(p).includes(selectedType))&&(selectedIndustry==='全部'||p.industry===selectedIndustry)):data.projects.filter(p=>p.featured);
  grid.innerHTML=projects.slice(0,shown).map(card).join('');
  document.querySelector('#filter-status').textContent=`${isArchive?'找到':'精选'} ${projects.length} 个作品${isArchive?' · 已显示 '+Math.min(shown,projects.length)+' 个':''}`;
  document.querySelector('#load-more')?.remove();
  if(!projects.length)grid.innerHTML='<div class="empty-state"><span>⌕</span><h3>这个分类的作品还未添加</h3><p>可以选择其他类型或行业，继续浏览作品。</p><button data-reset>查看全部作品 ↗</button></div>';
- if(projects.length>shown){const b=document.createElement('button');b.id='load-more';b.className='load-more';b.textContent=`查看更多作品（还有 ${projects.length-shown} 个）`;b.onclick=()=>{shown+=6;render()};grid.after(b)}
+ if(projects.length>shown){const b=document.createElement('button');b.id='load-more';b.className='load-more';b.textContent=`查看更多作品（还有 ${projects.length-shown} 个）`;b.onclick=()=>{shown+=12;render()};grid.after(b)}
  if(isArchive)renderFilters();
 }
-function resetFilters(){selectedType='全部';selectedIndustry='全部';shown=6;render()}
+function resetFilters(){selectedType='全部';selectedIndustry='全部';shown=12;render()}
 render();
 document.querySelectorAll('[data-total-count]').forEach(el=>el.textContent=String(data.projects.length).padStart(2,'0'));
-document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;shown=6;render()}if(e.target.closest('[data-reset]'))resetFilters()});
+document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;shown=12;render()}if(e.target.closest('[data-reset]'))resetFilters()});
 document.querySelector('#reset-filters')?.addEventListener('click',resetFilters);
 const dialog=document.querySelector('#detail-dialog');
 function caseFooter(){return '<section class="case-footer" aria-label="联系与个人资料">'+window.PortfolioUI.footerMarkup(true)+'</section>';}
 
+let caseObserver;
 function showProject(id){
  const p=data.projects.find(p=>p.id===id);if(!p)return;
  const index=data.projects.indexOf(p),previous=data.projects[(index-1+data.projects.length)%data.projects.length],next=data.projects[(index+1)%data.projects.length];
  dialog.classList.add('project-dialog');
  document.querySelector('#dialog-content').innerHTML=window.PortfolioCases.render(p,index,data.projects,visuals,caseFooter());
  dialog.setAttribute('aria-labelledby','case-title');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;document.querySelector('.case-content').scrollTop=0;
+ const address=new URL(location.href);address.searchParams.set('project',p.id);history.replaceState(null,'',address);
+ caseObserver?.disconnect();
+ const scroller=matchMedia('(max-width:700px)').matches?dialog:document.querySelector('.case-content');
+ caseObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('[data-case-anchor]').forEach(a=>a.toggleAttribute('aria-current',a.dataset.caseAnchor===entry.target.id));}}},{root:scroller,rootMargin:'0px 0px -65% 0px',threshold:0});
+ document.querySelectorAll('.case-chapter').forEach(section=>caseObserver.observe(section));
 }
 document.addEventListener('click',e=>{const anchor=e.target.closest('[data-case-anchor]');if(anchor){document.getElementById(anchor.dataset.caseAnchor)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});document.querySelectorAll('[data-case-anchor]').forEach(a=>a.removeAttribute('aria-current'));anchor.setAttribute('aria-current','location');}const button=e.target.closest('[data-project]'),switcher=e.target.closest('[data-case-switch]');if(button)showProject(button.dataset.project);if(switcher)showProject(switcher.dataset.caseSwitch);if(e.target.closest('[data-close-project]'))dialog.close()});
 document.querySelector('.close-dialog').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
@@ -64,3 +70,11 @@ const linkedProject=new URLSearchParams(location.search).get('project');
 if(linkedProject&&data.projects.some(p=>p.id===linkedProject))showProject(linkedProject);
 
 document.addEventListener('click',event=>{const wechat=event.target.closest('[data-case-wechat]');if(wechat){const panel=document.querySelector('.case-wechat-panel');panel.hidden=!panel.hidden;wechat.setAttribute('aria-expanded',String(!panel.hidden))}if(event.target.closest('[data-case-resume]')){document.querySelector('.case-footer-status').textContent='简历文件待上传。'}});
+
+// Shared full-size viewer keeps screen evidence readable on desktop and mobile.
+const imageViewer=document.createElement('dialog');imageViewer.className='case-image-viewer';imageViewer.setAttribute('aria-label','设计稿放大预览');
+imageViewer.innerHTML='<div class="image-viewer-toolbar"><p id="image-caption"></p><button type="button" data-image-scale aria-label="切换图片原尺寸">原尺寸</button><button type="button" data-image-close aria-label="关闭设计稿预览">关闭 ×</button></div><div class="image-viewer-canvas"><img alt=""></div>';
+document.body.append(imageViewer);
+document.addEventListener('click',e=>{const trigger=e.target.closest('[data-case-image]');if(trigger){const image=imageViewer.querySelector('img');image.src=trigger.dataset.caseImage;image.alt=trigger.dataset.imageCaption;imageViewer.querySelector('#image-caption').textContent=trigger.dataset.imageCaption;imageViewer.classList.remove('image-original');imageViewer.showModal();imageViewer.querySelector('.image-viewer-canvas').scrollTop=0;}if(e.target.closest('[data-image-close]'))imageViewer.close();if(e.target.closest('[data-image-scale]'))imageViewer.classList.toggle('image-original');});
+imageViewer.addEventListener('click',e=>{if(e.target===imageViewer)imageViewer.close()});
+dialog.addEventListener('close',()=>{caseObserver?.disconnect();const address=new URL(location.href);address.searchParams.delete('project');history.replaceState(null,'',address);});
