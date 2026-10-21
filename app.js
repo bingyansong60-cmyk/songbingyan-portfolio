@@ -10,7 +10,7 @@ const visuals = {
  travel:`<div class="travel-window"><div class="travel-nav"><b>山野 / WILD</b><span>探索目的地　 关于山野　 ↗</span></div><div class="mountains"><i></i><i></i><i></i></div><div class="travel-copy"><small>LESS NOISE. MORE NATURE.</small><h3>去山野，<br>找回自己的节奏。</h3><span>开启下一段旅程 ↗</span></div><div class="travel-bottom">01 / 山间漫游 <span>向自然，再靠近一点。</span></div></div>`
 };
 const isArchive = document.body.dataset.page === 'archive';
-let selectedType = '全部', selectedIndustry = '全部', shown = 12;
+let selectedType = '全部', selectedIndustry = '全部';
 const grid = document.querySelector('#project-grid');
 const types = window.PortfolioCases.types;
 const industries = ['全部',...new Set(data.projects.map(p=>p.industry).filter(Boolean))];
@@ -25,18 +25,15 @@ function renderFilters(){
 
 function render(){
  const projects=isArchive?data.projects.filter(p=>(selectedType==='全部'||window.PortfolioCases.projectTypes(p).includes(selectedType))&&(selectedIndustry==='全部'||p.industry===selectedIndustry)):data.projects.filter(p=>p.featured);
- grid.innerHTML=projects.slice(0,shown).map(card).join('');
- document.querySelector('#filter-status').textContent=`${isArchive?'找到':'精选'} ${projects.length} 个作品${isArchive?' · 已显示 '+Math.min(shown,projects.length)+' 个':''}`;
- document.querySelector('#load-more')?.remove();
+ grid.innerHTML=projects.map(card).join('');
+ document.querySelector('#filter-status').textContent=`${isArchive?'找到':'精选'} ${projects.length} 个作品`;
  if(!projects.length)grid.innerHTML='<div class="empty-state"><span>⌕</span><h3>这个分类的作品还未添加</h3><p>可以选择其他类型或行业，继续浏览作品。</p><button data-reset>查看全部作品 ↗</button></div>';
- if(projects.length>shown){const b=document.createElement('button');b.id='load-more';b.className='load-more';b.textContent=`查看更多作品（还有 ${projects.length-shown} 个）`;b.onclick=()=>{shown+=12;render()};grid.after(b)}
  if(isArchive)renderFilters();
 }
-function resetFilters(){selectedType='全部';selectedIndustry='全部';shown=12;render()}
+function resetFilters(){selectedType='全部';selectedIndustry='全部';render()}
 render();
 document.querySelectorAll('[data-total-count]').forEach(el=>el.textContent=String(data.projects.length).padStart(2,'0'));
-document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;shown=12;render()}if(e.target.closest('[data-reset]'))resetFilters()});
-document.querySelector('#reset-filters')?.addEventListener('click',resetFilters);
+document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;render()}if(e.target.closest('[data-reset]'))resetFilters()});
 const dialog=document.querySelector('#detail-dialog');
 
 let caseObserver;
@@ -57,7 +54,6 @@ document.querySelector('.close-dialog').onclick=()=>dialog.close();dialog.addEve
 function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove('visible'),3500)}
 if(document.querySelector('#resume-button')) document.querySelector('#resume-button').onclick=()=>{if(data.resumeUrl)window.open(data.resumeUrl,'_blank','noopener');else toast('简历尚未添加。请在 content.js 中配置你的简历文件。')};
 if(data.email && document.querySelector('#contact-hint'))document.querySelector('#contact-hint').textContent=data.email;
-if(document.querySelector('#contact-button')) document.querySelector('#contact-button').onclick=async()=>{if(!data.email)return toast('联系方式尚未添加。请在 content.js 中填入真实邮箱。');try{await navigator.clipboard.writeText(data.email);toast('邮箱已复制：'+data.email)}catch{location.href='mailto:'+data.email}};
 
 const socialGrid=document.querySelector('#social-grid');
 if(socialGrid){

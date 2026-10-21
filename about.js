@@ -7,5 +7,4 @@
  function notify(message){const t=document.querySelector('#toast');t.textContent=message;t.classList.add('visible');clearTimeout(window.aboutToast);window.aboutToast=setTimeout(()=>t.classList.remove('visible'),3500)}
  document.querySelector('#resume-button').onclick=()=>{if(data.resumeUrl)window.open(data.resumeUrl,'_blank','noopener');else notify('简历尚未添加。')};
  if(data.email&&document.querySelector('#contact-hint'))document.querySelector('#contact-hint').textContent=data.email;
- document.querySelector('#contact-button').onclick=async()=>{if(!data.email)return notify('联系方式尚未添加。');try{await navigator.clipboard.writeText(data.email);notify('邮箱已复制：'+data.email)}catch{location.href='mailto:'+data.email}};
 })();

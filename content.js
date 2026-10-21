@@ -2,6 +2,8 @@
 window.portfolio = {
   name: '宋冰艳',
   launchedProjectCount: '50+',
+  wechatId: 'S1570124',
+  phone: '15701242481',
   email: '3107177196@qq.com', // 填入真实邮箱后，“获取联系方式”即可复制邮箱。
   compactPortfolioUrl: '', // 精简版作品集 PDF 路径
   resumeUrl: '', // 如 'assets/我的简历.pdf'

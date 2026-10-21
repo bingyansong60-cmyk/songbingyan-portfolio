@@ -8,8 +8,8 @@ body header.site-header nav a{display:inline-flex;align-items:center;justify-con
 body header.site-header nav a svg{display:none;}
 body header.site-header nav .rail-label{display:block;margin:0;position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:transparent;color:inherit;font-size:13px;padding:0;border-radius:0;white-space:nowrap;}
 
-body header.site-header nav a[aria-current="page"]{background:transparent;color:var(--brand-deep);font-weight:600;box-shadow:0 2px 0 var(--accent);}
-body header.site-header nav a:hover{background:transparent;color:var(--brand-deep);transform:none;}
+body header.site-header nav a[aria-current="page"]{background:transparent;color:#222;font-weight:600;box-shadow:0 2px 0 #222;}
+body header.site-header nav a:hover{background:transparent;color:#222;transform:none;}
 body header.site-header .figma-header-icons{gap:8px;justify-self:end;}
 @media(prefers-reduced-motion:reduce){body header.site-header{transition:none;}}
 @media(max-width:1000px){body header.site-header{gap:20px;padding:0 25px!important;}body header.site-header nav{gap:18px;}body header.site-header .brand{font-size:13px;}}

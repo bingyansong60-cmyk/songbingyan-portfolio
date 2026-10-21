@@ -104,3 +104,46 @@ html[data-theme="dark"] .learning-panel{background:#28232e;}
 @media(max-width:700px){.hero-studio-card{display:none;}.figma-hero{height:690px;}.figma-hero h1{top:74px;max-width:calc(100% - 36px);width:100%;font-size:clamp(26px,6.1vw,38px);line-height:1.75;letter-spacing:-.6px;}.hero-first-line{display:block;}.hero-first-line .hero-experience{display:block;}.hero-name-underline{transform:translateX(-50%) scale(.62);bottom:-7px;}.hero-sticky-note{top:305px;left:6%;transform:rotate(-7deg) scale(.62);}.hero-portrait{top:285px;right:8%;transform:rotate(-5deg) scale(.68);}.hero-flower-sticker{top:455px;left:3%;transform:rotate(-15deg) scale(.5);}.hero-folder{top:515px;left:54%;transform:translateX(-50%) rotate(-2deg) scale(.8);}.hero-resume{top:545px;right:5%;transform:rotate(3deg) scale(.8);min-height:62px;}.figma-home .section-heading h2,.figma-home .career-heading h2,.figma-about .career-heading h2,.learning-topline h2,.tools-section h2{font-size:27px;}.figma-home .real-project .featured-project-heading{min-height:0;padding:24px;}.figma-home .featured-project-grid{gap:24px;}.figma-home .career-section,.figma-about .career-section,body #ai.learning-section,.tools-section{margin-top:64px;}.figma-home .career-item summary,.figma-about .career-item summary{padding:20px 17px;gap:14px;flex-wrap:wrap;}.figma-home .career-monogram,.figma-about .career-monogram{width:44px;height:44px;font-size:19px;border-radius:12px;}.figma-home .career-role strong,.figma-about .career-role strong{font-size:16px;}.figma-home .career-role small,.figma-about .career-role small{font-size:12px;}.figma-home .career-meta,.figma-about .career-meta{margin-left:58px;}.figma-home .career-period,.figma-about .career-period{font-size:11px;}.learning-panel{grid-template-columns:1fr;gap:26px;padding:24px;}.learning-panel .ai-heading h3{font-size:23px;}.learning-topline{gap:12px;}.learning-topline>a{font-size:11px;}.tool-row{padding:20px 17px;gap:14px;min-height:90px;}.tool-symbol{width:44px;height:44px;border-radius:12px;font-size:19px;}.tool-copy strong{font-size:17px;}.tool-copy small{font-size:12px;}.tool-row>span:last-child{font-size:11px;}body[data-page="archive"] .library-section{padding-top:45px;}body[data-page="archive"] .library-title{font-size:38px;}body[data-page="archive"] .project-ownership{font-size:14px!important;}body[data-page="archive"] .archive-filters{margin-top:36px;}body[data-page="archive"] .archive-filters .filter-line{align-items:flex-start;}body[data-page="archive"] .filter-label{padding-top:10px!important;}body[data-page="archive"] .real-project .project-info{grid-template-columns:minmax(0,1fr) auto;gap:12px;}body[data-page="archive"] .real-project .category{max-width:100px;font-size:9px;}.figma-about .about{grid-template-columns:1fr;gap:30px;padding-top:48px;}.about-portrait{width:min(280px,80%);height:325px;margin:auto;}.figma-about .about-copy h1{font-size:30px;}.figma-about .about-copy .about-subtitle{font-size:20px;}.figma-about .about-copy p{font-size:13px;}}
 @media(max-width:700px){.figma-hero h1>br{display:none;}}
 @media(prefers-reduced-motion:reduce){.hero-flower-sticker img,.folder-front,.folder-sheet,.hero-portrait,.hero-resume,.hero-studio-card{transition:none;}}
+/* The supplied Figma learning column, shared by home and about. */
+body #ai .learning-panel{grid-template-columns:200px minmax(0,1fr);gap:76px;padding:32px;background:#f8f7fa;align-items:start;}
+body #ai .learning-panel .ai-heading h3{font-size:25px;line-height:35px;font-weight:500;margin:0 0 16px;}
+body #ai .learning-panel .ai-heading p{font-size:13px;line-height:24.7px;margin:0;color:#79717f;}
+body #ai .learning-panel .ai-list article{grid-template-columns:64px minmax(0,1fr);gap:20px;padding:24px 0;border-bottom:1px solid #e7e1ed;align-items:start;}
+body #ai .learning-panel .ai-list article:first-child{padding-top:0;}
+body #ai .learning-panel .ai-list article:last-child{padding-bottom:0;border-bottom:0;}
+body #ai .learning-panel .ai-list h3{font-size:19px;font-weight:500;line-height:27px;margin:0 0 10px;color:#292431;}
+body #ai .learning-panel .ai-list p{font-size:13px;line-height:19.6px;margin:0;color:#79717f;}
+.learning-brand{position:relative;display:block;width:64px;height:64px;}
+.learning-brand img{position:absolute;display:block;object-fit:contain;border:1px solid #00000014;border-radius:10px;background:#fff;}
+.learning-brand-single img{width:64px;height:64px;inset:0;}
+.learning-brand-pair img{width:44px;height:44px;left:0;top:0;}
+.learning-brand-pair img+img{top:20px;left:20px;}
+/* About offers a direct route into the complete project collection. */
+.project-overview{padding:0;margin-top:100px;}
+.project-overview .section-heading{align-items:center;margin-bottom:24px;}
+.project-overview .section-heading h2{font-size:34px;font-weight:500;margin:0;}
+.project-overview .section-heading .text-link{margin:0;white-space:nowrap;}
+.project-overview-card{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center;min-height:290px;padding:32px;border:1px solid #e5ddef;border-radius:22px;background:linear-gradient(120deg,#faf8fc,#f0ebf7);overflow:hidden;}
+.overview-copy>small{display:block;font-size:10px;letter-spacing:1.8px;color:#9986aa;}
+.overview-copy>strong{display:block;font-size:28px;font-weight:500;line-height:1.55;margin:14px 0 12px;}
+.overview-copy>span{display:block;font-size:12px;color:var(--muted);}
+.overview-copy>.overview-cta{display:inline-flex;gap:5px;align-items:center;color:#292431;border-bottom:1px solid #bbaaca;padding:0 0 5px;margin-top:24px;}
+.overview-cta b{font-weight:500;}.overview-cta>span{margin-left:8px;}
+.overview-previews{position:relative;height:230px;display:block;}
+.overview-previews img{position:absolute;object-fit:cover;object-position:top;border:5px solid #fff;border-radius:14px;box-shadow:0 12px 30px #46315118;transition:transform .3s;}
+.overview-previews img:first-child{left:0;top:15px;width:125px;height:230px;z-index:2;transform:rotate(-7deg);}
+.overview-previews img:last-child{width:290px;height:185px;right:-18px;top:30px;transform:rotate(5deg);}
+.project-overview-card:hover .overview-previews img:first-child{transform:rotate(-10deg) translateY(-5px);}
+.project-overview-card:hover .overview-previews img:last-child{transform:rotate(7deg) translateY(-4px);}
+/* Only selected controls use black; artwork keeps its individual palette. */
+body .archive-filters .filters button.active,body .archive-filters .filters button[aria-pressed="true"]{background:#222;color:#fff;border-color:#222;}
+body #contact .contact-main .contact-actions{display:flex;flex-direction:row;justify-content:center;gap:14px;margin-top:8px;}
+body #contact .contact-main .contact-actions .primary{display:inline-flex;align-items:center;justify-content:center;background:#222;color:#fff;border:1px solid #222;min-width:112px;min-height:46px;margin:0;padding:13px 24px;font-size:13px;}
+body #contact .contact-main .contact-actions .primary:hover{background:#3a3a3a;border-color:#3a3a3a;}
+body #contact .contact-main .contact-status:not(.sr-only){margin:14px 0 0;font-size:12px;color:var(--muted);}
+body footer.reference-footer{padding-top:28px;padding-bottom:26px;}
+body footer.reference-footer .reference-footer-note{margin:0;}
+body footer.reference-footer .reference-footer-copyright{margin:12px 0 0;}
+@media(max-width:1100px){body #ai .learning-panel{gap:32px;grid-template-columns:190px minmax(0,1fr);}}
+@media(max-width:700px){body #ai .learning-panel{grid-template-columns:1fr;gap:28px;padding:24px;}body #ai .learning-panel .ai-heading h3{font-size:23px;}body #ai .learning-panel .ai-list article{grid-template-columns:48px minmax(0,1fr);gap:14px;padding:20px 0;}body #ai .learning-panel .ai-list h3{font-size:16px;line-height:24px;margin-bottom:8px;}body #ai .learning-panel .ai-list p{font-size:12px;line-height:19px;}.learning-brand{width:48px;height:48px;}.learning-brand-single img{width:48px;height:48px;}.learning-brand-pair img{width:34px;height:34px;}.learning-brand-pair img+img{left:14px;top:14px;}.project-overview{margin-top:64px;}.project-overview .section-heading h2{font-size:27px;}.project-overview .section-heading .text-link{font-size:11px;}.project-overview-card{grid-template-columns:1fr;gap:20px;padding:24px;}.overview-copy>strong{font-size:25px;}.overview-previews{height:190px;}.overview-previews img:first-child{width:105px;height:190px;top:0;}.overview-previews img:last-child{width:220px;height:150px;top:20px;right:-5px;}}
+@media(prefers-reduced-motion:reduce){.overview-previews img{transition:none;}}
