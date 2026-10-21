@@ -5,7 +5,7 @@ body header.site-header .brand-mark{font-size:28px;color:#a788c8;}
 body header.site-header nav{position:static;transform:none;display:flex;flex-direction:row;justify-content:center;justify-self:center;align-items:center;gap:24px;width:auto;max-width:none;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;backdrop-filter:none;overflow:visible;}
 body header.site-header nav a{display:inline-flex;width:auto;height:44px;padding:8px 0;border-radius:0;font-size:13px!important;color:var(--muted);background:none;transform:none;}
 body header.site-header nav a svg{display:none;}
-body header.site-header nav .rail-label{position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:transparent;color:inherit;font-size:13px;padding:0;border-radius:0;white-space:nowrap;}
+body header.site-header nav .rail-label{display:inline;position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;background:transparent;color:inherit;font-size:13px;padding:0;border-radius:0;white-space:nowrap;}
 body header.site-header nav a:last-child .rail-label{font-size:12px;}
 body header.site-header nav a[aria-current="page"]{background:transparent;color:var(--brand-deep);font-weight:600;box-shadow:0 2px 0 var(--accent);}
 body header.site-header nav a:hover{background:transparent;color:var(--brand-deep);transform:none;}

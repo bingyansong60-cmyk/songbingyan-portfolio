@@ -38,14 +38,13 @@ document.querySelectorAll('[data-total-count]').forEach(el=>el.textContent=Strin
 document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;shown=12;render()}if(e.target.closest('[data-reset]'))resetFilters()});
 document.querySelector('#reset-filters')?.addEventListener('click',resetFilters);
 const dialog=document.querySelector('#detail-dialog');
-function caseFooter(){return '<section class="case-footer" aria-label="联系与个人资料">'+window.PortfolioUI.footerMarkup(true)+'</section>';}
 
 let caseObserver;
 function showProject(id){
  const p=data.projects.find(p=>p.id===id);if(!p)return;
  const index=data.projects.indexOf(p),previous=data.projects[(index-1+data.projects.length)%data.projects.length],next=data.projects[(index+1)%data.projects.length];
  dialog.classList.add('project-dialog');
- document.querySelector('#dialog-content').innerHTML=window.PortfolioCases.render(p,index,data.projects,visuals,caseFooter());
+ document.querySelector('#dialog-content').innerHTML=window.PortfolioCases.render(p,index,data.projects,visuals);
  dialog.setAttribute('aria-labelledby','case-title');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;document.querySelector('.case-content').scrollTop=0;
  const address=new URL(location.href);address.searchParams.set('project',p.id);history.replaceState(null,'',address);
  caseObserver?.disconnect();
@@ -65,7 +64,7 @@ if(socialGrid){
  socialGrid.innerHTML=(data.social||[]).map((social)=>`<a class="social-card" href="learning.html?platform=${encodeURIComponent(social.name)}"><span class="social-icon ${social.tone}">${social.mark}</span><span class="social-copy"><strong>${social.name}</strong><small>浏览学习内容</small></span><span class="social-arrow">↗</span></a>`).join('');
  document.querySelector('.social-note').innerHTML='<a href="learning.html">查看全部学习内容 ↗</a>';
 }
-// 底部项目图标可直达对应案例。
+// 支持从链接直达项目详情。
 const linkedProject=new URLSearchParams(location.search).get('project');
 if(linkedProject&&data.projects.some(p=>p.id===linkedProject))showProject(linkedProject);
 

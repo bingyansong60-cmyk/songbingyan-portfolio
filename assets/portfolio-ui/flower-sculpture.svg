@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="petal" x1="78" y1="25" x2="117" y2="104" gradientUnits="userSpaceOnUse"><stop stop-color="#F2E9FF"/><stop offset=".35" stop-color="#CEB5EF"/><stop offset=".74" stop-color="#AF8BDA"/><stop offset="1" stop-color="#9671BE"/></linearGradient>
+    <linearGradient id="edge" x1="83" y1="21" x2="118" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".95"/><stop offset=".45" stop-color="#E7D6F8" stop-opacity=".55"/><stop offset="1" stop-color="#9B74C3"/></linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientTransform="translate(91 91) rotate(53) scale(35)" gradientUnits="userSpaceOnUse"><stop stop-color="#FBFFD9"/><stop offset=".5" stop-color="#DFEDB4"/><stop offset="1" stop-color="#B8CE87"/></radialGradient>
+    <filter id="shadow" x="0" y="0" width="200" height="205" filterUnits="userSpaceOnUse"><feDropShadow dx="1" dy="7" stdDeviation="3" flood-color="#74518E" flood-opacity=".18"/><feDropShadow dx="0" dy="18" stdDeviation="8" flood-color="#74518E" flood-opacity=".1"/></filter>
+    <filter id="core-shadow" x="65" y="65" width="70" height="76" filterUnits="userSpaceOnUse"><feDropShadow dy="4" stdDeviation="3" flood-color="#6F568D" flood-opacity=".22"/></filter>
+    <g id="one-petal"><ellipse cx="100" cy="60" rx="25" ry="43" fill="url(#petal)" stroke="url(#edge)" stroke-width="1.5"/><path d="M86 37C90 25 102 21 108 31" stroke="white" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/></g>
+  </defs>
+  <g filter="url(#shadow)"><use href="#one-petal"/><use href="#one-petal" transform="rotate(60 100 100)"/><use href="#one-petal" transform="rotate(120 100 100)"/><use href="#one-petal" transform="rotate(180 100 100)"/><use href="#one-petal" transform="rotate(240 100 100)"/><use href="#one-petal" transform="rotate(300 100 100)"/></g>
+  <g filter="url(#core-shadow)"><circle cx="100" cy="100" r="23" fill="url(#core)" stroke="#F1F7D4" stroke-width="1.5"/><ellipse cx="94" cy="88" rx="9" ry="3.5" transform="rotate(-25 94 88)" fill="white" fill-opacity=".5"/><path d="M93 100H107M100 93V107" stroke="#8E79A3" stroke-width="2" stroke-linecap="round"/></g>
+</svg>
