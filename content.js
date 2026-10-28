@@ -1,4 +1,4 @@
-// 项目资料以腾讯文档快照为准，由 portfolio-source-data/build-current-projects.py 生成。
+// 本地预览项目资料以腾讯文档 r314 快照为准，由 portfolio-source-data/build-current-projects.py 生成。
 window.portfolio = {
   "name": "宋冰艳",
   "launchedProjectCount": "50+",
@@ -222,14 +222,14 @@ window.portfolio = {
     "title": "项目数据作品集",
     "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
     "sheetId": "BB08J2",
-    "revision": 234,
+    "revision": 314,
     "retrievedDate": "2026-10-28",
     "sourceOfTruth": true
   },
   "projects": [
     {
       "id": "daily",
-      "title": "恒智易 AI｜智能体创作平台 2.0",
+      "title": "恒智易 AI｜智能体创作平台 2.0、3.0",
       "platform": "APP",
       "category": "APP",
       "types": [
@@ -248,6 +248,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "AI 智能体应用、产品改版、多端适配",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/oTBbNfe4Js3JbXauWaVtvz/%E6%81%92%E6%99%BA%E6%98%93-AI-2.0?m=auto&t=88juO2nln60Ik9vL-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -287,7 +291,7 @@ window.portfolio = {
       "example": false,
       "sourceRow": 2,
       "sourceFields": {
-        "名字": "恒智易 AI｜智能体创作平台 2.0",
+        "名字": "恒智易 AI｜智能体创作平台 2.0、3.0",
         "封面1920*1080": "",
         "平台": "APP",
         "项目日期": "2026年4月至5月 · 2个月",
@@ -296,14 +300,14 @@ window.portfolio = {
         "我的工作": "1.0-2.0视觉交互升级、ipad适配\n主站UI设计\n1、写作智能体；2、视频智能体；\nUI 视觉与交互设计\n围绕恒智易 AI 从 1.0 到 2.0 的升级，重构主站视觉框架，制定智能体公共框架与接入规范，完成 AI 生图、AI 视频、写作及养龙虾等智能体设计，统一平台视觉与交互体验，同步完成 iPad 适配。",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试及运营人员3人。\n3.0，5个前端（鸿蒙+安卓+ios）一个java，2测试，1产品\n",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/oTBbNfe4Js3JbXauWaVtvz/%E6%81%92%E6%99%BA%E6%98%93-AI-2.0?m=auto&t=88juO2nln60Ik9vL-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 2
@@ -352,11 +356,15 @@ window.portfolio = {
       "background": "基于人工智能技术的智能对话与内容生成平台，支持文本、图像、音频、视频等指令输入，可生成图片、表格、PPT、文本等内容，并支持个性化智能体创建。",
       "scope": "2.0-3.0 视觉交互升级、ipad适配、3.0视觉升级\n主站UI设计\n1、手表智能体；\n2、柜主龙虾智能体；\n3、写作智能体；\n4、视频智能体；\nUI 视觉与交互设计\n围绕恒智易 AI 从 2.0到 3.0 的视觉升级，首页重构。",
       "status": "已上线",
-      "team": "本人负责 UI 设计；5个前端（鸿蒙+安卓+ios）一个java，2测试，1产品",
+      "team": "本人负责 UI 设计；5个前端（鸿蒙+安卓+ios）一个java",
       "notes": "",
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "AI 智能体应用、产品改版、多端适配",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/Y9oFBwGL6X9tHnzF9mLtEk/%E6%81%92%E6%99%BA%E6%98%93-AI-3.0%E9%BB%91%E7%99%BD%E8%89%B2?m=auto&t=88juO2nln60Ik9vL-6"
+      ],
       "featured": true,
       "featuredRank": 0,
       "featureCover": "assets/figma-20261028/297-2783-imgRectangle2.png",
@@ -393,15 +401,15 @@ window.portfolio = {
         "平台背景": "基于人工智能技术的智能对话与内容生成平台，支持文本、图像、音频、视频等指令输入，可生成图片、表格、PPT、文本等内容，并支持个性化智能体创建。",
         "我的工作": "2.0-3.0 视觉交互升级、ipad适配、3.0视觉升级\n主站UI设计\n1、手表智能体；\n2、柜主龙虾智能体；\n3、写作智能体；\n4、视频智能体；\nUI 视觉与交互设计\n围绕恒智易 AI 从 2.0到 3.0 的视觉升级，首页重构。",
         "是否上线": "已上线",
-        "团队人员明细": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试及运营人员3人。\n3.0，5个前端（鸿蒙+安卓+ios）一个java，2测试，1产品\n",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "团队人员明细": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试及运营人员3人。\n3.0，5个前端（鸿蒙+安卓+ios）一个java",
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/Y9oFBwGL6X9tHnzF9mLtEk/%E6%81%92%E6%99%BA%E6%98%93-AI-3.0%E9%BB%91%E7%99%BD%E8%89%B2?m=auto&t=88juO2nln60Ik9vL-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 3
@@ -412,7 +420,7 @@ window.portfolio = {
         "status": "已上线",
         "summary": "基于人工智能技术的智能对话与内容生成平台，支持文本、图像、音频、视频等指令输入，可生成图片、表格、PPT、文本等内容，并支持个性化智能体创建。",
         "background": "基于人工智能技术的智能对话与内容生成平台，支持文本、图像、音频、视频等指令输入，可生成图片、表格、PPT、文本等内容，并支持个性化智能体创建。",
-        "team": "本人负责 UI 设计；5个前端（鸿蒙+安卓+ios）一个java，2测试，1产品",
+        "team": "本人负责 UI 设计；5个前端（鸿蒙+安卓+ios）一个java",
         "modules": [
           {
             "title": "界面展示",
@@ -420,6 +428,118 @@ window.portfolio = {
               {
                 "src": "assets/hengzhiyi/v3.png",
                 "label": "3.0 主站界面"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "hzy-work",
+      "title": "恒智易 Work｜AI 智能办公工作台",
+      "platform": "macOS / Windows",
+      "category": "桌面端",
+      "types": [
+        "桌面端"
+      ],
+      "industries": [
+        "AI"
+      ],
+      "industry": "AI",
+      "date": "2026年10月至11月 · 2个月（设计5天）",
+      "background": "随着生成式 AI 在职场场景中的应用不断深入，用户对 AI 工具的需求逐渐从简单的信息问答，扩展至文档生成、数据分析、视觉创作和日常办公任务。\n\n智易 Work 是面向多场景办公需求的 AI 智能工作台，通过整合智能对话、专业智能体和内容生成能力，为用户提供统一、高效的桌面端工作体验。\n\n产品以自然语言交互为核心，将任务发起、过程处理、结果预览与内容管理串联起来，降低复杂 AI 能力的使用门槛。",
+      "scope": "负责智易 Work 桌面端产品的 UI 与交互设计，围绕多功能 AI 工作台的使用场景，完善产品信息架构、核心业务流程及视觉体验。\n\n产品框架设计： 梳理首页、对话、智能体、素材、录音和个人中心等模块的布局与导航关系。\n\n核心功能设计： 完成 AI 对话、PPT 生成、数据分析、AI 生图及文案创作等核心业务界面。\n\n交互体验设计： 完善文件上传、生成反馈、任务状态、内容预览及结果操作等流程。\n\n视觉系统设计： 建立统一的色彩、字体、间距、图标和组件规范，保证复杂场景下的视觉一致性。\n\n场景适配设计： 处理 macOS、Windows 桌面窗口、侧边栏及多区域内容布局。",
+      "status": "已上线",
+      "team": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试1名，运营人员1人。\n5个前端（鸿蒙+安卓+ios）一个java",
+      "notes": "",
+      "releaseNote": "",
+      "role": "UI 设计",
+      "sourceProjectType": "AI 智能办公 / 桌面端应用设计",
+      "presentationGuideUrl": "https://chatgpt.com/share/6ae1e914-9d30-83ee-a07a-455409285242",
+      "designUrls": [
+        "https://www.figma.com/design/FggtaDd7YJ4V5XHj1DLnfR/%E6%99%BA%E6%98%93-Work?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
+      "featured": false,
+      "featuredRank": null,
+      "featureCover": "",
+      "cover": "assets/figma-20261028/297-2784-imgRectangle4.png",
+      "coverScreens": [
+        "assets/projects/web/work-home.webp",
+        "assets/projects/web/work-ppt.webp"
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/web/work-home.webp",
+          "label": "桌面主工作台"
+        },
+        {
+          "src": "assets/projects/web/work-ppt.webp",
+          "label": "PPT 生成与预览"
+        },
+        {
+          "src": "assets/projects/web/work-assets.webp",
+          "label": "个人素材管理"
+        }
+      ],
+      "coverLayout": "desktop",
+      "theme": "lilac",
+      "coverPalette": [
+        "#f2f5fb",
+        "#dae2f1"
+      ],
+      "subtitle": "随着生成式 AI 在职场场景中的应用不断深入，用户对 AI 工具的需求逐渐从简单的信息问答，扩展至文档生成、数据分析、视觉创作和日常办公任务。\n\n智易 Work 是面向多场景办公需求的 AI 智能工作台，通过整合智能对话、专业智能体和内容生成能力，为用户提供统一、高效的桌面端工作体验。\n\n产品以自然语言交互为核心，将任务发起、过程处理、结果预览与内容管理串联起来，降低复杂 AI 能力的使用门槛。",
+      "tags": [
+        "macOS / Windows",
+        "UI Design",
+        "Design System"
+      ],
+      "phase": "已上线",
+      "example": false,
+      "sourceRow": 4,
+      "sourceFields": {
+        "名字": "恒智易 Work｜AI 智能办公工作台",
+        "封面1920*1080": " ",
+        "平台": "macOS / Windows",
+        "项目日期": "2026年10月至11月 · 2个月（设计5天）",
+        "项目类型": "AI 智能办公 / 桌面端应用设计",
+        "平台背景": "随着生成式 AI 在职场场景中的应用不断深入，用户对 AI 工具的需求逐渐从简单的信息问答，扩展至文档生成、数据分析、视觉创作和日常办公任务。\n\n智易 Work 是面向多场景办公需求的 AI 智能工作台，通过整合智能对话、专业智能体和内容生成能力，为用户提供统一、高效的桌面端工作体验。\n\n产品以自然语言交互为核心，将任务发起、过程处理、结果预览与内容管理串联起来，降低复杂 AI 能力的使用门槛。",
+        "我的工作": "负责智易 Work 桌面端产品的 UI 与交互设计，围绕多功能 AI 工作台的使用场景，完善产品信息架构、核心业务流程及视觉体验。\n\n产品框架设计： 梳理首页、对话、智能体、素材、录音和个人中心等模块的布局与导航关系。\n\n核心功能设计： 完成 AI 对话、PPT 生成、数据分析、AI 生图及文案创作等核心业务界面。\n\n交互体验设计： 完善文件上传、生成反馈、任务状态、内容预览及结果操作等流程。\n\n视觉系统设计： 建立统一的色彩、字体、间距、图标和组件规范，保证复杂场景下的视觉一致性。\n\n场景适配设计： 处理 macOS、Windows 桌面窗口、侧边栏及多区域内容布局。\n\n",
+        "是否上线": "已上线",
+        "团队人员明细": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试1名，运营人员1人。\n5个前端（鸿蒙+安卓+ios）一个java\n",
+        "作品集展示思路大致的（图文结合）": "https://chatgpt.com/share/6ae1e914-9d30-83ee-a07a-455409285242",
+        "设计稿地址": "https://www.figma.com/design/FggtaDd7YJ4V5XHj1DLnfR/%E6%99%BA%E6%98%93-Work?m=auto&t=V5ACabSi0z6VkJVF-6"
+      },
+      "provenance": {
+        "title": "项目数据作品集",
+        "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
+        "sheetId": "BB08J2",
+        "revision": 314,
+        "retrievedDate": "2026-10-28",
+        "sourceOfTruth": true,
+        "row": 4
+      },
+      "caseStudy": {
+        "period": "2026年10月至11月 · 2个月（设计5天）",
+        "role": "负责智易 Work 桌面端产品的 UI 与交互设计，围绕多功能 AI 工作台的使用场景，完善产品信息架构、核心业务流程及视觉体验。\n\n产品框架设计： 梳理首页、对话、智能体、素材、录音和个人中心等模块的布局与导航关系。\n\n核心功能设计： 完成 AI 对话、PPT 生成、数据分析、AI 生图及文案创作等核心业务界面。\n\n交互体验设计： 完善文件上传、生成反馈、任务状态、内容预览及结果操作等流程。\n\n视觉系统设计： 建立统一的色彩、字体、间距、图标和组件规范，保证复杂场景下的视觉一致性。\n\n场景适配设计： 处理 macOS、Windows 桌面窗口、侧边栏及多区域内容布局。",
+        "status": "已上线",
+        "summary": "随着生成式 AI 在职场场景中的应用不断深入，用户对 AI 工具的需求逐渐从简单的信息问答，扩展至文档生成、数据分析、视觉创作和日常办公任务。\n\n智易 Work 是面向多场景办公需求的 AI 智能工作台，通过整合智能对话、专业智能体和内容生成能力，为用户提供统一、高效的桌面端工作体验。\n\n产品以自然语言交互为核心，将任务发起、过程处理、结果预览与内容管理串联起来，降低复杂 AI 能力的使用门槛。",
+        "background": "随着生成式 AI 在职场场景中的应用不断深入，用户对 AI 工具的需求逐渐从简单的信息问答，扩展至文档生成、数据分析、视觉创作和日常办公任务。\n\n智易 Work 是面向多场景办公需求的 AI 智能工作台，通过整合智能对话、专业智能体和内容生成能力，为用户提供统一、高效的桌面端工作体验。\n\n产品以自然语言交互为核心，将任务发起、过程处理、结果预览与内容管理串联起来，降低复杂 AI 能力的使用门槛。",
+        "team": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试1名，运营人员1人。\n5个前端（鸿蒙+安卓+ios）一个java",
+        "modules": [
+          {
+            "title": "界面展示",
+            "gallery": [
+              {
+                "src": "assets/projects/web/work-home.webp",
+                "label": "桌面主工作台"
+              },
+              {
+                "src": "assets/projects/web/work-ppt.webp",
+                "label": "PPT 生成与预览"
+              },
+              {
+                "src": "assets/projects/web/work-assets.webp",
+                "label": "个人素材管理"
               }
             ]
           }
@@ -448,6 +568,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "AI 人工智能 · 海外 App · 多语言本地化 · iPad 适配",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/oTBbNfe4Js3JbXauWaVtvz/%E6%81%92%E6%99%BA%E6%98%93-AI-2.0?m=auto&t=88juO2nln60Ik9vL-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -479,7 +603,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 4,
+      "sourceRow": 5,
       "sourceFields": {
         "名字": "Haieasy｜AI 录音与会议助手",
         "封面1920*1080": "",
@@ -490,17 +614,17 @@ window.portfolio = {
         "我的工作": "负责海外版从 0 到 1 的 UI 设计，涵盖 AI 对话、AI 硬件、个人中心及登录注册；完成多语言排版、组件与状态设计，以及 iPad 适配，统一多端体验。",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理2名、研发工程师8-10人、测试及运营人员3人。\n3.0，5个前端（鸿蒙+安卓+ios）一个java，2测试，1产品\n",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/oTBbNfe4Js3JbXauWaVtvz/%E6%81%92%E6%99%BA%E6%98%93-AI-2.0?m=auto&t=88juO2nln60Ik9vL-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 4
+        "row": 5
       },
       "caseStudy": {
         "period": "2026年5月至6月 · 2个月",
@@ -544,10 +668,14 @@ window.portfolio = {
       "scope": "负责恒生活 App 核心业务 UI 设计与持续迭代，涵盖首页改版、商城设计、三大业务专区、AI 智能助手定制化嵌入及会员权益体系。通过优化信息架构、交互体验与视觉规范，提升多业务场景下的体验一致性，并协同产品与研发推动设计落地。",
       "status": "已上线",
       "team": "本人负责 UI 设计；协作产品经理 1 人、研发工程师 5–8 人、测试及运营人员 3 人",
-      "notes": "持续迭代项目，覆盖首页、商城、智能零售及 AI 定制化功能",
+      "notes": "",
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "数字生活平台、智能零售、本地生活服务、APP 改版与业务迭代",
+      "presentationGuideUrl": "https://chatgpt.com/share/6ae0979a-65bc-83ee-9fe1-849101682390",
+      "designUrls": [
+        "https://www.figma.com/design/O5ZdBthl2MTT4TKMV6TxGA/%E6%81%92%E7%94%9F%E6%B4%BB%EF%BD%9C%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB%E7%94%A8%E6%88%B7%E7%AB%AF?m=auto&t=88juO2nln60Ik9vL-6"
+      ],
       "featured": true,
       "featuredRank": 2,
       "featureCover": "assets/figma-20261028/297-2783-imgContainer1.png",
@@ -574,7 +702,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 5,
+      "sourceRow": 6,
       "sourceFields": {
         "名字": "恒生活｜数字生活用户端",
         "封面1920*1080": "",
@@ -585,17 +713,17 @@ window.portfolio = {
         "我的工作": "负责恒生活 App 核心业务 UI 设计与持续迭代，涵盖首页改版、商城设计、三大业务专区、AI 智能助手定制化嵌入及会员权益体系。通过优化信息架构、交互体验与视觉规范，提升多业务场景下的体验一致性，并协同产品与研发推动设计落地。",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理 1 人、研发工程师 5–8 人、测试及运营人员 3 人",
-        "备注": "持续迭代项目，覆盖首页、商城、智能零售及 AI 定制化功能",
-        "作品集展示思路大致的（图文结合）": "https://chatgpt.com/share/6ae0979a-65bc-83ee-9fe1-849101682390"
+        "作品集展示思路大致的（图文结合）": "https://chatgpt.com/share/6ae0979a-65bc-83ee-9fe1-849101682390",
+        "设计稿地址": "https://www.figma.com/design/O5ZdBthl2MTT4TKMV6TxGA/%E6%81%92%E7%94%9F%E6%B4%BB%EF%BD%9C%E6%95%B0%E5%AD%97%E7%94%9F%E6%B4%BB%E7%94%A8%E6%88%B7%E7%AB%AF?m=auto&t=88juO2nln60Ik9vL-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 5
+        "row": 6
       },
       "caseStudy": {
         "period": "2024.9月 - 至今",
@@ -630,15 +758,19 @@ window.portfolio = {
         "电商产品"
       ],
       "industry": "海外产品",
-      "date": "",
-      "background": "面向智能售货机经营者的一体化运营管理平台，支持多设备远程管理，并覆盖商品、设备、订单、权限及经营数据等管理能力。",
-      "scope": "",
+      "date": "2026年1月至2月 · 2个月",
+      "background": "EZvend 是面向海外智能售货机运营商、商户及运维人员打造的一体化移动运营管理平台，围绕无人零售场景，整合经营数据分析、智能设备管理、商品与库存管理、订单处理、补货运营及人员权限等核心业务。\n\n平台连接线下智能售货设备与线上运营管理系统，帮助运营人员实时掌握设备和经营状态，实现跨设备、跨场地的移动化管理，为海外无人零售业务提供更便捷、高效的数字化运营体验。",
+      "scope": "负责 EZvend APP 的 UI 视觉设计与交互体验优化，围绕海外智能售货业务需求，完成首页数据看板、设备管理、订单管理、商品管理、补货流程及运营配置等核心模块的界面设计。\n\n结合复杂业务场景，优化信息架构、内容层级与关键操作流程，设计异常状态、操作反馈和多场景交互方案。同时搭建并维护 Figma 组件库、色彩变量及视觉设计规范，配合产品、研发及测试团队推进设计落地与版本迭代。",
       "status": "已上线",
       "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
       "notes": "",
-      "releaseNote": "App Store 显示 2025 年底上线",
+      "releaseNote": "",
       "role": "UI 设计",
-      "sourceProjectType": "",
+      "sourceProjectType": "海外智能零售 / B 端运营管理 / 国际化 APP / 智能硬件生态",
+      "presentationGuideUrl": "https://chatgpt.com/share/6ae1c619-2e20-83ec-8e53-fff50700b3fe",
+      "designUrls": [
+        "https://www.figma.com/design/yNcJ9wPLiXqoQpfiQTB0CS/EZvend?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": true,
       "featuredRank": 1,
       "featureCover": "assets/figma-20261028/297-2783-imgContainer.png",
@@ -668,42 +800,43 @@ window.portfolio = {
         "#f2f5fb",
         "#dae2f1"
       ],
-      "subtitle": "面向智能售货机经营者的一体化运营管理平台，支持多设备远程管理，并覆盖商品、设备、订单、权限及经营数据等管理能力。",
+      "subtitle": "EZvend 是面向海外智能售货机运营商、商户及运维人员打造的一体化移动运营管理平台，围绕无人零售场景，整合经营数据分析、智能设备管理、商品与库存管理、订单处理、补货运营及人员权限等核心业务。\n\n平台连接线下智能售货设备与线上运营管理系统，帮助运营人员实时掌握设备和经营状态，实现跨设备、跨场地的移动化管理，为海外无人零售业务提供更便捷、高效的数字化运营体验。",
       "tags": [
         "APP",
-        "UI Design"
+        "UI Design",
+        "Design System"
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 6,
+      "sourceRow": 7,
       "sourceFields": {
         "名字": "EZvend｜海外智能售货运营端",
         "封面1920*1080": "",
         "平台": "APP",
-        "项目日期": "",
-        "项目类型": "",
-        "平台背景": "面向智能售货机经营者的一体化运营管理平台，支持多设备远程管理，并覆盖商品、设备、订单、权限及经营数据等管理能力。",
-        "我的工作": "App Store 显示 2025 年底上线",
+        "项目日期": "2026年1月至2月 · 2个月",
+        "项目类型": "海外智能零售 / B 端运营管理 / 国际化 APP / 智能硬件生态",
+        "平台背景": "EZvend 是面向海外智能售货机运营商、商户及运维人员打造的一体化移动运营管理平台，围绕无人零售场景，整合经营数据分析、智能设备管理、商品与库存管理、订单处理、补货运营及人员权限等核心业务。\n\n平台连接线下智能售货设备与线上运营管理系统，帮助运营人员实时掌握设备和经营状态，实现跨设备、跨场地的移动化管理，为海外无人零售业务提供更便捷、高效的数字化运营体验。",
+        "我的工作": "负责 EZvend APP 的 UI 视觉设计与交互体验优化，围绕海外智能售货业务需求，完成首页数据看板、设备管理、订单管理、商品管理、补货流程及运营配置等核心模块的界面设计。\n\n结合复杂业务场景，优化信息架构、内容层级与关键操作流程，设计异常状态、操作反馈和多场景交互方案。同时搭建并维护 Figma 组件库、色彩变量及视觉设计规范，配合产品、研发及测试团队推进设计落地与版本迭代。\n\n",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "https://chatgpt.com/share/6ae1c619-2e20-83ec-8e53-fff50700b3fe",
+        "设计稿地址": "https://www.figma.com/design/yNcJ9wPLiXqoQpfiQTB0CS/EZvend?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 6
+        "row": 7
       },
       "caseStudy": {
-        "period": "",
-        "role": "UI 设计",
+        "period": "2026年1月至2月 · 2个月",
+        "role": "负责 EZvend APP 的 UI 视觉设计与交互体验优化，围绕海外智能售货业务需求，完成首页数据看板、设备管理、订单管理、商品管理、补货流程及运营配置等核心模块的界面设计。\n\n结合复杂业务场景，优化信息架构、内容层级与关键操作流程，设计异常状态、操作反馈和多场景交互方案。同时搭建并维护 Figma 组件库、色彩变量及视觉设计规范，配合产品、研发及测试团队推进设计落地与版本迭代。",
         "status": "已上线",
-        "summary": "面向智能售货机经营者的一体化运营管理平台，支持多设备远程管理，并覆盖商品、设备、订单、权限及经营数据等管理能力。",
-        "background": "面向智能售货机经营者的一体化运营管理平台，支持多设备远程管理，并覆盖商品、设备、订单、权限及经营数据等管理能力。",
+        "summary": "EZvend 是面向海外智能售货机运营商、商户及运维人员打造的一体化移动运营管理平台，围绕无人零售场景，整合经营数据分析、智能设备管理、商品与库存管理、订单处理、补货运营及人员权限等核心业务。\n\n平台连接线下智能售货设备与线上运营管理系统，帮助运营人员实时掌握设备和经营状态，实现跨设备、跨场地的移动化管理，为海外无人零售业务提供更便捷、高效的数字化运营体验。",
+        "background": "EZvend 是面向海外智能售货机运营商、商户及运维人员打造的一体化移动运营管理平台，围绕无人零售场景，整合经营数据分析、智能设备管理、商品与库存管理、订单处理、补货运营及人员权限等核心业务。\n\n平台连接线下智能售货设备与线上运营管理系统，帮助运营人员实时掌握设备和经营状态，实现跨设备、跨场地的移动化管理，为海外无人零售业务提供更便捷、高效的数字化运营体验。",
         "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
         "modules": [
           {
@@ -747,6 +880,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/ruh63esH3mzdvdtRf5nR2S/%E6%81%92%E7%94%9F%E6%B4%BB%E5%95%86%E5%AE%B6%E7%89%88---%E6%81%92%E6%8E%8C%E6%9F%9C---APP?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": true,
       "featuredRank": 4,
       "featureCover": "assets/figma-20261028/297-2783-imgRectangle3.png",
@@ -783,7 +920,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 7,
+      "sourceRow": 8,
       "sourceFields": {
         "名字": "恒掌柜｜智能货柜商家端",
         "封面1920*1080": "",
@@ -794,17 +931,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/ruh63esH3mzdvdtRf5nR2S/%E6%81%92%E7%94%9F%E6%B4%BB%E5%95%86%E5%AE%B6%E7%89%88---%E6%81%92%E6%8E%8C%E6%9F%9C---APP?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 7
+        "row": 8
       },
       "caseStudy": {
         "period": "",
@@ -856,6 +993,10 @@ window.portfolio = {
       "releaseNote": "2026.08 上线",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/0LiphO9J0awZO48r7BmLhr/%E6%81%92%E6%99%BA%E5%BD%B1-AI?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": true,
       "featuredRank": 5,
       "featureCover": "assets/figma-20261028/297-2783-imgRectangle4.png",
@@ -892,10 +1033,10 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 8,
+      "sourceRow": 9,
       "sourceFields": {
         "名字": "恒智影 Studio｜AI 短剧创作平台",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "APP",
         "项目日期": "",
         "项目类型": "",
@@ -903,17 +1044,17 @@ window.portfolio = {
         "我的工作": "2026.08 上线",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/0LiphO9J0awZO48r7BmLhr/%E6%81%92%E6%99%BA%E5%BD%B1-AI?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 8
+        "row": 9
       },
       "caseStudy": {
         "period": "",
@@ -965,6 +1106,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/Yb1Rj8PXrnz1SIYg4YFIQh/%E6%81%92%E7%94%9F%E6%B4%BB%E5%80%9F%E6%AC%BE-APP?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -991,7 +1136,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 9,
+      "sourceRow": 10,
       "sourceFields": {
         "名字": "恒生活借款｜消费金融用户端",
         "封面1920*1080": "",
@@ -1002,17 +1147,17 @@ window.portfolio = {
         "我的工作": "负责恒生活页面板块设计",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/Yb1Rj8PXrnz1SIYg4YFIQh/%E6%81%92%E7%94%9F%E6%B4%BB%E5%80%9F%E6%AC%BE-APP?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 9
+        "row": 10
       },
       "caseStudy": {
         "period": "2025年1月至2月 · 2个月",
@@ -1053,6 +1198,8 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1072,7 +1219,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 10,
+      "sourceRow": 11,
       "sourceFields": {
         "名字": "恒先锋｜渠道推广运营端",
         "封面1920*1080": "",
@@ -1083,17 +1230,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": ""
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 10
+        "row": 11
       },
       "caseStudy": {
         "period": "",
@@ -1127,6 +1274,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "AI 智能体应用、产品改版、多端适配",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/yyUUEeOVeXLUWHs1FXx06b/%E6%81%92%E7%94%9F%E6%B4%BB-%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1153,10 +1304,10 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 11,
+      "sourceRow": 12,
       "sourceFields": {
         "名字": "恒生活｜智能货柜服务小程序",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "小程序",
         "项目日期": "2026年4月至5月 · 2个月",
         "项目类型": "AI 智能体应用、产品改版、多端适配",
@@ -1164,17 +1315,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/yyUUEeOVeXLUWHs1FXx06b/%E6%81%92%E7%94%9F%E6%B4%BB-%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 11
+        "row": 12
       },
       "caseStudy": {
         "period": "2026年4月至5月 · 2个月",
@@ -1217,6 +1368,10 @@ window.portfolio = {
       "releaseNote": "2025.04 产品推出",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/D305lm012MvjyaEJbrHGYP/%E5%8A%B2%E6%9D%A5%E7%94%B5-%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1243,7 +1398,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 12,
+      "sourceRow": 13,
       "sourceFields": {
         "名字": "劲来电｜智能充电服务小程序",
         "封面1920*1080": "",
@@ -1254,17 +1409,17 @@ window.portfolio = {
         "我的工作": "2025.04 产品推出",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/D305lm012MvjyaEJbrHGYP/%E5%8A%B2%E6%9D%A5%E7%94%B5-%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 12
+        "row": 13
       },
       "caseStudy": {
         "period": "",
@@ -1307,6 +1462,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/bBVbRzCVs02yRrULrrMPRU/%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1333,7 +1492,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 13,
+      "sourceRow": 14,
       "sourceFields": {
         "名字": "恒生活｜智能游艺与潮玩服务小程序",
         "封面1920*1080": "",
@@ -1344,17 +1503,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/bBVbRzCVs02yRrULrrMPRU/%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 13
+        "row": 14
       },
       "caseStudy": {
         "period": "",
@@ -1398,6 +1557,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/avHsLeBuJv1yHDr0BkPRrW/%E5%A5%87%E7%82%B9%C2%B7BOX-%E6%89%AB%E7%A0%81%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1424,7 +1587,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 14,
+      "sourceRow": 15,
       "sourceFields": {
         "名字": "恒生活 - 盲盒",
         "封面1920*1080": "",
@@ -1435,17 +1598,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/avHsLeBuJv1yHDr0BkPRrW/%E5%A5%87%E7%82%B9%C2%B7BOX-%E6%89%AB%E7%A0%81%E5%B0%8F%E7%A8%8B%E5%BA%8F?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 14
+        "row": 15
       },
       "caseStudy": {
         "period": "",
@@ -1489,6 +1652,10 @@ window.portfolio = {
       "releaseNote": "2025.05 商业化上线",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/7kbxa74SjF1Fxm8BHwIXs4/%E5%BC%B9%E7%8F%A0%E6%9C%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F-2.0?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1515,7 +1682,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 15,
+      "sourceRow": 16,
       "sourceFields": {
         "名字": "恒生活 - 奇点BOX（SaaS）",
         "封面1920*1080": "",
@@ -1526,17 +1693,17 @@ window.portfolio = {
         "我的工作": "2025.05 商业化上线",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/7kbxa74SjF1Fxm8BHwIXs4/%E5%BC%B9%E7%8F%A0%E6%9C%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F-2.0?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 15
+        "row": 16
       },
       "caseStudy": {
         "period": "",
@@ -1579,6 +1746,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/7kbxa74SjF1Fxm8BHwIXs4/%E5%BC%B9%E7%8F%A0%E6%9C%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F-2.0?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1605,7 +1776,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 16,
+      "sourceRow": 17,
       "sourceFields": {
         "名字": "恒生活 - 弹珠机",
         "封面1920*1080": "",
@@ -1616,17 +1787,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/7kbxa74SjF1Fxm8BHwIXs4/%E5%BC%B9%E7%8F%A0%E6%9C%BA%E5%B0%8F%E7%A8%8B%E5%BA%8F-2.0?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 16
+        "row": 17
       },
       "caseStudy": {
         "period": "",
@@ -1670,6 +1841,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/jFdoKMCbGXdtVfpuCMCC0X/Grabot-%E5%AE%98%E7%BD%91?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": true,
       "featuredRank": 3,
       "featureCover": "assets/figma-20261028/297-2783-imgContainer2.png",
@@ -1701,10 +1876,10 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 17,
+      "sourceRow": 18,
       "sourceFields": {
         "名字": "GRABOT｜海外智能零售品牌官网",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "官网",
         "项目日期": "",
         "项目类型": "",
@@ -1712,17 +1887,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/jFdoKMCbGXdtVfpuCMCC0X/Grabot-%E5%AE%98%E7%BD%91?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 17
+        "row": 18
       },
       "caseStudy": {
         "period": "",
@@ -1769,6 +1944,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/0LiphO9J0awZO48r7BmLhr/%E6%81%92%E6%99%BA%E5%BD%B1-AI?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1800,7 +1979,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 18,
+      "sourceRow": 19,
       "sourceFields": {
         "名字": "恒智易 AI｜网页创作工作台",
         "封面1920*1080": "",
@@ -1811,17 +1990,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/0LiphO9J0awZO48r7BmLhr/%E6%81%92%E6%99%BA%E5%BD%B1-AI?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 18
+        "row": 19
       },
       "caseStudy": {
         "period": "",
@@ -1868,6 +2047,8 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1887,7 +2068,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 19,
+      "sourceRow": 20,
       "sourceFields": {
         "名字": "恒先锋｜海外经销商管理系统",
         "封面1920*1080": "",
@@ -1898,17 +2079,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": ""
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 19
+        "row": 20
       },
       "caseStudy": {
         "period": "",
@@ -1942,6 +2123,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/ehWA4eXuzSmlJoLT18XH22/%E7%A1%AC%E4%BB%B6ui-%E5%BC%B9%E7%B0%A7%E6%9C%BA-%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -1968,7 +2153,7 @@ window.portfolio = {
       ],
       "phase": "已上线",
       "example": false,
-      "sourceRow": 20,
+      "sourceRow": 21,
       "sourceFields": {
         "名字": "智能零售终端｜售货与互动设备 UI",
         "封面1920*1080": "",
@@ -1979,17 +2164,17 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/ehWA4eXuzSmlJoLT18XH22/%E7%A1%AC%E4%BB%B6ui-%E5%BC%B9%E7%B0%A7%E6%9C%BA-%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
-        "row": 20
+        "row": 21
       },
       "caseStudy": {
         "period": "",
@@ -2009,80 +2194,6 @@ window.portfolio = {
             ]
           }
         ]
-      }
-    },
-    {
-      "id": "toy",
-      "title": "奇点BOX｜潮玩零售终端 UI",
-      "platform": "硬件大屏",
-      "category": "终端硬件",
-      "types": [
-        "终端硬件"
-      ],
-      "industries": [
-        "娱乐潮玩",
-        "电商产品"
-      ],
-      "industry": "娱乐潮玩",
-      "date": "",
-      "background": "部署于智能零售及互动设备上的终端 UI，服务商品展示、扫码购买、设备操作、补货及运营管理等场景。",
-      "scope": "",
-      "status": "已上线",
-      "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-      "notes": "",
-      "releaseNote": "",
-      "role": "UI 设计",
-      "sourceProjectType": "",
-      "featured": false,
-      "featuredRank": null,
-      "featureCover": "",
-      "cover": "",
-      "coverScreens": [],
-      "gallery": [],
-      "coverLayout": "phone",
-      "theme": "lilac",
-      "coverPalette": [
-        "#f2eef8",
-        "#e9e2f0"
-      ],
-      "subtitle": "部署于智能零售及互动设备上的终端 UI，服务商品展示、扫码购买、设备操作、补货及运营管理等场景。",
-      "tags": [
-        "硬件大屏",
-        "UI Design"
-      ],
-      "phase": "已上线",
-      "example": false,
-      "sourceRow": 21,
-      "sourceFields": {
-        "名字": "奇点BOX｜潮玩零售终端 UI",
-        "封面1920*1080": "",
-        "平台": "硬件大屏",
-        "项目日期": "",
-        "项目类型": "",
-        "平台背景": "部署于智能零售及互动设备上的终端 UI，服务商品展示、扫码购买、设备操作、补货及运营管理等场景。",
-        "我的工作": "",
-        "是否上线": "已上线",
-        "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
-      },
-      "provenance": {
-        "title": "项目数据作品集",
-        "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
-        "sheetId": "BB08J2",
-        "revision": 234,
-        "retrievedDate": "2026-10-28",
-        "sourceOfTruth": true,
-        "row": 21
-      },
-      "caseStudy": {
-        "period": "",
-        "role": "UI 设计",
-        "status": "已上线",
-        "summary": "部署于智能零售及互动设备上的终端 UI，服务商品展示、扫码购买、设备操作、补货及运营管理等场景。",
-        "background": "部署于智能零售及互动设备上的终端 UI，服务商品展示、扫码购买、设备操作、补货及运营管理等场景。",
-        "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "modules": []
       }
     },
     {
@@ -2106,6 +2217,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/6IPJFNnh2EbPB9o3XaUuOK/%E9%85%92%E6%9F%9C%E7%A1%AC%E4%BB%B6---%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2143,14 +2258,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/6IPJFNnh2EbPB9o3XaUuOK/%E9%85%92%E6%9F%9C%E7%A1%AC%E4%BB%B6---%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 22
@@ -2197,6 +2312,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/9fV8ozMSrbzvYdIWO3jvX6/POS%E6%9C%BA?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2226,7 +2345,7 @@ window.portfolio = {
       "sourceRow": 23,
       "sourceFields": {
         "名字": "海外智能售货 POS｜运营终端 UI",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "硬件大屏",
         "项目日期": "",
         "项目类型": "",
@@ -2234,14 +2353,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/9fV8ozMSrbzvYdIWO3jvX6/POS%E6%9C%BA?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 23
@@ -2288,6 +2407,11 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/HOgbvl9EGnRabfKeNd1OMF/%E7%A1%AC%E4%BB%B6ui-%E7%9B%B2%E7%9B%92%E6%9C%BA-%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6",
+        "https://www.figma.com/design/N8h4ZtDUAX0z2ukL72fng2/%E6%BD%AE%E7%8E%A9%E5%94%AE%E8%B4%A7%E6%9C%BA%E5%A4%A7%E5%B1%8F-3.0?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2325,14 +2449,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "2.0设计稿，https://www.figma.com/design/HOgbvl9EGnRabfKeNd1OMF/%E7%A1%AC%E4%BB%B6ui-%E7%9B%B2%E7%9B%92%E6%9C%BA-%E5%A4%A7%E5%B1%8F%E8%AE%BE%E8%AE%A1?m=auto&t=V5ACabSi0z6VkJVF-6，4、0设计稿https://www.figma.com/design/N8h4ZtDUAX0z2ukL72fng2/%E6%BD%AE%E7%8E%A9%E5%94%AE%E8%B4%A7%E6%9C%BA%E5%A4%A7%E5%B1%8F-3.0?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 24
@@ -2378,6 +2502,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/e89YHhsWobeB1BKEZaKh45/%E5%8A%B2%E6%9D%A5%E7%94%B5H5---%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA-H5?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2415,14 +2543,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/e89YHhsWobeB1BKEZaKh45/%E5%8A%B2%E6%9D%A5%E7%94%B5H5---%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA-H5?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 25
@@ -2468,6 +2596,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/e89YHhsWobeB1BKEZaKh45/%E5%8A%B2%E6%9D%A5%E7%94%B5H5---%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA-H5?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2505,14 +2637,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/e89YHhsWobeB1BKEZaKh45/%E5%8A%B2%E6%9D%A5%E7%94%B5H5---%E5%B0%8F%E6%A9%99%E6%B8%B8%E8%89%BA-H5?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 26
@@ -2558,6 +2690,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/pdiCQgm0rTpQMysPud8RPs/%E6%81%92%E7%94%9F%E6%B4%BBAPP---%E7%9F%AD%E5%89%A7%E3%80%81%E5%B0%8F%E8%AF%B4?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2587,7 +2723,7 @@ window.portfolio = {
       "sourceRow": 27,
       "sourceFields": {
         "名字": "恒生活借款｜短剧内容服务 H5",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "H5",
         "项目日期": "",
         "项目类型": "",
@@ -2595,14 +2731,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/pdiCQgm0rTpQMysPud8RPs/%E6%81%92%E7%94%9F%E6%B4%BBAPP---%E7%9F%AD%E5%89%A7%E3%80%81%E5%B0%8F%E8%AF%B4?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 27
@@ -2648,6 +2784,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/pdiCQgm0rTpQMysPud8RPs/%E6%81%92%E7%94%9F%E6%B4%BBAPP---%E7%9F%AD%E5%89%A7%E3%80%81%E5%B0%8F%E8%AF%B4?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2677,7 +2817,7 @@ window.portfolio = {
       "sourceRow": 28,
       "sourceFields": {
         "名字": "小说",
-        "封面1920*1080": "",
+        "封面1920*1080": " ",
         "平台": "H5",
         "项目日期": "",
         "项目类型": "",
@@ -2685,14 +2825,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/pdiCQgm0rTpQMysPud8RPs/%E6%81%92%E7%94%9F%E6%B4%BBAPP---%E7%9F%AD%E5%89%A7%E3%80%81%E5%B0%8F%E8%AF%B4?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 28
@@ -2739,6 +2879,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/5HYLcOuqHoD6U3DzaXCECZ/%E8%BD%A6%E5%95%86%E5%9F%8E---H5?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2776,14 +2920,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/5HYLcOuqHoD6U3DzaXCECZ/%E8%BD%A6%E5%95%86%E5%9F%8E---H5?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 29
@@ -2830,6 +2974,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/A6l1445hpfS1c3dF7wUIgQ/%E6%81%92%E7%94%9F%E6%B4%BB%E5%80%9F%E6%AC%BE---%E5%88%86%E6%9C%9F%E5%95%86%E5%9F%8E?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2867,14 +3015,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/A6l1445hpfS1c3dF7wUIgQ/%E6%81%92%E7%94%9F%E6%B4%BB%E5%80%9F%E6%AC%BE---%E5%88%86%E6%9C%9F%E5%95%86%E5%9F%8E?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 30
@@ -2920,6 +3068,10 @@ window.portfolio = {
       "releaseNote": "",
       "role": "UI 设计",
       "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/FLubkgHQQVnsRMJivBKCCl/%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%B4%BBH5?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
       "featured": false,
       "featuredRank": null,
       "featureCover": "",
@@ -2957,14 +3109,14 @@ window.portfolio = {
         "我的工作": "",
         "是否上线": "已上线",
         "团队人员明细": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-        "备注": "",
-        "作品集展示思路大致的（图文结合）": ""
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/FLubkgHQQVnsRMJivBKCCl/%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%B4%BBH5?m=auto&t=V5ACabSi0z6VkJVF-6"
       },
       "provenance": {
         "title": "项目数据作品集",
         "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
         "sheetId": "BB08J2",
-        "revision": 234,
+        "revision": 314,
         "retrievedDate": "2026-10-28",
         "sourceOfTruth": true,
         "row": 31
@@ -2983,6 +3135,100 @@ window.portfolio = {
               {
                 "src": "assets/projects/web/local-home.webp",
                 "label": "本地生活首页"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "medical",
+      "title": "医药商城",
+      "platform": "H5",
+      "category": "H5",
+      "types": [
+        "H5"
+      ],
+      "industries": [
+        "医疗健康",
+        "电商产品"
+      ],
+      "industry": "医疗健康",
+      "date": "",
+      "background": "",
+      "scope": "",
+      "status": "",
+      "team": "",
+      "notes": "",
+      "releaseNote": "",
+      "role": "",
+      "sourceProjectType": "",
+      "presentationGuideUrl": "",
+      "designUrls": [
+        "https://www.figma.com/design/nKOKyMCa5iW3NiNUUVtCvh/%E4%BA%92%E8%81%94%E7%BD%91%E5%8C%BB%E9%99%A2-sketch?m=auto&t=V5ACabSi0z6VkJVF-6"
+      ],
+      "featured": false,
+      "featuredRank": null,
+      "featureCover": "",
+      "cover": "assets/projects/web/medical-home.webp",
+      "coverScreens": [
+        "assets/projects/web/medical-home.webp"
+      ],
+      "gallery": [
+        {
+          "src": "assets/projects/web/medical-home.webp",
+          "label": "医疗服务界面"
+        }
+      ],
+      "coverLayout": "phone",
+      "theme": "lilac",
+      "coverPalette": [
+        "#f2f7fb",
+        "#dae9f1"
+      ],
+      "subtitle": "",
+      "tags": [
+        "H5"
+      ],
+      "phase": "",
+      "example": false,
+      "sourceRow": 32,
+      "sourceFields": {
+        "名字": "医药商城",
+        "封面1920*1080": "",
+        "平台": "H5",
+        "项目日期": "",
+        "项目类型": "",
+        "平台背景": "",
+        "我的工作": "",
+        "是否上线": "",
+        "团队人员明细": "",
+        "作品集展示思路大致的（图文结合）": "",
+        "设计稿地址": "https://www.figma.com/design/nKOKyMCa5iW3NiNUUVtCvh/%E4%BA%92%E8%81%94%E7%BD%91%E5%8C%BB%E9%99%A2-sketch?m=auto&t=V5ACabSi0z6VkJVF-6"
+      },
+      "provenance": {
+        "title": "项目数据作品集",
+        "url": "https://docs.qq.com/sheet/DVUd6amd0WW1GaHVU?tab=BB08J2",
+        "sheetId": "BB08J2",
+        "revision": 314,
+        "retrievedDate": "2026-10-28",
+        "sourceOfTruth": true,
+        "row": 32
+      },
+      "caseStudy": {
+        "period": "",
+        "role": "",
+        "status": "",
+        "summary": "",
+        "background": "",
+        "team": "",
+        "modules": [
+          {
+            "title": "界面展示",
+            "gallery": [
+              {
+                "src": "assets/projects/web/medical-home.webp",
+                "label": "医疗服务界面"
               }
             ]
           }

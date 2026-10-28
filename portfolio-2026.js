@@ -48,9 +48,9 @@
     main.innerHTML=`<section class="home-hero" aria-labelledby="hero-title"><h1 id="hero-title"><span>我是<span class="hero-name">宋冰艳，<img src="${asset('292-1860','imgVector','svg')}" alt="" aria-hidden="true" width="177" height="10"></span>5年 UI 设计经验</span><span>独立负责 50+ 项目并上线</span></h1><p>AI工具已经完全融入日常工作高达90%</p><button class="primary" data-contact>联系面试</button></section><div class="home-content page-shell"><section id="work" aria-labelledby="work-title"><div class="section-heading"><h2 id="work-title" class="section-title">精选作品</h2><a class="more-link" href="all-works.html">查看更多 ${projects.length}</a></div><div id="project-grid" class="featured-grid">${selected.map(featuredCard).join('')}</div></section>${careers()}${learningSection()}${contact()}</div>`;
   }
   let selectedType='全部项目',selectedIndustry='所有类别';
-  const types=['全部项目','APP','小程序','H5','终端硬件','后台管理','官网','UI运营活动','设计系统'];
+  const types=['全部项目','APP','桌面端','小程序','H5','终端硬件','后台管理','官网','UI运营活动','设计系统'];
   const industries=['所有类别','AI','金融产品','电商产品','海外产品','医疗健康','娱乐潮玩','生活方式'];
-  const platform=p=>({'硬件大屏':'终端硬件',WEB:p.id==='hxf-admin'?'后台管理':'官网'}[p.platform]||p.platform||p.category);
+  const platform=p=>p.category||({'硬件大屏':'终端硬件','macOS / Windows':'桌面端',WEB:p.id==='hxf-admin'?'后台管理':'官网'}[p.platform]||p.platform);
   function industryMatches(p,value){
     const tags=p.industries||[p.industry].filter(Boolean);
     const aliases={'人工智能':'AI','内容娱乐':'娱乐潮玩','潮玩':'娱乐潮玩','电商':'电商产品','硬件':'生活方式','生活方式':'生活方式','汽车服务':'电商产品','医疗':'医疗健康'};
