@@ -1,0 +1,323 @@
+/* Native layout for Figma illustration layers; all geometry comes from the supplied design. */
+.figma-figure{position:relative;overflow:hidden;isolation:isolate;width:100%;font-family:"PingFang SC",sans-serif;}
+.figma-figure .figure-canvas{position:absolute;left:0;top:0;transform-origin:top left;transform:scale(var(--figure-scale,1));}
+.figure-portrait{aspect-ratio:461/487;}
+.figure-tools{aspect-ratio:868/500;}
+.figure-demo{aspect-ratio:5/3;}
+.figure-portrait .figure-canvas{width:461px;height:487px;}
+.figure-tools .figure-canvas{width:868px;height:500px;}
+.figure-demo .figure-canvas{width:1000px;height:600px;}
+.figma-figure .figure-canvas,.figma-figure .figure-canvas *{box-sizing:border-box;border-width:0;border-style:solid;}
+.figma-figure p{margin:0;padding:0;}
+.figma-figure img{display:block;max-width:none;}
+.figma-figure a{color:inherit;text-decoration:none;}
+.figma-figure a:focus-visible{outline:2px solid #9270af;outline-offset:4px;}
+.figma-figure .ff-s1{height:487px;overflow:clip;position:relative;flex-shrink:0;width:461px;}
+.figma-figure .ff-s2{position:absolute;display:flex;height:471.137px;align-items:center;justify-content:center;left:47.41px;top:7.93px;width:403.05px;}
+.figma-figure .ff-s3{transform:rotate(-8deg);flex:none;}
+.figma-figure .ff-s4{align-content:stretch;display:flex;flex-direction:column;align-items:flex-start;position:relative;}
+.figma-figure .ff-s5{background-color:#fff;align-content:stretch;display:flex;flex-direction:column;height:427px;align-items:center;justify-content:center;overflow:clip;padding-bottom:100px;padding-top:20px;padding-left:20px;padding-right:20px;position:relative;flex-shrink:0;width:347px;}
+.figma-figure .ff-s6{overflow:clip;position:relative;flex-shrink:0;width:307px;height:307px;}
+.figma-figure .ff-s7{position:absolute;left:0;overflow:clip;width:307px;height:307px;top:0;}
+.figma-figure .ff-s8{position:absolute;display:flex;height:411.146px;align-items:center;justify-content:center;left:-2.34px;top:-44.49px;width:309.142px;}
+.figma-figure .ff-s9{flex:none;transform:rotate(0.25deg);}
+.figma-figure .ff-s10{height:409.81px;position:relative;width:307.357px;}
+.figma-figure .ff-s11{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;width:100%;height:100%;}
+.figma-figure .ff-s12{position:absolute;border-width:1px;border-color:#d5d5d5;border-style:solid;height:427px;left:0;top:0;width:347px;}
+.figma-figure .ff-s13{position:absolute;height:72px;left:7px;top:53px;width:77px;}
+.figma-figure .ff-s14{position:absolute;left:55px;width:67px;height:67px;top:12px;}
+.figma-figure .ff-s15{height:500px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s16{position:absolute;height:500px;left:0;border-radius:24px;top:0;width:868px;}
+.figma-figure .ff-s17{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;border-radius:24px;width:100%;height:100%;}
+.figma-figure .ff-s18{position:absolute;display:flex;height:112.903px;align-items:center;justify-content:center;left:398.79px;top:131.93px;width:174.63px;}
+.figma-figure .ff-s19{transform:rotate(-2deg);flex:none;}
+.figma-figure .ff-s20{align-content:stretch;display:flex;flex-direction:column;height:107px;align-items:flex-start;position:relative;width:171px;}
+.figma-figure .ff-s21{height:107px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s22{position:absolute;display:flex;height:76.342px;align-items:center;justify-content:center;left:438.17px;top:53.91px;width:81.208px;}
+.figma-figure .ff-s23{flex:none;transform:rotate(10deg);}
+.figma-figure .ff-s24{align-content:stretch;display:flex;flex-direction:column;height:65px;align-items:flex-start;position:relative;width:71px;}
+.figma-figure .ff-s25{height:65px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s26{position:absolute;display:flex;height:162.458px;align-items:center;justify-content:center;left:281.18px;top:26.85px;width:119.903px;}
+.figma-figure .ff-s27{flex:none;transform:rotate(8deg);}
+.figma-figure .ff-s28{align-content:stretch;display:flex;flex-direction:column;height:150px;align-items:flex-start;position:relative;width:100px;}
+.figma-figure .ff-s29{height:150px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s30{position:absolute;display:flex;height:158.632px;align-items:center;justify-content:center;left:554.76px;top:281.24px;width:146.449px;}
+.figma-figure .ff-s31{flex:none;transform:rotate(12.42deg);}
+.figma-figure .ff-s32{align-content:stretch;display:flex;flex-direction:column;height:136px;align-items:flex-start;position:relative;width:120px;}
+.figma-figure .ff-s33{height:136px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s34{position:absolute;display:flex;align-items:center;justify-content:center;left:665.82px;width:179.223px;height:179.223px;top:314.65px;}
+.figma-figure .ff-s35{transform:rotate(-19deg);flex:none;}
+.figma-figure .ff-s36{align-content:stretch;display:flex;flex-direction:column;align-items:flex-start;position:relative;width:141px;height:141px;}
+.figma-figure .ff-s37{height:141px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s38{position:absolute;display:flex;height:127.724px;align-items:center;justify-content:center;left:151.8px;top:295.51px;width:123.791px;}
+.figma-figure .ff-s39{transform:rotate(-27deg);flex:none;}
+.figma-figure .ff-s40{align-content:stretch;display:flex;flex-direction:column;height:98px;align-items:flex-start;position:relative;width:89px;}
+.figma-figure .ff-s41{height:98px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s42{position:absolute;display:flex;height:201.616px;align-items:center;justify-content:center;left:2.96px;top:310.24px;width:171.739px;}
+.figma-figure .ff-s43{transform:rotate(-17deg);flex:none;}
+.figma-figure .ff-s44{align-content:stretch;display:flex;flex-direction:column;height:172px;align-items:flex-start;position:relative;width:127px;}
+.figma-figure .ff-s45{height:172px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s46{position:absolute;border-width:0.969px;border-color:rgba(12,19,27,0.1);border-style:solid;height:500px;left:0;border-radius:24px;top:0;width:868px;}
+.figma-figure .ff-s47{position:absolute;height:275.796px;left:19.34px;top:223.24px;width:413.694px;}
+.figma-figure .ff-s48{position:absolute;display:flex;height:283.591px;align-items:center;justify-content:center;left:13.75px;top:17.19px;width:277.102px;}
+.figma-figure .ff-s49{transform:rotate(-10deg);flex:none;}
+.figma-figure .ff-s50{align-content:stretch;display:flex;flex-direction:column;gap:26px;height:246px;align-items:center;justify-content:center;position:relative;width:238px;}
+.figma-figure .ff-s51{align-content:stretch;display:flex;flex-direction:column;height:190px;align-items:flex-start;position:relative;flex-shrink:0;width:238px;}
+.figma-figure .ff-s52{height:190px;position:relative;border-radius:12px;flex-shrink:0;width:100%;background-image:linear-gradient(176.80484092259914deg, rgb(220, 222, 223) 7.7354%, rgba(206, 207, 208, 0.89) 24.172%, rgba(187, 188, 189, 0.78) 40.608%);}
+.figma-figure .ff-s53{position:absolute;display:flex;height:131.566px;align-items:center;justify-content:center;left:28.97px;top:29.21px;width:177.957px;}
+.figma-figure .ff-s54{transform:rotate(-4deg);flex:none;}
+.figma-figure .ff-s55{background-color:rgba(255,255,255,0);height:120px;overflow:clip;position:relative;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(122,122,122,0.25);width:170px;}
+.figma-figure .ff-s56{position:absolute;height:120px;left:0;border-radius:10px;top:0;width:170px;}
+.figma-figure .ff-s57{position:absolute;inset:0;max-width:none;object-fit:cover;pointer-events:none;border-radius:10px;width:100%;height:100%;}
+.figma-figure .ff-s58{position:absolute;filter:blur(5px);height:142px;left:-57.57px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(122,122,122,0.25);top:-7.9px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s59{position:absolute;border-width:2.907px;border-style:solid;border-color:#fff;height:120px;left:0;border-radius:10px;top:0;width:170px;}
+.figma-figure .ff-s60{position:absolute;background-color:rgba(255,255,255,0);height:120px;left:33.99px;overflow:clip;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);top:34.99px;width:170px;}
+.figma-figure .ff-s61{position:absolute;filter:blur(5px);height:142px;left:-57.57px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);top:-7.9px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s62{position:absolute;height:147px;left:0;overflow:clip;border-radius:12px;box-shadow:0.398px 0.398px 0.563px -0.875px rgba(0,0,0,0.17),1.207px 1.207px 1.707px -1.75px rgba(0,0,0,0.16),3.191px 3.191px 4.513px -2.625px rgba(0,0,0,0.14),10px 10px 14.142px -3.5px rgba(0,0,0,0.08);top:43.69px;width:238px;}
+.figma-figure .ff-s63{position:absolute;inset:0;pointer-events:none;border-radius:12px;background-image:linear-gradient(to bottom,#e5e5e7,#fafafa 46.057%,#fff);}
+.figma-figure .ff-s64{position:absolute;display:flex;height:180.115px;align-items:center;justify-content:center;left:-99.59px;top:-31.52px;width:96.677px;}
+.figma-figure .ff-s65{flex:none;transform:rotate(15deg);}
+.figma-figure .ff-s66{background-color:#fff;filter:blur(5px);height:172px;position:relative;width:54px;}
+.figma-figure .ff-s67{position:absolute;height:147px;left:0;opacity:0.06;top:0;width:238px;}
+.figma-figure .ff-s68{position:absolute;height:147px;left:0;opacity:0.5;top:0;width:238px;}
+.figma-figure .ff-s69{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.figma-figure .ff-s70{position:absolute;height:87.07%;left:0;max-width:none;top:0;width:53.78%;}
+.figma-figure .ff-s71{position:absolute;left:94px;width:50px;height:50px;top:48.5px;}
+.figma-figure .ff-s72{position:absolute;left:0;max-width:none;width:100%;height:100%;top:0;}
+.figma-figure .ff-s73{position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0px 2px 0px 0px white;}
+.figma-figure .ff-s74{word-break:break-word;font-family:"PingFang SC", sans-serif;font-weight:500;line-height:normal;font-style:normal;position:relative;flex-shrink:0;font-size:18px;color:rgba(12,19,27,0.6);text-align:center;white-space:nowrap;}
+.figma-figure .ff-s75{position:absolute;display:flex;height:286.893px;align-items:center;justify-content:center;left:569.23px;top:21.73px;width:280.566px;}
+.figma-figure .ff-s76{flex:none;transform:rotate(11deg);}
+.figma-figure .ff-s77{align-content:stretch;display:flex;flex-direction:column;height:246px;align-items:flex-start;position:relative;width:238px;}
+.figma-figure .ff-s78{position:absolute;align-content:stretch;display:flex;flex-direction:column;gap:26px;height:246px;align-items:center;justify-content:center;left:0;top:0;width:238px;}
+.figma-figure .ff-s79{position:absolute;display:flex;height:164.419px;align-items:center;justify-content:center;left:50.12px;top:24.14px;width:104.693px;}
+.figma-figure .ff-s80{transform:rotate(-14deg);flex:none;}
+.figma-figure .ff-s81{background-color:rgba(255,255,255,0);height:152px;overflow:clip;position:relative;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(133,133,133,0.25);width:70px;}
+.figma-figure .ff-s82{position:absolute;height:152px;left:0;border-radius:10px;top:0;width:70px;}
+.figma-figure .ff-s83{position:absolute;filter:blur(5px);height:142px;left:-39.57px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(133,133,133,0.25);top:8.91px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s84{position:absolute;border-width:2.907px;border-style:solid;border-color:#fff;height:152px;left:0;border-radius:10px;top:0;width:70px;}
+.figma-figure .ff-s85{position:absolute;display:flex;height:155.455px;align-items:center;justify-content:center;left:-0.98px;top:25.1px;width:77.859px;}
+.figma-figure .ff-s86{flex:none;transform:rotate(3deg);}
+.figma-figure .ff-s87{background-color:rgba(255,255,255,0);height:152px;overflow:clip;position:relative;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(122,122,122,0.25);width:70px;}
+.figma-figure .ff-s88{position:absolute;filter:blur(5px);height:142px;left:-39.57px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(122,122,122,0.25);top:8.91px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s89{position:absolute;display:flex;height:156.513px;align-items:center;justify-content:center;left:113.16px;top:28.5px;width:80.432px;}
+.figma-figure .ff-s90{background-color:rgba(255,255,255,0);height:152px;overflow:clip;position:relative;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);width:70px;}
+.figma-figure .ff-s91{position:absolute;filter:blur(5px);height:142px;left:-39.57px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);top:8.91px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s92{position:absolute;display:flex;height:156.526px;align-items:center;justify-content:center;left:158.58px;top:23.47px;width:82.894px;}
+.figma-figure .ff-s93{transform:rotate(-5deg);flex:none;}
+.figma-figure .ff-s94{background-color:rgba(255,255,255,0);height:151px;overflow:clip;position:relative;border-radius:10px;box-shadow:-1px 1px 3px 0px rgba(92,92,92,0.3);width:70px;}
+.figma-figure .ff-s95{position:absolute;height:151px;left:0;border-radius:10px;top:0;width:70px;}
+.figma-figure .ff-s96{position:absolute;filter:blur(5px);height:142px;left:74.04px;opacity:0.22;box-shadow:-1px 1px 3px 0px rgba(92,92,92,0.3);top:8.39px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s97{position:absolute;border-width:2.907px;border-style:solid;border-color:#fff;height:151px;left:0;border-radius:10px;top:0;width:70px;}
+.figma-figure .ff-s98{position:absolute;display:flex;height:254.156px;align-items:center;justify-content:center;left:292.85px;top:235.6px;width:246.44px;}
+.figma-figure .ff-s99{flex:none;transform:rotate(2deg);}
+.figma-figure .ff-s100{position:absolute;display:flex;height:108.531px;align-items:center;justify-content:center;left:23.79px;top:23.07px;width:190.411px;}
+.figma-figure .ff-s101{flex:none;transform:rotate(6deg);}
+.figma-figure .ff-s102{background-color:rgba(255,255,255,0);height:90px;overflow:clip;position:relative;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(133,133,133,0.25);width:182px;}
+.figma-figure .ff-s103{position:absolute;height:90px;left:0;border-radius:10px;top:0;width:182px;}
+.figma-figure .ff-s104{position:absolute;filter:blur(5px);height:142px;left:64px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(133,133,133,0.25);top:-26px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s105{position:absolute;border-width:2.907px;border-style:solid;border-color:#fff;height:90px;left:0;border-radius:10px;top:0;width:182px;}
+.figma-figure .ff-s106{position:absolute;display:flex;height:131.566px;align-items:center;justify-content:center;left:8.35px;top:27.15px;width:177.957px;}
+.figma-figure .ff-s107{position:absolute;background-color:rgba(255,255,255,0);height:94px;left:46.27px;overflow:clip;border-radius:10px;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);top:36.23px;width:170px;}
+.figma-figure .ff-s108{position:absolute;height:94px;left:0;border-radius:10px;top:0;width:170px;}
+.figma-figure .ff-s109{position:absolute;filter:blur(5px);height:142px;left:58px;opacity:0.22;box-shadow:0px -1px 2px 0px rgba(117,117,117,0.25);top:-24px;width:54px;background-image:linear-gradient(121.32377102691221deg, rgb(163, 163, 163) 7.2131%, rgb(138, 138, 138) 92.787%);}
+.figma-figure .ff-s110{position:absolute;border-width:2.907px;border-style:solid;border-color:#fff;height:94px;left:0;border-radius:10px;top:0;width:170px;}
+.figma-figure .ff-s111{position:absolute;left:94px;width:50px;height:50px;top:49px;}
+.figma-figure .ff-s112{height:600px;position:relative;flex-shrink:0;width:100%;}
+.figma-figure .ff-s113{position:absolute;background-color:#f5f5f5;height:598.5px;left:0;border-radius:20px;top:0;width:1000px;}
+.figma-figure .ff-s114{position:absolute;height:548px;left:365.5px;top:26px;width:269px;}
+.figma-figure .ff-s115{position:absolute;background-color:#fff;height:526.296px;left:12px;overflow:clip;border-radius:25.206px;top:10.85px;width:245px;}
+.figma-figure .ff-s116{position:absolute;height:526.296px;left:0;top:0;width:245px;}
+.figma-figure .ff-s117{position:absolute;background-color:#f2f5ff;height:298.436px;left:0;top:101.83px;width:245px;}
+.figma-figure .ff-s118{position:absolute;background-color:#fff;height:235.926px;left:7.06px;overflow:clip;border-radius:12.099px;top:101.83px;width:230.885px;}
+.figma-figure .ff-s119{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:11.09px;width:212.737px;}
+.figma-figure .ff-s120{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:0;color:#212133;font-size:9.578px;top:0;white-space:nowrap;}
+.figma-figure .ff-s121{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:34.28px;width:212.737px;}
+.figma-figure .ff-s122{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:52.43px;width:212.737px;}
+.figma-figure .ff-s123{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:70.58px;width:212.737px;}
+.figma-figure .ff-s124{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:88.72px;width:212.737px;}
+.figma-figure .ff-s125{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:111.91px;width:212.737px;}
+.figma-figure .ff-s126{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:130.06px;width:212.737px;}
+.figma-figure .ff-s127{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:148.21px;width:212.737px;}
+.figma-figure .ff-s128{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:166.36px;width:212.737px;}
+.figma-figure .ff-s129{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:189.55px;width:212.737px;}
+.figma-figure .ff-s130{position:absolute;height:17.14px;left:8.07px;overflow:clip;top:207.7px;width:212.737px;}
+.figma-figure .ff-s131{position:absolute;background-color:#fff;height:25.206px;left:12.1px;top:277.26px;width:211.728px;}
+.figma-figure .ff-s132{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:15.13px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s133{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:25.41px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s134{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:35.69px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s135{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:45.98px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s136{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:56.26px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s137{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:66.54px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s138{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:76.83px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s139{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:87.11px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s140{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:97.4px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s141{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:107.68px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s142{word-break:break-word;position:absolute;font-family:"Noto Sans SC", sans-serif;font-weight:400;line-height:normal;left:117.96px;color:#1a1a33;font-size:10.284px;top:286.34px;white-space:nowrap;}
+.figma-figure .ff-s143{position:absolute;background-color:rgba(0,0,0,0.32);height:526.296px;left:0;top:0;width:245px;}
+.figma-figure .ff-s144{position:absolute;height:526.296px;left:0;overflow:clip;top:0;width:182.49px;}
+.figma-figure .ff-s145{position:absolute;background-color:#fff;align-content:stretch;display:flex;height:31.779px;align-items:center;left:7.06px;padding:10.593px;border-bottom-left-radius:2.648px;border-bottom-right-radius:10.593px;border-top-left-radius:10.593px;border-top-right-radius:10.593px;top:101.83px;}
+.figma-figure .ff-s146{grid-template-columns:max-content;grid-template-rows:max-content;display:inline-grid;line-height:0;place-items:start;position:relative;flex-shrink:0;}
+.figma-figure .ff-s147{word-break:break-word;grid-column:1 / span 1;font-family:"PingFang SC", sans-serif;font-weight:500;margin-left:0;margin-top:0;font-style:normal;position:relative;grid-row:1 / span 1;font-size:13.241px;color:rgba(103,60,255,0.7);text-align:center;white-space:nowrap;}
+.figma-figure .ff-s148{line-height:11.917px;color:rgba(103,60,255,0.3);}
+.figma-figure .ff-s149{line-height:11.917px;}
+.figma-figure .ff-s150{line-height:11.917px;color:#673cff;}
+.figma-figure .ff-s151{position:absolute;left:116.95px;width:12.099px;height:12.099px;top:247.02px;}
+.figma-figure .ff-s152{position:absolute;display:block;inset:0;max-width:none;width:100%;height:100%;}
+.figma-figure .ff-s153{position:absolute;left:8.07px;width:12.099px;height:12.099px;top:37.3px;}
+.figma-figure .ff-s154{position:absolute;left:210.72px;width:12.099px;height:12.099px;top:246.01px;}
+.figma-figure .ff-s155{position:absolute;left:89.73px;width:12.099px;height:12.099px;top:433.54px;}
+.figma-figure .ff-s156{position:absolute;left:214.75px;width:12.099px;height:12.099px;top:308.52px;}
+.figma-figure .ff-s157{position:absolute;background-color:#6638ff;height:13.107px;left:15.13px;top:286.34px;width:1.008px;}
+.figma-figure .ff-s158{position:absolute;height:548px;left:0;top:0;width:269px;}
+.figma-figure.figure-demo [data-node-id="331:49233"]{animation: ff-motion-1 26s linear, ff-motion-2 26s linear, ff-motion-3 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49237"]{animation: ff-motion-4 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49238"]{animation: ff-motion-5 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49239"]{animation: ff-motion-6 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49253"]{animation: ff-motion-6 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49254"]{animation: ff-motion-7 26s linear, ff-motion-8 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49256"]{animation: ff-motion-9 26s linear, ff-motion-10 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49258"]{animation: ff-motion-11 26s linear, ff-motion-12 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49260"]{animation: ff-motion-13 26s linear, ff-motion-14 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49262"]{animation: ff-motion-15 26s linear, ff-motion-16 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49264"]{animation: ff-motion-17 26s linear, ff-motion-18 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49266"]{animation: ff-motion-19 26s linear, ff-motion-20 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49268"]{animation: ff-motion-21 26s linear, ff-motion-22 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49270"]{animation: ff-motion-23 26s linear, ff-motion-24 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49272"]{animation: ff-motion-25 26s linear, ff-motion-26 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49274"]{animation: ff-motion-27 26s linear, ff-motion-28 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49276"]{animation: ff-motion-29 26s linear, ff-motion-30 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49282"]{animation: ff-motion-31 26s linear, ff-motion-32 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49283"]{animation: ff-motion-33 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49284"]{animation: ff-motion-34 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49285"]{animation: ff-motion-35 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49286"]{animation: ff-motion-36 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49287"]{animation: ff-motion-37 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49288"]{animation: ff-motion-38 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49289"]{animation: ff-motion-39 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49290"]{animation: ff-motion-40 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49291"]{animation: ff-motion-41 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49292"]{animation: ff-motion-42 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49293"]{animation: ff-motion-43 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49294"]{animation: ff-motion-44 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49296"]{animation: ff-motion-45 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49297"]{animation: ff-motion-46 26s linear, ff-motion-47 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49300"]{animation: ff-motion-48 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49301"]{animation: ff-motion-49 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49305"]{animation: ff-motion-50 26s linear, ff-motion-51 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49308"]{animation: ff-motion-52 26s linear, ff-motion-53 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49311"]{animation: ff-motion-54 26s linear, ff-motion-55 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49314"]{animation: ff-motion-56 26s linear, ff-motion-57 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49317"]{animation: ff-motion-58 26s linear, ff-motion-59 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="331:49318"]{animation: ff-motion-60 26s linear, ff-motion-61 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50209"]{animation: ff-motion-1 26s linear, ff-motion-2 26s linear, ff-motion-3 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50212"]{animation: ff-motion-4 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50213"]{animation: ff-motion-5 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50214"]{animation: ff-motion-6 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50228"]{animation: ff-motion-6 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50229"]{animation: ff-motion-7 26s linear, ff-motion-8 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50231"]{animation: ff-motion-9 26s linear, ff-motion-10 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50233"]{animation: ff-motion-11 26s linear, ff-motion-12 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50235"]{animation: ff-motion-13 26s linear, ff-motion-14 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50237"]{animation: ff-motion-15 26s linear, ff-motion-16 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50239"]{animation: ff-motion-17 26s linear, ff-motion-18 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50241"]{animation: ff-motion-19 26s linear, ff-motion-20 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50243"]{animation: ff-motion-21 26s linear, ff-motion-22 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50245"]{animation: ff-motion-23 26s linear, ff-motion-24 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50247"]{animation: ff-motion-25 26s linear, ff-motion-26 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50249"]{animation: ff-motion-27 26s linear, ff-motion-28 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50251"]{animation: ff-motion-29 26s linear, ff-motion-30 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50257"]{animation: ff-motion-31 26s linear, ff-motion-32 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50258"]{animation: ff-motion-33 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50259"]{animation: ff-motion-34 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50260"]{animation: ff-motion-35 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50261"]{animation: ff-motion-36 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50262"]{animation: ff-motion-37 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50263"]{animation: ff-motion-38 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50264"]{animation: ff-motion-39 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50265"]{animation: ff-motion-40 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50266"]{animation: ff-motion-41 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50267"]{animation: ff-motion-42 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50268"]{animation: ff-motion-43 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50269"]{animation: ff-motion-44 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50271"]{animation: ff-motion-45 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50272"]{animation: ff-motion-46 26s linear, ff-motion-47 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50275"]{animation: ff-motion-48 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50276"]{animation: ff-motion-49 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50280"]{animation: ff-motion-50 26s linear, ff-motion-51 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50283"]{animation: ff-motion-52 26s linear, ff-motion-53 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50286"]{animation: ff-motion-54 26s linear, ff-motion-55 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50289"]{animation: ff-motion-56 26s linear, ff-motion-57 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50292"]{animation: ff-motion-58 26s linear, ff-motion-59 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+.figma-figure.figure-demo [data-node-id="332:50293"]{animation: ff-motion-60 26s linear, ff-motion-61 26s linear; animation-iteration-count: infinite; animation-play-state:var(--figure-play-state,running);}
+@keyframes ff-motion-1 { 0% { animation-timing-function: ease-out; opacity: 0; } 2.692% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-2 { 0% { animation-timing-function: ease-out; translate: 0px 38px; } 3.269% { translate: 0px 0px; } 100% { translate: 0px 0px; } }
+@keyframes ff-motion-3 { 0% { animation-timing-function: ease-out; scale: 0.95 0.95; } 3.269% { scale: 1 1; } 100% { scale: 1 1; } }
+@keyframes ff-motion-4 { 0% { opacity: 1; } 6.538% { opacity: 1; } 7.692% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-5 { 0% { opacity: 0; } 6.538% { opacity: 0; } 7.692% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-6 { 0% { opacity: 0; } 43.038% { opacity: 0; } 43.077% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-7 { 0% { height: 1px; } 49.962% { height: 1px; } 50% { height: 38px; } 52.423% { height: 41px; } 52.885% { height: 61px; } 53.923% { height: 64px; } 54.385% { height: 79px; } 56.635% { height: 82px; } 57.096% { height: 97px; } 59.519% { height: 100px; } 59.981% { height: 115px; } 61.712% { height: 118px; } 62.173% { height: 138px; } 63.212% { height: 141px; } 63.673% { height: 156px; } 66.269% { height: 159px; } 66.731% { height: 174px; } 69.327% { height: 177px; } 69.788% { height: 192px; } 72.212% { height: 195px; } 72.673% { height: 215px; } 74.058% { height: 218px; } 74.519% { height: 233px; } 77.288% { height: 236px; } 100% { height: 236px; } }
+@keyframes ff-motion-8 { 0% { opacity: 0; } 49.962% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-9 { 0% { opacity: 0; } 50% { opacity: 0; } 50.038% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-10 { 0% { width: 1px; } 50% { width: 1px; } 52.423% { width: 135px; } 100% { width: 135px; } }
+@keyframes ff-motion-11 { 0% { opacity: 0; } 52.885% { opacity: 0; } 52.923% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-12 { 0% { width: 1px; } 52.885% { width: 1px; } 53.923% { width: 59px; } 100% { width: 59px; } }
+@keyframes ff-motion-13 { 0% { opacity: 0; } 54.385% { opacity: 0; } 54.423% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-14 { 0% { width: 1px; } 54.385% { width: 1px; } 56.635% { width: 126px; } 100% { width: 126px; } }
+@keyframes ff-motion-15 { 0% { opacity: 0; } 57.096% { opacity: 0; } 57.135% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-16 { 0% { width: 1px; } 57.096% { width: 1px; } 59.519% { width: 135px; } 100% { width: 135px; } }
+@keyframes ff-motion-17 { 0% { opacity: 0; } 59.981% { opacity: 0; } 60.019% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-18 { 0% { width: 1px; } 59.981% { width: 1px; } 61.712% { width: 97px; } 100% { width: 97px; } }
+@keyframes ff-motion-19 { 0% { opacity: 0; } 62.173% { opacity: 0; } 62.212% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-20 { 0% { width: 1px; } 62.173% { width: 1px; } 63.212% { width: 59px; } 100% { width: 59px; } }
+@keyframes ff-motion-21 { 0% { opacity: 0; } 63.673% { opacity: 0; } 63.712% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-22 { 0% { width: 1px; } 63.673% { width: 1px; } 66.269% { width: 145px; } 100% { width: 145px; } }
+@keyframes ff-motion-23 { 0% { opacity: 0; } 66.731% { opacity: 0; } 66.769% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-24 { 0% { width: 1px; } 66.731% { width: 1px; } 69.327% { width: 145px; } 100% { width: 145px; } }
+@keyframes ff-motion-25 { 0% { opacity: 0; } 69.788% { opacity: 0; } 69.827% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-26 { 0% { width: 1px; } 69.788% { width: 1px; } 72.212% { width: 135px; } 100% { width: 135px; } }
+@keyframes ff-motion-27 { 0% { opacity: 0; } 72.673% { opacity: 0; } 72.712% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-28 { 0% { width: 1px; } 72.673% { width: 1px; } 74.058% { width: 78px; } 100% { width: 78px; } }
+@keyframes ff-motion-29 { 0% { opacity: 0; } 74.519% { opacity: 0; } 74.558% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-30 { 0% { width: 1px; } 74.519% { width: 1px; } 77.288% { width: 154px; } 100% { width: 154px; } }
+@keyframes ff-motion-31 { 0% { opacity: 0; } 23.462% { opacity: 0; } 24.615% { opacity: 1; } 43.077% { opacity: 1; } 43.846% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-32 { 0% { translate: 0px 26.214px; } 23.462% { animation-timing-function: ease-out; translate: 0px 26.214px; } 25% { translate: 0px 0px; } 43.077% { animation-timing-function: ease-in; translate: 0px 0px; } 43.846% { translate: 0px 26.214px; } 100% { translate: 0px 26.214px; } }
+@keyframes ff-motion-33 { 0% { opacity: 0; } 24.962% { animation-timing-function: step-end; opacity: 0; } 25% { opacity: 1; } 43.038% { animation-timing-function: step-end; opacity: 1; } 43.077% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-34 { 0% { opacity: 0; } 26.923% { opacity: 0; } 26.962% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-35 { 0% { opacity: 0; } 27.577% { opacity: 0; } 27.615% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-36 { 0% { opacity: 0; } 28.231% { opacity: 0; } 28.269% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-37 { 0% { opacity: 0; } 28.885% { opacity: 0; } 28.923% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-38 { 0% { opacity: 0; } 29.538% { opacity: 0; } 29.577% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-39 { 0% { opacity: 0; } 30.192% { opacity: 0; } 30.231% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-40 { 0% { opacity: 0; } 30.846% { opacity: 0; } 30.885% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-41 { 0% { opacity: 0; } 31.5% { opacity: 0; } 31.538% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-42 { 0% { opacity: 0; } 32.154% { opacity: 0; } 32.192% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-43 { 0% { opacity: 0; } 32.808% { opacity: 0; } 32.846% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-44 { 0% { opacity: 0; } 33.462% { opacity: 0; } 33.5% { opacity: 1; } 43.077% { opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-45 { 0% { opacity: 0; } 11.538% { opacity: 0; } 12.885% { opacity: 1; } 20% { opacity: 1; } 21.538% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-46 { 0% { opacity: 0; } 11.5% { opacity: 0; } 11.538% { opacity: 1; } 21.538% { opacity: 1; } 21.577% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-47 { 0% { translate: -183.498px 0px; } 11.538% { animation-timing-function: ease-out; translate: -183.498px 0px; } 13.077% { translate: 0px 0px; } 20% { animation-timing-function: ease-in; translate: 0px 0px; } 21.538% { translate: -183.498px 0px; } 100% { translate: -183.498px 0px; } }
+@keyframes ff-motion-48 { 0% { opacity: 0; } 43.846% { opacity: 0; } 44.423% { opacity: 1; } 49.615% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-49 { 0% { opacity: 0.45; } 44.615% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0.45; } 45.577% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 1; } 46.538% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0.45; } 47.5% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes ff-motion-50 { 0% { opacity: 0; } 5.154% { animation-timing-function: ease-out; opacity: 0; } 5.192% { animation-timing-function: ease-out; opacity: 1; } 6.923% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-51 { 0% { scale: 0.5 0.5; } 5.192% { animation-timing-function: ease-out; scale: 0.5 0.5; } 6.923% { scale: 1.9 1.9; } 100% { scale: 1.9 1.9; } }
+@keyframes ff-motion-52 { 0% { opacity: 0; } 10.731% { animation-timing-function: ease-out; opacity: 0; } 10.769% { animation-timing-function: ease-out; opacity: 1; } 12.5% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-53 { 0% { scale: 0.5 0.5; } 10.769% { animation-timing-function: ease-out; scale: 0.5 0.5; } 12.5% { scale: 1.9 1.9; } 100% { scale: 1.9 1.9; } }
+@keyframes ff-motion-54 { 0% { opacity: 0; } 19.769% { animation-timing-function: ease-out; opacity: 0; } 19.808% { animation-timing-function: ease-out; opacity: 1; } 21.538% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-55 { 0% { scale: 0.5 0.5; } 19.808% { animation-timing-function: ease-out; scale: 0.5 0.5; } 21.538% { scale: 1.9 1.9; } 100% { scale: 1.9 1.9; } }
+@keyframes ff-motion-56 { 0% { opacity: 0; } 22.846% { animation-timing-function: ease-out; opacity: 0; } 22.885% { animation-timing-function: ease-out; opacity: 1; } 24.615% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-57 { 0% { scale: 0.5 0.5; } 22.885% { animation-timing-function: ease-out; scale: 0.5 0.5; } 24.615% { scale: 1.9 1.9; } 100% { scale: 1.9 1.9; } }
+@keyframes ff-motion-58 { 0% { opacity: 0; } 41.692% { animation-timing-function: ease-out; opacity: 0; } 41.731% { animation-timing-function: ease-out; opacity: 1; } 43.462% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-59 { 0% { scale: 0.5 0.5; } 41.731% { animation-timing-function: ease-out; scale: 0.5 0.5; } 43.462% { scale: 1.9 1.9; } 100% { scale: 1.9 1.9; } }
+@keyframes ff-motion-60 { 0% { opacity: 0; } 24.962% { animation-timing-function: step-end; opacity: 0; } 25% { opacity: 1; } 34.615% { animation-timing-function: step-end; opacity: 1; } 35.962% { animation-timing-function: step-end; opacity: 0; } 37.308% { animation-timing-function: step-end; opacity: 1; } 38.654% { animation-timing-function: step-end; opacity: 0; } 40% { animation-timing-function: step-end; opacity: 1; } 41.346% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes ff-motion-61 { 0% { translate: 0px 0px; } 25% { animation-timing-function: step-end; translate: 0px 0px; } 26.962% { animation-timing-function: step-end; translate: 10.284px 0px; } 27.615% { animation-timing-function: step-end; translate: 20.568px 0px; } 28.269% { animation-timing-function: step-end; translate: 30.852px 0px; } 28.923% { animation-timing-function: step-end; translate: 41.136px 0px; } 29.577% { animation-timing-function: step-end; translate: 51.42px 0px; } 30.231% { animation-timing-function: step-end; translate: 61.704px 0px; } 30.885% { animation-timing-function: step-end; translate: 71.988px 0px; } 31.538% { animation-timing-function: step-end; translate: 82.272px 0px; } 32.192% { animation-timing-function: step-end; translate: 92.556px 0px; } 32.846% { animation-timing-function: step-end; translate: 102.84px 0px; } 33.5% { translate: 113.123px 0px; } 100% { translate: 113.123px 0px; } }
+@media(prefers-reduced-motion:reduce){
+ .figure-demo [data-node-id]{animation:none!important;translate:none!important;scale:none!important;}
+ .figure-demo [data-name="02 一键登录"],.figure-demo [data-name="03 登录后首页"],.figure-demo [data-name="键盘弹起｜使用新增参考"],.figure-demo [data-name="侧栏｜背景遮罩"],.figure-demo [data-name="侧边栏｜左滑展开与收起"],.figure-demo [data-name="思考中｜原版三圆点组件"],.figure-demo [data-name^="点击"],.figure-demo [data-name^="输入光标"],.figure-demo [data-name="清除原截图固定光标"]{display:none;}
+ .figure-demo [data-name="AI回复｜流式生成"]{opacity:1;height:235.926px;}
+ .figure-demo [data-name^="逐字回复"]{opacity:1;width:212.737px;}
+ .figure-demo [data-node-id="331:49284"],.figure-demo [data-node-id="331:49285"],.figure-demo [data-node-id="331:49286"],.figure-demo [data-node-id="331:49287"],.figure-demo [data-node-id="331:49288"],.figure-demo [data-node-id="331:49289"],.figure-demo [data-node-id="331:49290"],.figure-demo [data-node-id="331:49291"],.figure-demo [data-node-id="331:49292"],.figure-demo [data-node-id="331:49293"],.figure-demo [data-node-id="331:49294"]{display:none;}
+}
+
+@media(prefers-reduced-motion:reduce){.figure-demoAgent [data-node-id="332:50212"],.figure-demoAgent [data-node-id="332:50213"],.figure-demoAgent [data-node-id="332:50257"],.figure-demoAgent [data-node-id="332:50258"],.figure-demoAgent [data-node-id="332:50259"],.figure-demoAgent [data-node-id="332:50260"],.figure-demoAgent [data-node-id="332:50261"],.figure-demoAgent [data-node-id="332:50262"],.figure-demoAgent [data-node-id="332:50263"],.figure-demoAgent [data-node-id="332:50264"],.figure-demoAgent [data-node-id="332:50265"],.figure-demoAgent [data-node-id="332:50266"],.figure-demoAgent [data-node-id="332:50267"],.figure-demoAgent [data-node-id="332:50268"],.figure-demoAgent [data-node-id="332:50269"],.figure-demoAgent [data-node-id="332:50271"],.figure-demoAgent [data-node-id="332:50272"],.figure-demoAgent [data-node-id="332:50275"],.figure-demoAgent [data-node-id="332:50276"],.figure-demoAgent [data-node-id="332:50280"],.figure-demoAgent [data-node-id="332:50283"],.figure-demoAgent [data-node-id="332:50286"],.figure-demoAgent [data-node-id="332:50289"],.figure-demoAgent [data-node-id="332:50292"],.figure-demoAgent [data-node-id="332:50293"]{display:none;}
+}
