@@ -80,7 +80,7 @@ function action(el,fn){
   el.addEventListener('click',fn);
   el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();fn(e);}});
 }
-function go(el,key){action(el,()=>{if(key==='resume'){window.open('assets/song-bingyan-resume.pdf?v=20261123','_blank','noopener');}else location.hash=key;});}
+function go(el,key){action(el,()=>{if(key==='resume'){window.open('assets/song-bingyan-resume.pdf?v=6730e02933d1','_blank','noopener');}else location.hash=key;});}
 function notify(text){
   const notice=document.querySelector('#notice');
   notice.textContent=text;
@@ -168,7 +168,7 @@ function prepareLayout(key){
   if(key==='contact')links.push(['联系我','contact']);
   links.forEach(([label,route])=>{
     const link=document.createElement('a');
-    link.href=route==='resume'?'assets/song-bingyan-resume.pdf?v=20261123':'#'+route;
+    link.href=route==='resume'?'assets/song-bingyan-resume.pdf?v=6730e02933d1':'#'+route;
     if(route==='resume'){link.target='_blank';link.rel='noopener';}
     link.textContent=label;
     if(route===(key==='work'||key==='detail'?'projects':key))link.setAttribute('aria-current','page');
