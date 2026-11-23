@@ -80,7 +80,7 @@ function action(el,fn){
   el.addEventListener('click',fn);
   el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();fn(e);}});
 }
-function go(el,key){action(el,()=>{location.hash=key;});}
+function go(el,key){action(el,()=>{if(key==='resume'){window.open('assets/song-bingyan-resume.pdf','_blank','noopener');}else location.hash=key;});}
 function notify(text){
   const notice=document.querySelector('#notice');
   notice.textContent=text;
@@ -97,7 +97,7 @@ function bindNavigation(page){
   });
   const ids={'292:1854':'contact','612:13649':'resume','292:1861':'projects','614:16774':'contact','614:16782':'contact','614:16789':'contact','644:13607':'projects'};
   Object.entries(ids).forEach(([id,key])=>go(node(id),key));
-  action(node('190:15124'),()=>{ printResume=true;location.hash='resume'; });
+  go(node('190:15124'),'resume');
   const copy = value => navigator.clipboard.writeText(value).then(()=>notify('已复制'),()=>notify('复制失败，请在简历中查看'));
   action(node('692:14830'),()=>copy('Sliu6de@163.com'));
   action(node('330:47676'),()=>copy('15701242481'));
@@ -168,7 +168,8 @@ function prepareLayout(key){
   if(key==='contact')links.push(['联系我','contact']);
   links.forEach(([label,route])=>{
     const link=document.createElement('a');
-    link.href='#'+route;
+    link.href=route==='resume'?'assets/song-bingyan-resume.pdf':'#'+route;
+    if(route==='resume'){link.target='_blank';link.rel='noopener';}
     link.textContent=label;
     if(route===(key==='work'||key==='detail'?'projects':key))link.setAttribute('aria-current','page');
     nav.append(link);
