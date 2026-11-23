@@ -147,6 +147,7 @@ function bindWork(){
     });
     const empty=grid.querySelector('.no-projects');
     empty.hidden=allCards.some(c=>!c.hidden);
+    installMotion();
     if(!motion.matches)grid.animate([{opacity:.65,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:240,easing:'ease-out'});
   };
   const empty=document.createElement('p');
@@ -298,7 +299,6 @@ function render(){
   }
   if(key==='work')bindWork();
   bindArticles();
-  installMotion();
   if(project)bindCase();
   if(key==='resume'&&printResume){
     printResume=false;
@@ -306,6 +306,7 @@ function render(){
   }
   if(key==='about'&&id==='workflows')node('330:46795')?.scrollIntoView({block:'start'});
   else window.scrollTo({top:0,behavior:'instant'});
+  installMotion();
   if(initialized){
     const frame=app.querySelector('.artboard');
     frame.tabIndex=-1;
@@ -337,8 +338,24 @@ function renderArticle(id){
 function installMotion(){
  revealObserver?.disconnect();
  if(motion.matches||!('IntersectionObserver' in window))return;
- revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('has-entered');revealObserver.unobserve(entry.target);}}),{threshold:.06,rootMargin:'0px 0px -24px 0px'});
- app.querySelectorAll('[data-project],.editorial-section,.decision-section,.flow-band,.evidence-screen,.case-contact,.case-next,.workflow-article section,[data-node-id="288:1606"]>div').forEach((el,i)=>{el.classList.add('motion-enter');el.style.setProperty('--enter-delay',Math.min(i%3*50,100)+'ms');revealObserver.observe(el);});
+ const groups='[data-project],[data-node-id="297:2685"]>div,[data-node-id="288:1566"]>div,[data-node-id="288:1606"]>div,.tool-folder,.tool-sticker,.evidence-screen,.case-facts>div,.editorial-decisions>article,.strategy-list>div,.delivery-facts>div,.ai-responsibilities>div,.case-flow>li,.screen-reading,.workflow-article section';
+ const blocks=[...app.querySelectorAll(groups)];
+ const text=[...app.querySelectorAll('h1,h2,h3,.artboard p,.workflow-article header,.workflow-article>p,.workflow-article footer')].filter(el=>!el.closest(groups)&&!el.closest('.site-nav,.case-topline,dialog,.compact-hero')&&!el.closest('[data-node-id="612:13663"],[data-node-id="612:13692"]'));
+ const targets=[...new Set([...blocks,...text])];
+ // A small visible strip is sufficient even for very tall screenshots.
+ revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add('has-entered');revealObserver.unobserve(entry.target);}
+ }),{threshold:0,rootMargin:'0px 0px -64px 0px'});
+ targets.forEach((el,i)=>{
+   if(el.closest('[hidden]'))return;
+   const rect=el.getBoundingClientRect();
+   if(!rect.width||!rect.height)return;
+   el.classList.add('motion-enter');
+   el.style.setProperty('--enter-delay',Math.min(i%3*65,130)+'ms');
+   // Keep content already in view steady during route changes.
+   if(rect.top<window.innerHeight-64&&rect.bottom>0)el.classList.add('has-entered');
+   else revealObserver.observe(el);
+ });
 }
 
 let revealObserver;
