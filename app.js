@@ -258,6 +258,7 @@ function render(){
   const project=page==='project'&&projects.find(p=>p[0]===id);
   const key=page==='projects'||(page==='project'&&!project)?'work':project?'detail':page;
   if(project?.[0]==='ai3'){location.replace('cases/ai3/index.html');return;}
+  if(project?.[0]==='ezvend'){location.replace('cases/ezvend/index.html');return;}
   if(page==='article'){renderArticle(id);return;}
   const board=artboards[key]||artboards.home;
   app.innerHTML='<div class="artboard" style="height:'+board.height+'px">'+(project?caseView(project):board.html)+'</div>';
