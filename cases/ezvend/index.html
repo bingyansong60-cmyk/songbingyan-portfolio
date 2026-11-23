@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0865FE">
+  <meta name="description" content="宋冰艳的 EZvend UI 设计案例：从海外售货机运营场景出发，展示双模式补货、陈列模板复用、新品资料采集与设计规范。">
+  <meta property="og:title" content="EZvend · 宋冰艳 UI 设计作品集">
+  <meta property="og:description" content="把售货机运营，变成清晰的工作流。">
+  <title>EZvend · 宋冰艳 UI 设计作品集</title>
+  <link rel="icon" type="image/webp" href="assets/app-icon.webp">
+  <link rel="stylesheet" href="styles.css?v=portfolio-20261123">
+  <link rel="stylesheet" href="../../detail-shell.css?v=ezvend-20261123">
+  <script src="../../detail-shell.js?v=1" defer></script>
+  <script src="app.js?v=portfolio-20261123" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#overview">跳至项目内容</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <div id="ezvend-detail"><main>
+    <section class="hero grid-paper" id="top" aria-labelledby="hero-heading">
+      <div class="hero-masthead">
+        <span class="eyebrow">SMART VENDING · MOBILE APP</span>
+        <span class="label-blue">UI / UX DESIGN</span>
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-heading">EZvend<span class="hero-period">.</span></h1>
+        <h2>把售货机运营，<br>变成清晰的工作流。</h2>
+        <p>连接设备、商品与日常补货。<br>为海外运营场景，设计有条理的移动体验。</p>
+        <a class="pill-button dark" href="#restock">探索设计过程</a>
+      </div>
+      <div class="hero-stage" aria-label="EZvend 首页与补货界面展示">
+        <div class="hero-disc" aria-hidden="true"></div>
+        <div class="stage-step step-one" aria-hidden="true"></div><div class="stage-step step-two" aria-hidden="true"></div>
+        <button class="phone hero-phone-back" type="button" data-image="home" aria-label="放大查看 EZvend 首页">
+          <span class="phone-screen"><img src="assets/home.webp" width="375" height="840" alt="EZvend 首页，经营数据、快捷入口与操作分组" fetchpriority="high"></span>
+        </button>
+        <button class="phone hero-phone-front" type="button" data-image="replenish-entry" aria-label="放大查看补货首页">
+          <span class="phone-screen"><img src="assets/replenish-entry.webp" width="1125" height="2436" alt="EZvend 精细化补货首页，设备、缺货和补货任务" fetchpriority="high"></span>
+        </button>
+        <div class="hero-floating-label"><span class="mini-cross" aria-hidden="true"></span><span>ONE APP.<br><b>CONNECTED OPERATIONS.</b></span></div>
+      </div>
+      <div class="hero-bottom"><span>宋冰艳 / UI 设计</span><span>设备运营 · 移动端 · 设计规范</span><a href="#overview" class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span>向下探索</a></div>
+    </section>
+
+    <section class="section overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">PROJECT OVERVIEW</span><h2 id="overview-title">连接设备，<br>也连接每一步运营。</h2></div>
+        <div class="heading-detail"><span class="label-blue">从业务场景出发</span><p>一台售货机背后，是设备状态、商品资料、货架陈列、补货作业与订单数据。EZvend 将这些日常任务汇集在移动端，让运营人员从了解现状，到执行操作，都有清楚的入口。</p></div>
+      </div>
+      <dl class="project-facts reveal">
+        <div><dt>产品定位</dt><dd>海外售货机运营 APP</dd></div>
+        <div><dt>设计工作</dt><dd>UI 设计 · 交互细节</dd></div>
+        <div><dt>设计交付</dt><dd>界面 · 组件 · 规范 · 走查</dd></div>
+        <div><dt>展示重点</dt><dd>补货 · 陈列 · 新品采集</dd></div>
+      </dl>
+      <figure class="hardware-scene reveal">
+        <img src="assets/vending-scene.webp" width="1672" height="941" alt="根据 GRABOT 售货机实拍优化的黑色玻璃柜体场景，保留左侧支付终端与顶部广告屏机型" loading="lazy">
+        <figcaption class="scene-caption"><span class="eyebrow">THE REAL-WORLD CONTEXT</span><strong>现场的复杂，<br>在屏幕里变得有序。</strong><span class="scene-note">基于真实设备照片优化渲染</span></figcaption>
+      </figure>
+      <div class="intent-strip reveal"><p>设计关注</p><h3>看得清状态。<br class="mobile-only">找得到任务。做得完操作。</h3><span>从信息组织到交付细节</span></div>
+    </section>
+
+    <section class="section workflow" id="workflow" aria-labelledby="workflow-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">INFORMATION &amp; TASKS</span><h2 id="workflow-title">先看见全局，<br>再进入具体任务。</h2></div>
+        <div class="heading-detail"><span class="label-blue">信息组织</span><p>首页把经营数据、待处理事项与常用操作分组；设备列表通过在线、离线、缺货与停售区分状态。让“需要关注什么”和“接下来做什么”，在同一个产品里衔接起来。</p></div>
+      </div>
+      <div class="overview-showcase grid-paper reveal">
+        <div class="overview-note note-left"><span class="line-label">业务概览</span><h3>信息有优先级</h3><p>数据、提醒与操作，<br>各自占据清楚的位置。</p></div>
+        <div class="overview-phones">
+          <button class="phone overview-device" type="button" data-image="devices" aria-label="放大查看设备列表"><span class="phone-screen"><img src="assets/devices.webp" width="375" height="815" alt="设备列表及在线状态筛选" loading="lazy"></span></button>
+          <button class="phone overview-home" type="button" data-image="home" aria-label="放大查看首页"><span class="phone-screen"><img src="assets/home.webp" width="375" height="840" alt="业务数据、快捷入口和操作分组" loading="lazy"></span></button>
+          <button class="phone overview-order" type="button" data-image="orders" aria-label="放大查看订单列表"><span class="phone-screen"><img src="assets/orders.webp" width="375" height="812" alt="销售订单与订单状态" loading="lazy"></span></button>
+        </div>
+        <div class="overview-note note-right"><span class="line-label">状态辨识</span><h3>任务有入口</h3><p>用分组和状态筛选，<br>缩小当前的关注范围。</p></div>
+        <span class="stage-caption">OVERVIEW / DEVICES / ORDERS</span>
+      </div>
+      <div class="task-map reveal" aria-label="主要运营任务">
+        <div><span class="task-kicker">了解现状</span><h3>经营与设备</h3><p>业务数据 · 设备状态 · 订单</p></div>
+        <div><span class="task-kicker">准备配置</span><h3>商品与陈列</h3><p>商品资料 · 货架配置 · 模板</p></div>
+        <div><span class="task-kicker">现场作业</span><h3>补货与核对</h3><p>模式选择 · 库存调整 · 确认</p></div>
+        <div><span class="task-kicker">回看操作</span><h3>记录与追溯</h3><p>补货模式 · 时间 · 商品变更</p></div>
+      </div>
+    </section>
+
+    <section class="section restock" id="restock" aria-labelledby="restock-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">RESTOCK EXPERIENCE</span><h2 id="restock-title">两种补货方式，<br>适应不同作业节奏。</h2></div>
+        <div class="heading-detail"><span class="label-blue">精细核对 / 快捷调整</span><p>在需要逐项核对时，突出商品、货架与库存状态；在需要快速调整时，把数量操作放到列表中。设计通过两种路径，回应不同的补货需求。</p></div>
+      </div>
+      <div class="mode-panels">
+        <article class="mode-panel mode-precision reveal">
+          <div class="mode-heading"><span class="eyebrow">PRECISION RESTOCK</span><h3>看清，再补货。</h3><p>商品卡片 / 库存比例 / 分层选择</p></div>
+          <button class="phone mode-phone" type="button" data-image="replenish-precise" aria-label="查看精细化补货完整设计"><span class="phone-screen"><img src="assets/replenish-precise.webp" width="375" height="1041" alt="精细化补货：按层选择商品，展示库存和已补货标记" loading="lazy"></span></button>
+          <div class="mode-sticker"><span class="sticker-line"></span>突出库存与选择状态</div>
+          <span class="panel-caption">精细化补货</span>
+        </article>
+        <article class="mode-panel mode-quick reveal">
+          <div class="mode-heading"><span class="eyebrow">QUICK RESTOCK</span><h3>调整，然后确认。</h3><p>紧凑列表 / 数量编辑 / 补前对照</p></div>
+          <button class="phone mode-phone" type="button" data-image="replenish-quick" aria-label="查看快捷补货完整设计"><span class="phone-screen"><img src="assets/replenish-quick.webp" width="375" height="1227" alt="快捷补货：列表中的库存数量编辑和补货前对照" loading="lazy"></span></button>
+          <div class="mode-sticker"><span class="sticker-line"></span>让数量调整就近发生</div>
+          <span class="panel-caption">快捷补货</span>
+        </article>
+      </div>
+      <div class="decision-notes reveal">
+        <article><span class="eyebrow">INFORMATION</span><h3>同一业务，不同信息密度</h3><p>精细化模式用商品卡片支持识别和选择，快捷模式用紧凑列表承载连续的数量编辑。</p></article>
+        <article><span class="eyebrow">OPERATION</span><h3>把状态放在操作附近</h3><p>库存比例、低库存提示、补前数量与差值，各自服务于当前需要做出的判断。</p></article>
+        <article><span class="eyebrow">FEEDBACK</span><h3>完成之后，仍然能回看</h3><p>补货记录保留模式、设备、时间与商品变更信息，将作业结果接回运营管理。</p></article>
+      </div>
+      <div class="record-feature reveal">
+        <div class="record-copy"><span class="label-blue">从操作到记录</span><h3>每一次调整，<br>都有可回看的依据。</h3><p>记录中的 Precision Restock / Quick Restock 与入口的两种模式保持一致，帮助使用者辨认作业方式。</p><button class="text-button" type="button" data-image="replenish-record">查看补货记录完整界面</button></div>
+        <button class="record-crop" type="button" data-image="replenish-record" aria-label="放大补货记录"><img src="assets/replenish-record.webp" width="375" height="812" alt="标有 Precision Restock 和 Quick Restock 的补货记录" loading="lazy"></button>
+        <div class="record-type type-precision">Precision Restock</div><div class="record-type type-quick">Quick Restock</div>
+      </div>
+    </section>
+
+    <section class="section planogram" id="planogram" aria-labelledby="planogram-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">PLANOGRAM REUSE</span><h2 id="planogram-title">一次配置，<br>成为下一次的起点。</h2></div>
+        <div class="heading-detail"><span class="label-blue">让陈列方案可复用</span><p>陈列配置可以来自已有设备，也可以来自保存的模板。把“从哪里导入”“是否适配”“会产生什么影响”分开说明，让复用与确认都有依据。</p></div>
+      </div>
+      <div class="planogram-stage reveal">
+        <div class="planogram-story">
+          <span class="eyebrow">DESIGN DECISIONS</span>
+          <div class="flow-tabs" role="tablist" aria-label="陈列导入设计说明" aria-orientation="vertical">
+            <button role="tab" id="plan-tab-device" aria-controls="plan-panel" aria-selected="true" data-plan="device"><span class="flow-tab-title">选择配置来源</span><span class="flow-tab-desc">设备与模板，保持清楚的入口</span></button>
+            <button role="tab" id="plan-tab-template" aria-controls="plan-panel" aria-selected="false" tabindex="-1" data-plan="template"><span class="flow-tab-title">先判断是否适配</span><span class="flow-tab-desc">说明布局条件，区分可选状态</span></button>
+            <button role="tab" id="plan-tab-confirm" aria-controls="plan-panel" aria-selected="false" tabindex="-1" data-plan="confirm"><span class="flow-tab-title">在覆盖前，解释影响</span><span class="flow-tab-desc">告知替换范围与不可撤销性</span></button>
+          </div>
+          <p class="flow-detail" id="plan-description">From Device 与 From Template 分别承载两类来源；搜索与卡片选择帮助用户定位已有配置。</p>
+          <span class="small-note">点击查看不同设计环节</span>
+        </div>
+        <div class="planogram-visual grid-paper" id="plan-panel" role="tabpanel" aria-labelledby="plan-tab-device">
+          <button class="phone planogram-base" type="button" data-image="planogram" aria-label="放大查看陈列管理"><span class="phone-screen"><img src="assets/planogram.webp" width="375" height="812" alt="陈列管理，货架商品与保存模板入口" loading="lazy"></span></button>
+          <button class="phone planogram-active" type="button" id="plan-screen-button" data-image="planogram-device" aria-label="放大查看当前导入界面"><span class="phone-screen"><img id="plan-screen" src="assets/planogram-device.webp" width="375" height="812" alt="从设备导入陈列" loading="lazy"></span></button>
+          <span class="planogram-badge" id="plan-badge">FROM DEVICE</span>
+        </div>
+      </div>
+      <div class="principle-line reveal"><span>关键设计判断</span><p>让高频配置能够复用，也让重要变更在执行前被理解。</p></div>
+    </section>
+
+    <section class="section capture" id="capture" aria-labelledby="capture-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">PRODUCT CAPTURE</span><h2 id="capture-title">把拍摄要求，<br>变成看得懂的指引。</h2></div>
+        <div class="heading-detail"><span class="label-blue">新品资料采集</span><p>面对不同包装，单靠一段文字难以说明图片要求。设计将包装类型、拍摄角度与正反示例放在一起，让用户在上传前知道什么样的图片符合要求。</p></div>
+      </div>
+      <div class="capture-showcase reveal">
+        <div class="capture-device-area">
+          <span class="capture-bigtype" aria-hidden="true">6<br><small>ANGLES</small></span>
+          <div class="phone capture-phone"><div class="phone-screen scrollable-screen" id="capture-scroll" tabindex="0" role="region" aria-label="新品申请完整界面，可上下滚动"><img id="capture-screen" src="assets/product-apply-general.webp" width="1125" height="6003" alt="通用包装新品申请，含六角度拍摄说明与示例" loading="lazy"></div></div>
+          <span class="capture-tip">可在界面内滚动，查看完整表单</span>
+        </div>
+        <div class="capture-copy">
+          <span class="eyebrow">GUIDANCE IN CONTEXT</span><h3>每个角度，<br>都有清楚的参照。</h3>
+          <p>先选择包装类型，再查看对应商品示例。六个拍摄角度之后，继续承接条码图片与可选补充图片。</p>
+          <div class="pack-tabs" role="tablist" aria-label="查看包装类型">
+            <button role="tab" aria-selected="true" id="pack-general" aria-controls="capture-scroll" data-pack="general">通用包装</button><button role="tab" aria-selected="false" tabindex="-1" id="pack-bottled" aria-controls="capture-scroll" data-pack="bottled">瓶装</button><button role="tab" aria-selected="false" tabindex="-1" id="pack-boxed" aria-controls="capture-scroll" data-pack="boxed">盒装</button>
+          </div>
+          <div class="angle-list"><span>正面 <small>Front</small></span><span>背面 <small>Back</small></span><span>上方 45° <small>45° Above</small></span><span>下方 45° <small>45° Below</small></span><span>顶部 <small>Top</small></span><span>底部 <small>Bottom</small></span></div>
+          <div class="photo-rule"><span class="photo-rule-mark" aria-hidden="true"></span><p><b>要求出现在需要它的位置。</b><br>白色背景、1:1 画幅、单件商品与留白规则，就近呈现在照片区域。</p></div>
+          <button class="text-button" type="button" data-image="product-photo-guidance">放大查看原稿中的拍摄指引</button>
+        </div>
+      </div>
+      <div class="capture-insights reveal">
+        <div><h3>包装有差异，指引有对应</h3><p>通用、瓶装、袋装、杯碗与盒装，使用匹配包装类型的参照图片。</p></div>
+        <div><h3>提交前，就看见标准</h3><p>用正反示例、完成勾选与待添加位置，让资料准备过程更容易检查。</p></div>
+      </div>
+    </section>
+
+    <section class="section system" id="system" aria-labelledby="system-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">A CONSISTENT LANGUAGE</span><h2 id="system-title">界面可以生长，<br>规则始终一致。</h2></div>
+        <div class="heading-detail"><span class="label-blue">组件 / 变量 / 规范</span><p>以统一的颜色语义、文字层级和组件样式承接持续迭代。设备、订单、商品与补货页面，在不同任务里保持可辨识的视觉语言。</p></div>
+      </div>
+      <div class="system-board reveal">
+        <div class="brand-color"><span class="eyebrow">PRIMARY / ACTION</span><strong>EZ<br>BLUE.</strong><div><span>#0865FE</span><span>关键操作与选中状态</span></div></div>
+        <div class="system-detail">
+          <div class="type-specimen"><span class="eyebrow">TYPOGRAPHY</span><div class="type-main">Aa<span>清晰，一以贯之。</span></div><p>PingFang SC<span>标题 · 正文 · 辅助信息</span></p></div>
+          <div class="semantic-colors">
+            <div><i style="background:#0A1317"></i><span>主要文字<small>#0A1317</small></span></div>
+            <div><i style="background:#5D6C7B"></i><span>次级文字<small>#5D6C7B</small></span></div>
+            <div><i style="background:#DDE2E8"></i><span>卡片描边<small>#DDE2E8</small></span></div>
+          </div>
+          <div class="system-source"><p>项目中保留组件、变量组件库与 Design Guidelines，支持新需求沿用已有规则。</p></div>
+        </div>
+      </div>
+      <div class="handoff reveal">
+        <div><span class="eyebrow">DESIGN HANDOFF</span><h3>把设计判断，<br>落实到交付细节。</h3><p>走查记录聚焦字号、字重、图标、颜色与边界。用具体标注描述问题，让实现有明确的核对依据。</p></div>
+        <div class="review-list">
+          <article><span>文字层级</span><p>标题字号与字重、价格和辅助文字颜色</p></article>
+          <article><span>组件一致</span><p>图标替换、按钮状态、卡片描边</p></article>
+          <article><span>细节校准</span><p>间距、分割线、对齐和底部操作区域</p></article>
+          
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="closing section" id="reflection" aria-labelledby="closing-title">
+      <div class="closing-top reveal"><span class="eyebrow">DESIGN REFLECTION</span><span class="label-blue">从复杂业务，到清晰体验</span></div>
+      <h2 id="closing-title" class="reveal">好的界面，<br>让每一步<span>都有章法。</span></h2>
+      <div class="closing-bottom reveal"><p>我关注业务怎样被理解，也关注设计怎样被准确实现。<br>在 EZvend 中，把任务结构、操作状态和界面规则串起来，<br>是贯穿设计工作的同一个目标。</p><div class="designer-signature"><strong>宋冰艳</strong><span>UI DESIGNER</span></div></div>
+      
+    </section>
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading reveal">
+        <div><span class="eyebrow">THE BIGGER PICTURE</span><h2 id="gallery-title">不同任务，<br>同一个 EZvend。</h2></div>
+        <div class="heading-detail"><span class="label-outline">SELECTED SCREENS</span><p>从经营概览到现场作业，以一致的界面连接日常运营。点击任意界面，可放大查看完整设计。</p></div>
+      </div>
+      <div class="gallery-toolbar reveal"><div class="gallery-filters" role="group" aria-label="筛选界面"><button class="active" aria-pressed="true" data-filter="all">全部</button><button aria-pressed="false" data-filter="operations">设备与运营</button><button aria-pressed="false" data-filter="restock">补货作业</button><button aria-pressed="false" data-filter="products">商品与陈列</button></div><span id="gallery-count" class="gallery-count" aria-live="polite">12 个精选界面</span></div>
+      <div class="screen-gallery" id="screen-gallery">
+        <button class="gallery-item" type="button" data-image="home" data-category="operations"><span class="gallery-image"><img src="assets/home.webp" width="375" height="840" alt="首页" loading="lazy"></span><span class="gallery-caption">业务首页<small>HOME</small></span></button>
+        <button class="gallery-item" type="button" data-image="devices" data-category="operations"><span class="gallery-image"><img src="assets/devices.webp" width="375" height="815" alt="设备列表" loading="lazy"></span><span class="gallery-caption">设备管理<small>DEVICES</small></span></button>
+        <button class="gallery-item" type="button" data-image="orders" data-category="operations"><span class="gallery-image"><img src="assets/orders.webp" width="375" height="812" alt="订单列表" loading="lazy"></span><span class="gallery-caption">订单管理<small>ORDERS</small></span></button>
+        <button class="gallery-item" type="button" data-image="data" data-category="operations"><span class="gallery-image data-viewport"><img src="assets/data.webp" width="383" height="956" alt="数据概览" loading="lazy"></span><span class="gallery-caption">经营数据<small>DATA</small></span></button>
+        <button class="gallery-item" type="button" data-image="replenish-entry" data-category="restock"><span class="gallery-image"><img src="assets/replenish-entry.webp" width="1125" height="2436" alt="补货首页" loading="lazy"></span><span class="gallery-caption">补货首页<small>RESTOCK</small></span></button>
+        <button class="gallery-item" type="button" data-image="replenish-precise" data-category="restock"><span class="gallery-image"><img src="assets/replenish-precise.webp" width="375" height="1041" alt="精细化补货" loading="lazy"></span><span class="gallery-caption">精细化补货<small>PRECISION</small></span></button>
+        <button class="gallery-item" type="button" data-image="replenish-quick" data-category="restock"><span class="gallery-image"><img src="assets/replenish-quick.webp" width="375" height="1227" alt="快捷补货" loading="lazy"></span><span class="gallery-caption">快捷补货<small>QUICK RESTOCK</small></span></button>
+        <button class="gallery-item" type="button" data-image="replenish-record" data-category="restock"><span class="gallery-image"><img src="assets/replenish-record.webp" width="375" height="812" alt="补货记录" loading="lazy"></span><span class="gallery-caption">补货记录<small>RECORDS</small></span></button>
+        <button class="gallery-item" type="button" data-image="products" data-category="products"><span class="gallery-image"><img src="assets/products.webp" width="375" height="944" alt="商品库" loading="lazy"></span><span class="gallery-caption">商品管理<small>PRODUCTS</small></span></button>
+        <button class="gallery-item" type="button" data-image="planogram" data-category="products"><span class="gallery-image"><img src="assets/planogram.webp" width="375" height="812" alt="陈列管理" loading="lazy"></span><span class="gallery-caption">陈列管理<small>PLANOGRAM</small></span></button>
+        <button class="gallery-item" type="button" data-image="planogram-template" data-category="products"><span class="gallery-image"><img src="assets/planogram-template.webp" width="375" height="812" alt="模板导入" loading="lazy"></span><span class="gallery-caption">模板复用<small>TEMPLATES</small></span></button>
+        <button class="gallery-item" type="button" data-image="product-apply-general" data-category="products"><span class="gallery-image"><img src="assets/product-apply-general.webp" width="1125" height="6003" alt="新品申请" loading="lazy"></span><span class="gallery-caption">新品申请<small>NEW PRODUCT</small></span></button>
+      </div>
+      <p class="gallery-note">界面来自 EZvend 设计文件；界面内的业务数据为设计稿展示内容。</p>
+    </section>
+  </main></div>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="回到顶部">TOP</button>
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-header"><div><span class="eyebrow">EZVEND / ORIGINAL DESIGN</span><h2 id="lightbox-title">设计界面</h2></div><button class="close-button" id="lightbox-close" type="button" aria-label="关闭大图">关闭 <span aria-hidden="true">×</span></button></div>
+    <div class="lightbox-body"><img id="lightbox-image" alt=""></div>
+    <div class="lightbox-footer"><div class="lightbox-paging"><button id="lightbox-prev" type="button">上一张</button><span id="lightbox-position"></span><button id="lightbox-next" type="button">下一张</button></div></div>
+  </dialog>
+<script>
+window.addEventListener('DOMContentLoaded',()=>window.mountDetailShell({
+root:document.getElementById('ezvend-detail'),backHref:'../../index.html#projects',
+sections:[['top','项目概览'],['workflow','业务与任务'],['restock','双模式补货'],['planogram','陈列复用'],['capture','新品采集'],['system','设计规范'],['reflection','项目沉淀'],['gallery','设计稿展示']],
+onDemo:()=>{document.querySelector('[data-plan="device"]').click();document.getElementById('planogram').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});document.querySelector('[data-plan="device"]').focus({preventScroll:true});}
+}));
+</script></body>
+</html>
