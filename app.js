@@ -181,6 +181,16 @@ function prepareLayout(key){
     hero.className='compact-hero';
     hero.innerHTML='<img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳"><h1>我是 <em>宋冰艳</em><br>5年 UI 设计经验</h1><p>设计项目超 50+ 并上线</p><div><a href="#contact">联系面试</a><a href="#resume">查看简历</a></div>';
     node('297:2783').before(hero);
+    const desk=document.createElement('section');
+    desk.className='designer-desk';
+    desk.setAttribute('aria-label','我的设计工作台');
+    desk.innerHTML=`<div class="desk-heading"><span>ABOUT MY DESIGN</span><h2>认真设计，也保持好奇。</h2><p>把复杂业务，变成清晰好用的界面。</p></div>
+      <a class="desk-badge desk-item" href="#about" aria-label="了解宋冰艳"><span class="badge-strap">SONG BINGYAN · UI DESIGNER</span><div class="badge-shell"><div class="badge-slot"></div><span class="desk-eyebrow">HELLO, I'M</span><h3>宋冰艳</h3><p>UI 设计师<br>AI 产品 · 多端体验 · 设计规范</p><img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳的个人照片"><span class="badge-footer">5 年设计经验 · 持续探索</span></div></a>
+      <a class="desk-record desk-item" href="#projects" aria-label="查看跨端设计项目"><div class="vinyl-disc"><span>UI<br>DESIGN</span></div><small>我的设计播放列表</small><h3>从界面，到体验</h3><p>APP / Web / 小程序 / 智能硬件</p><span class="record-note">探索我的项目</span></a>
+      <a class="desk-folder desk-item" href="#projects" aria-label="打开我的项目文件夹"><div class="desk-folder-back"></div><div class="desk-folder-sheet"><img src="${workbookProjects.ai3.cover.src}" alt="恒智易 AI 项目预览"><span>恒智易 AI · 智能体创作平台</span></div><div class="desk-folder-front"><span>精选项目</span><strong>我的作品集</strong><small>AI 产品 / 海外零售 / 企业后台</small></div><span class="folder-caption">把每一次思考，沉淀成作品</span></a>
+      <div class="desk-terminal desk-item"><div class="terminal-bar"><i></i><i></i><i></i><span>bingyan — design workflow</span></div><div class="terminal-content"><p><b>~ $</b> whoami</p><strong>宋冰艳 · UI 设计师</strong><p><b>~ $</b> cat workflow</p><div class="terminal-steps">理解业务 → 梳理流程<br>视觉设计 → 组件规范 → 交付走查</div><p><b>~ $</b> explore AI</p><div class="terminal-steps">AI 辅助构思、素材探索与方案推演<br>设计判断与交付质量，由我把关<span class="terminal-caret"></span></div></div></div>`;
+    hero.after(desk);
+
   }
   if(key==='about'){
     const collage=node('330:47878');
@@ -213,19 +223,22 @@ function caseView(project){
   const next=projects.find(p=>p[0]===workOrder[(workOrder.indexOf(id)+1)%workOrder.length]);
   const screens=caseEvidence.screens[id]||[];
   const hero=cover?'assets/'+cover+'.webp':screens[0]?.src;
-  const sections=[['overview','项目概览'],['decisions','设计拆解'],['ai-method','AI 协作'],['review','交付与复盘'],...(screens.length?[['interfaces','设计稿展示']]:[])];
+  const sections=[['overview','项目背景'],['strategy','设计策略'],['decisions','关键决策'],['ai-method','AI 协作'],['delivery','设计交付'],['review','复盘与验证'],...(screens.length?[['interfaces','设计稿展示']]:[])];
   const gallery=screens.map((screen,i)=>`<figure class="evidence-screen ${screen.w/screen.h>1.1?'wide-screen':''}"><button type="button" class="case-enlarge" data-image="${screen.src}" aria-label="放大${screen.label}"><img loading="lazy" src="${screen.src}" alt="${screen.label}"></button><figcaption><strong>${screen.label}</strong></figcaption></figure>`).join('');
-  return `<article class="project-case editorial-case" data-kind="${platform==='后台管理'?'admin':platform==='硬件大屏'?'hardware':'product'}">
+  const theme={ai:'#1783ff',ai3:'#1783ff',work:'#1783ff','ai-web':'#1783ff',life:'#ff6b00',merchant:'#ff6b00',cabinet:'#ff6b00',ezvend:'#0865fe',grabot:'#0865fe',studio:'#8653df',charging:'#ff8a00','charge-h5':'#ff8a00',health:'#ff6b00','work-platform':'#222222','work-enterprise':'#222222',pos:'#0865fe',wine:'#9b6639',box:'#7251c7',arcade:'#7251c7'}[id]||'#252835';
+  return `<article class="project-case editorial-case" style="--project-accent:${theme}" data-project-id="${id}" data-kind="${platform==='后台管理'?'admin':platform==='硬件大屏'?'hardware':'product'}">
     <div class="case-topline"><a class="case-back" href="#projects">全部项目</a><span>${platform} · UI 设计作品</span></div>
     <header class="editorial-heading"><p class="case-scope">${scope}</p><h1>${title}</h1><p class="case-lead">${study.angle}</p><div class="case-facts"><div><span>服务人群</span><p>${study.audience}</p></div><div><span>设计范围</span><p>${study.scope}</p></div>${date?`<div><span>项目日期</span><p>${date}</p></div>`:''}${record?.status?'<div><span>上线状态</span><p>'+record.status+'</p></div>':''}</div></header>
     ${hero?`<figure class="editorial-hero"><button type="button" class="case-enlarge" data-image="${hero}" aria-label="放大项目主图"><img src="${hero}" alt="${title}项目展示"></button></figure>`:''}
     <nav class="case-sections" aria-label="项目详情目录">${sections.map(([key,label])=>`<a href="#${key}" data-section="${key}">${label}</a>`).join('')}</nav>
-    <section id="overview" class="editorial-section"><div class="section-title"><p>业务与任务</p><h2>先理解业务，<br>再组织操作。</h2></div><div class="section-body"><p class="large-copy">${summary}</p>${study.problem!==summary?'<p>'+study.problem+'</p>':''}</div></section>
+    <section id="overview" class="editorial-section"><div class="section-title"><p>项目背景</p><h2>业务是什么，<br>设计负责什么。</h2></div><div class="section-body"><p class="large-copy">${summary}</p>${study.problem!==summary?'<p>'+study.problem+'</p>':''}</div></section>
     <section class="flow-band"><h2>核心任务路径</h2><ol class="case-flow">${study.flow.map(step=>`<li>${step}</li>`).join('')}</ol></section>
     ${record?.responsibility?'<section class="editorial-section personal-role"><div class="section-title"><p>个人贡献</p><h2>我负责的设计工作</h2></div><div class="section-body"><p class="responsibility-copy">'+record.responsibility+'</p>'+(record.team?'<p class="case-source">'+record.team+'</p>':'')+'</div></section>':''}
-    <section id="decisions" class="decision-section"><p class="section-kicker">设计拆解</p><h2>把复杂关系，转化为清晰选择。</h2><div class="editorial-decisions">${study.decisions.map(d=>`<article><h3>${d.title}</h3><p>${d.body}</p></article>`).join('')}</div></section>
+    <section id="strategy" class="editorial-section strategy-section"><div class="section-title"><p>设计策略</p><h2>${study.angle}</h2></div><div class="section-body"><p class="large-copy">围绕${study.audience}的核心任务，组织 ${platform} 端的操作体验。</p><div class="strategy-list"><div><h3>任务优先</h3><p>${study.flow.join(' → ')}。围绕这条路径安排入口、内容层级和反馈。</p></div><div><h3>保留产品辨识度</h3><p>沿用本项目现有界面的视觉语言，在实际业务页面中落实一致的颜色、文字、组件和操作状态。</p></div><div><h3>设计落到具体范围</h3><p>${study.scope}。</p></div></div></div></section>
+    <section id="decisions" class="decision-section"><p class="section-kicker">关键设计决策</p><h2>每一个方案，都回应具体的任务。</h2><div class="editorial-decisions">${study.decisions.map((d,i)=>`<article><span class="decision-label">${['信息与任务','操作与反馈','一致性与延展'][i%3]}</span><h3>${d.title}</h3><div class="decision-detail"><span>方案与思考</span><p>${d.body}</p></div></article>`).join('')}</div></section>
     <section id="ai-method" class="editorial-section ai-section"><div class="section-title"><p>${study.aiStatus}</p><h2>让 AI 加速整理，<br>让设计判断落地。</h2></div><div class="section-body"><p>${study.ai}</p><div class="ai-responsibilities"><div><h3>工具辅助</h3><p>内容归纳、场景扩展、样本生成与规范整理。</p></div><div><h3>设计师负责</h3><p>业务边界、操作优先级、视觉表达和最终交付核验。</p></div></div></div></section>
-    <section id="review" class="editorial-section review-section"><div class="section-title"><p>交付与复盘</p><h2>让方案具备<br>可检查的细节。</h2></div><div class="section-body"><h3>本项目的检查重点</h3><p>${study.verify}</p><h3>面向交付继续核对</h3><p>依据关键任务检查页面入口、状态反馈、返回路径和组件一致性，结合开发走查与使用反馈持续修正。</p><p class="case-source">案例资料 · ${study.evidence}。</p></div></section>
+    <section id="delivery" class="editorial-section delivery-section"><div class="section-title"><p>设计交付</p><h2>从视觉表达，<br>走向产品落地。</h2></div><div class="section-body"><p class="large-copy">${study.scope}</p><div class="delivery-facts"><div><span>项目进度</span><strong>${record?.status||'以项目资料为准'}</strong></div><div><span>产品形态</span><strong>${platform}</strong></div>${date?`<div><span>项目周期</span><strong>${date}</strong></div>`:''}</div><p>以上以现有项目资料与设计稿为依据。具体界面及细节统一收录在页面末尾，可点击放大查看。</p></div></section>
+    <section id="review" class="editorial-section review-section"><div class="section-title"><p>复盘与验证</p><h2>用可检查的标准，<br>继续验证设计。</h2></div><div class="section-body"><h3>本项目的检查重点</h3><p>${study.verify}</p><h3>面向交付继续核对</h3><p>依据关键任务检查页面入口、状态反馈、返回路径和组件一致性，结合开发走查与使用反馈持续修正。</p><p class="case-source">案例资料 · ${study.evidence}。</p></div></section>
     <aside class="case-contact"><div><h2>欢迎交流项目中的设计判断</h2><p>从业务梳理、界面设计到跨端适配与交付。</p></div><a href="#contact">联系我</a></aside>
     <a class="case-next" href="#project/${next[0]}"><span>继续浏览</span><strong>${next[1]}</strong></a>
     ${screens.length?`<section id="interfaces" class="interface-section"><div class="interface-heading"><div><p class="section-kicker">设计稿展示</p><h2>项目界面与设计细节</h2></div></div>${study.screenNote?`<div class="screen-reading"><h3>${study.screenNote.title}</h3><p>${study.screenNote.body}</p></div>`:`<div class="screen-reading"><h3>页面范围与信息组织</h3><p>${study.scope}。以下设计分析结合现有项目说明与已读取的画板结构整理。</p></div>`}<div class="screen-gallery">${gallery}</div></section>`:''}
@@ -302,3 +315,15 @@ function fitPaper(){
 }
 addEventListener('resize',fitPaper);
 fitPaper();
+
+// The reference uses a 22px difference-blend cursor on desktop.
+const finePointer=matchMedia('(pointer: fine) and (min-width: 1024px)');
+const designCursor=document.createElement('div');
+designCursor.className='design-cursor';designCursor.setAttribute('aria-hidden','true');document.body.append(designCursor);
+function syncDesignCursor(){document.documentElement.classList.toggle('custom-pointer',finePointer.matches);designCursor.style.opacity='0';}
+syncDesignCursor();finePointer.addEventListener('change',syncDesignCursor);
+window.addEventListener('pointermove',e=>{if(!finePointer.matches||e.pointerType==='touch')return;designCursor.style.left=e.clientX+'px';designCursor.style.top=e.clientY+'px';designCursor.style.opacity='1';},{passive:true});
+document.addEventListener('pointerleave',()=>designCursor.style.opacity='0');
+window.addEventListener('blur',()=>designCursor.style.opacity='0');
+window.addEventListener('pointerdown',()=>designCursor.classList.add('is-down'),{passive:true});
+window.addEventListener('pointerup',()=>designCursor.classList.remove('is-down'),{passive:true});
