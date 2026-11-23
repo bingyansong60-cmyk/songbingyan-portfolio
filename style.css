@@ -414,3 +414,8 @@ body{margin:0;color:#111;font-family:"PingFang SC","Microsoft YaHei","Noto Sans 
 .hero-flower>img{transform-origin:center;transition:transform .8s cubic-bezier(.22,1,.36,1);will-change:transform}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){.hero-flower:hover>img{transform:scale(1.2) rotate(150deg)}}
 @media(prefers-reduced-motion:reduce){.hero-flower>img{transition:none;will-change:auto}}
+/* Progressive scroll reveals on every page; native scrolling stays unchanged. */
+.motion-enter{opacity:0;translate:0 26px;transition:opacity .85s cubic-bezier(.16,1,.3,1) var(--enter-delay,0ms),translate .85s cubic-bezier(.16,1,.3,1) var(--enter-delay,0ms)}
+.motion-enter.has-entered{opacity:1;translate:0 0}
+@media(max-width:640px){.motion-enter{translate:0 18px}.motion-enter.has-entered{translate:0 0}}
+@media(prefers-reduced-motion:reduce){.motion-enter{opacity:1;translate:none;transition:none}}
