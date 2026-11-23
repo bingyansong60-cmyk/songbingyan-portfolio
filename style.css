@@ -373,3 +373,5 @@ body{margin:0;color:#111;font-family:"PingFang SC","Microsoft YaHei","Noto Sans 
 
 .artboard[data-page="resume"] [class*="Alibaba_PuHuiTi_2.0:105_Heavy"]{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-weight:900}
 .artboard[data-page="resume"] [class*="PingFang_SC:Light"]{font-weight:300}
+
+.project-card-summary{margin:0;color:#808080;font-size:16px;line-height:1.6;white-space:normal;width:100%;height:auto;min-height:26px;overflow-wrap:anywhere}
