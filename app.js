@@ -258,6 +258,7 @@ function render(){
   const project=page==='project'&&projects.find(p=>p[0]===id);
   const key=page==='projects'||(page==='project'&&!project)?'work':project?'detail':page;
   if(project?.[0]==='ai3'){location.replace('cases/ai3/index.html');return;}
+  if(project?.[0]==='work'){location.replace('cases/work/index.html');return;}
   if(project?.[0]==='ezvend'){location.replace('cases/ezvend/index.html');return;}
   if(page==='article'){renderArticle(id);return;}
   const board=artboards[key]||artboards.home;
@@ -281,6 +282,15 @@ function render(){
       const record=workbookProjects[id];
       if(record?.cover&&card.querySelector('img'))card.querySelector('img').src=record.cover.src;
       go(card,'project/'+id);
+      if(id==='grabot'){
+        const visit=document.createElement('a');
+        visit.className='project-visit-link';visit.textContent='访问网站';
+        visit.href='https://www.grabot.com/';visit.target='_blank';visit.rel='noopener noreferrer';
+        visit.setAttribute('aria-label','访问 GRABOT 官网（新标签页）');
+        visit.addEventListener('click',event=>event.stopPropagation());
+        visit.addEventListener('keydown',event=>event.stopPropagation());
+        card.lastElementChild.lastElementChild.append(visit);
+      }
     });
   }
   if(key==='home'){
@@ -330,7 +340,16 @@ const workflowArticles = [
  {id:'editable-source',node:'288:1638',title:'Codex 到 Figma 生成源文件的工作流',intro:'重点是可编辑、可维护和符合项目规范，而不只是生成一张界面。',parts:[['提供结构化需求','明确页面结构、文本内容、尺寸及复用组件，让输出有具体依据。'],['建立真实图层','页面里的文字、图标、按钮和内容区域需要有清晰结构，重复元素优先使用组件。'],['核对设计规范','检查自动布局、颜色变量、字体层级和图层命名，确保后续可以继续修改。'],['人工完成最后一轮','逐项走查对齐、间距、溢出及交互状态，把可用的输出整理成完整交付文件。']]},
  {id:'miniapp-redesign',node:'288:1645',title:'用 ChatGPT 辅助小程序 UI 改版',intro:'把生成思路与真实产品约束结合，让改版能继续落地。',parts:[['梳理原有页面','整理已有功能、操作路径及需要保留的内容，明确此次改版的范围。'],['辅助生成设计方向','让 AI 围绕信息层级、模块布局和视觉风格提供候选思路，再根据业务进行筛选。'],['落成可编辑界面','在 Figma 中结合现有组件完成细化，统一导航、卡片、按钮及反馈样式。'],['检查完整性','核对小程序的页面跳转、系统栏、安全区、长文案及空状态，把视觉方案补全为可交付设计。']]}
 ];
-function bindArticles(){workflowArticles.forEach(article=>{const card=node(article.node);if(card){go(card,'article/'+article.id);card.setAttribute('aria-label','阅读文章：'+article.title);}});}
+const workflowArticleLinks = ["https://www.xiaohongshu.com/discovery/item/6a0f1e5c000000000803ddff", "https://www.xiaohongshu.com/discovery/item/6a03548e0000000006036346", "https://www.xiaohongshu.com/discovery/item/69d66a1900000000220263e6", "https://www.xiaohongshu.com/explore/6aad733f0000000025035832", "https://www.bilibili.com/video/BV1skR2BkEEs?t=81.4", "https://www.bilibili.com/video/BV1AxGn6FEnK?t=146.7"];
+function bindArticles(){workflowArticles.forEach((article,index)=>{
+ const card=node(article.node);if(!card)return;
+ const link=document.createElement('a');
+ for(const attribute of card.attributes)link.setAttribute(attribute.name,attribute.value);
+ link.innerHTML=card.innerHTML;link.href=workflowArticleLinks[index];link.target='_blank';link.rel='noopener noreferrer';
+ link.removeAttribute('role');link.removeAttribute('tabindex');
+ link.setAttribute('aria-label','阅读原文：'+article.title+'（新标签页）');
+ link.style.textDecoration='none';link.style.color='inherit';card.replaceWith(link);
+});}
 function renderArticle(id){
  const article=workflowArticles.find(a=>a.id===id);
  if(!article){location.hash='home';return;}
