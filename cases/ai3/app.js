@@ -25,7 +25,7 @@
   const updateScroll = () => {
     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
     const ratio = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
-    progress.style.transform = `scaleX(${ratio})`;
+    if (progress) progress.style.transform = `scaleX(${ratio})`;
     let active = -1;
     sections.forEach((section, index) => { if (section.getBoundingClientRect().top < 190) active = index; });
     navigation.forEach((link, index) => {
