@@ -111,24 +111,23 @@ function bindNavigation(page){
 function bindWork(){
   const grid=node('297:5334');
   const baseCard=grid.firstElementChild;
-  const originalCards=[...grid.children];
-  const fallbackCards=Object.fromEntries(['ai3','studio','work','haieasy','ezvend','merchant','loan','charge-h5','charging','retail','pinball','installment','auto','local','box','life','book','drama','arcade','health','box-saas','arcade-h5','grabot','cabinet','ai','ai-web','wine','pos','vertical','overseas-admin','operations'].map((id,i)=>[id,originalCards[i]]));
-  grid.replaceChildren(...workOrder.map(id=>(fallbackCards[id]||baseCard).cloneNode(true)));
+  const listedOrder=workOrder.slice(0,27);
+  grid.replaceChildren(...listedOrder.map(()=>baseCard.cloneNode(true)));
   const allCards=[...grid.children];
   const buttons=[...node('297:3022').children];
   const topicButtons=[];
   node('297:5437')?.remove();
   topic='所有类别';
   allCards.forEach((card,i)=>{
-    const project=projects.find(p=>p[0]===workOrder[i]);
+    const project=projects.find(p=>p[0]===listedOrder[i]);
     if(!project)return;
     const record=workbookProjects[project[0]];
-    const source=record?.cover?.src||(project[6]?'assets/'+project[6]+'.webp':null);
+    const source=record?.cover?.src||null;
     if(source){
       const holder=card.firstElementChild;
       holder.replaceChildren();
       const image=document.createElement('img');image.src=source;image.alt=project[1]+'项目封面';image.loading='lazy';holder.append(image);
-    }else if(!fallbackCards[project[0]]){
+    }else{
       card.firstElementChild.innerHTML='<div class="admin-cover">'+project[1]+'</div>';
     }
     const info=card.lastElementChild;
