@@ -1,75 +1,292 @@
-const data = window.portfolio;
-document.querySelectorAll('[data-name]').forEach(el => el.textContent = data.name);
-const miniNav = '<div class="mini-nav"><b>◈</b><span>概览</span><span>发现</span><span>收藏</span><i>●</i></div>';
-const visuals = {
- mobile: `<div class="mobile-composition"><div class="floating-note">Every little moment.<span>记录生活的小美好 ↗</span></div><div class="phone phone-back"><div class="phone-bar">9:41 <span>▮▮ ●</span></div><small>YOUR DAILY INSPIRATION</small><h3>发现生活<br>的另一面。</h3><div class="plant"><i></i><i></i><i></i><i></i><b></b></div><div class="mini-card">慢下来，感受日常 <span>↗</span></div></div><div class="phone phone-front"><div class="phone-bar">9:41 <span>▮▮ ●</span></div><div class="phone-title">早上好，<br><b>今天也有新发现 ☀</b></div><div class="mobile-tabs">为你推荐　 灵感　 生活</div><div class="abstract-photo"><span>寻一处<br>自在角落</span><i></i></div><div class="mini-cards"><div>☕<small>一杯好时光</small></div><div>✳<small>周末灵感</small></div></div><div class="phone-bottom">⌂　⌕　♡　◉</div></div></div>`,
- dashboard:`<div class="desktop-window"><div class="window-top"><span class="dots">● ● ●</span><small>序 · WORKSPACE</small></div><div class="dashboard-layout"><aside><b>▧ 序</b><span class="selected">◫ 工作概览</span><span>▦ 项目空间</span><span>◷ 我的任务</span><span>▤ 团队文档</span><small>工作空间 / DESIGN</small></aside><div class="dashboard-body"><div class="dash-title"><div><small>星期一，新的开始</small><h3>工作概览</h3></div><b>＋ 创建项目</b></div><div class="metric-row"><div>进行中项目<b>12 <em>↗</em></b></div><div>本周完成<b>28 <em>+16%</em></b></div><div>团队成员<b>08 <em>●</em></b></div></div><div class="chart"><div>项目进度 <small>本周 ⌄</small></div><div class="bars">${[36,60,48,78,64,92,75,100,84,112,96,122].map(h=>`<i style="height:${h}px"></i>`).join('')}</div></div><div class="task-row">◉　品牌官网视觉探索 <span>进行中</span></div><div class="task-row">◉　移动端组件规范整理 <span>待评审</span></div></div></div></div>`,
- web:`<div class="web-window">${miniNav}<div class="interior-copy"><small>CURATED FOR EVERYDAY LIVING</small><h3>住进<br>喜欢的日常。</h3><p>Objects with stories.<br>Spaces with soul.</p><span>探索灵感 ↗</span></div><div class="room-scene"><div class="sunlight"></div><div class="vase"></div><div class="chair"><i></i></div><div class="room-caption">THE QUIET COLLECTION — 01</div></div></div>`,
- finance:`<div class="finance-layout"><div class="finance-title">有数<span>让每一份积累<br>都清晰可见。</span><small>CLARITY IN EVERY NUMBER.</small></div><div class="phone finance-phone"><div class="phone-bar">9:41 <span>▮▮ ●</span></div><div class="phone-title">我的资产 <span>◉</span></div><div class="balance"><small>总资产（元）</small><strong>128,650<em>.00</em></strong><small>本月结余　+ 3,250.00 ↗</small></div><div class="finance-actions"><span>↗<small>转入</small></span><span>↙<small>转出</small></span><span>▤<small>账单</small></span></div><h4>资产分布 <span>详情 ↗</span></h4><div class="donut"></div><div class="finance-legend">● 稳健理财　● 活期储蓄</div><div class="mini-card">本月收支 <span>＋ ¥3,250</span></div></div></div>`,
- system:`<div class="system-board"><div class="system-title">Forma<span>Design language, connected.</span><b>✳</b></div><div class="system-grid"><div class="type-tile"><small>TYPOGRAPHY</small><strong>Aa</strong><span>清晰 · 有序 · 一致</span></div><div class="color-tile"><small>COLOR PALETTE</small><div><i></i><i></i><i></i><i></i></div><span>#5853D9　#B9B7EF</span></div><div class="component-tile"><small>COMPONENTS</small><span class="fake-button">主要按钮 ↗</span><span class="fake-input">搜索你需要的内容　⌕</span></div><div class="toggle-tile"><small>DETAILS MATTER</small><b>✓ <i></i> ◉</b><span>8pt spacing system</span></div></div></div>`,
- travel:`<div class="travel-window"><div class="travel-nav"><b>山野 / WILD</b><span>探索目的地　 关于山野　 ↗</span></div><div class="mountains"><i></i><i></i><i></i></div><div class="travel-copy"><small>LESS NOISE. MORE NATURE.</small><h3>去山野，<br>找回自己的节奏。</h3><span>开启下一段旅程 ↗</span></div><div class="travel-bottom">01 / 山间漫游 <span>向自然，再靠近一点。</span></div></div>`
+const projects = [
+  ['ai','恒智易 AI｜智能体创作平台 2.0、3.0','APP','2026.04–05','AI 智能体应用 · 产品改版 · 多端适配','支持以文本、图像和视频指令进行智能对话与内容生成，也可创建个性化智能体。','home-imgRectangle2'],
+  ['ai3','恒智易 AI｜智能体创作平台 3.0','APP','2026.09–10','AI 智能体应用 · 产品改版 · 多端适配','围绕智能对话和多模态内容创作进行视觉升级，覆盖手机与 iPad 场景。'],
+  ['work','恒智易 Work｜AI 智能办公工作台','macOS / Win','2026.10–11','AI 智能办公 · 桌面端应用','以自然语言交互串联任务发起、过程处理、结果预览和交付。','work-imgRectangle4'],
+  ['haieasy','Haieasy｜AI 录音与会议助手','APP','2026.05–06','海外 APP · 多语言本地化 · iPad 适配','面向海外市场的 AI 助手，结合智能对话与 AI 硬件，服务问答及办公记录。'],
+  ['life','恒生活｜数字生活用户端','APP','2024.09 至今','数字生活 · 智能零售 · 本地生活','聚合智能货柜、共享充电、生活商城、出行服务和 AI 助手。','home-imgContainer1'],
+  ['ezvend','EZvend｜海外智能售货运营端','APP','2026.01–02','海外智能零售 · B 端运营 · 国际化','面向海外运营商、商户与运维人员，覆盖设备、商品、库存、订单和补货运营。','home-imgContainer'],
+  ['merchant','恒掌柜｜智能货柜商家端','APP','2024.09 至今','智能货柜 · 商家运营','面向智能零售商家及运营人员，支持商品管理、订单处理和经营数据查看。','home-imgRectangle3'],
+  ['studio','恒智影 AI｜智能影像创作平台','APP','2026.07–08','0–1 独立负责 · AI 产品设计','以 AI 辅助影像创作，降低内容创作门槛。','home-imgRectangle4'],
+  ['loan','恒生活借款｜消费金融用户端','APP','2025.01–02','消费金融 · 生活服务','在金融服务之外整合智能零售、生活消费与汽车服务等入口。'],
+  ['cabinet','恒生活｜智能货柜服务小程序','小程序','2026.04–05','智能零售 · IoT','连接线下智能货柜，覆盖商品选购、自动结算与订单管理。'],
+  ['charging','劲来电｜智能充电服务小程序','小程序','2025.04','智能硬件 · IoT · 新能源出行','覆盖设备查找、扫码启动、充电状态查看和费用结算。','work-imgRectangle9'],
+  ['arcade','恒生活｜智能游艺与潮玩服务小程序','小程序','','线下游艺 · 潮玩服务','连接抓娃娃机、卡机等游艺设备，承接购买与使用服务。','work-imgRectangle19'],
+  ['box','恒生活盲盒／奇点·BOX 扫码小程序','小程序','','智能零售 · 潮玩消费 · 软硬件联动','围绕潮玩自助零售设备设计扫码交易与售后流程。','work-imgRectangle15'],
+  ['box-saas','恒生活 · 奇点BOX（SaaS）','小程序','','潮玩零售 · 品牌服务','配合线下潮玩零售场景，承接品牌展示及消费服务。'],
+  ['pinball','恒生活 · 弹珠机','小程序','','线下游艺 · 会员服务','连接实体设备与会员账户，覆盖买珠、储珠和积分兑换。','work-imgRectangle11'],
+  ['grabot','GRABOT｜海外智能零售品牌官网','官网','','海外品牌 · 智能零售 · B 端营销','呈现智能售货设备与解决方案，帮助访客了解产品和发起咨询。','home-imgContainer2'],
+  ['ai-web','恒智易 AI｜网页创作工作台','Web','','AIGC 创作工具 · Web 工作台','面向网页端的 AI 内容创作工作台。'],
+  ['retail','智能零售终端｜售货与互动设备 UI','硬件大屏','','智能零售 · 嵌入式设备 · 自助交易','承接待机宣传、操作引导、商品选购与出货反馈。'],
+  ['wine','智能酒柜｜零售终端 UI','硬件大屏','','酒类零售 · 自助购买与取货','在同一触控大屏支持商品浏览、购买与凭取货码领取。'],
+  ['pos','海外智能售货 POS｜运营终端 UI','硬件大屏','','消费者支付终端 · 英文交互','覆盖刷卡授权、开门购物、支付，以及欠款补缴和设备异常。','pos-cover'],
+  ['vertical','盲盒竖屏','硬件大屏','','潮玩零售 · 多尺寸适配','覆盖商品展示、购物车、扫码支付和出货状态。'],
+  ['charge-h5','劲来电｜商家运营 H5','H5','','充电运营 · B 端管理','支持场地设备、计费策略、购卡与经营数据管理。','work-imgRectangle8'],
+  ['arcade-h5','小橙游艺｜商家运营 H5','H5','','游艺运营 · 设备管理','面向游艺商家与运营人员管理场地、设备、订单与经营数据。'],
+  ['drama','恒生活借款｜短剧内容服务 H5','H5','','短视频娱乐 · App 内嵌 H5','覆盖短剧发现、分类推荐、搜索、收藏与继续观看。','work-imgRectangle22'],
+  ['book','小说','H5','','数字阅读 · 内容服务','覆盖书城、搜索、作品详情、书架与阅读进度延续。','work-imgRectangle21'],
+  ['auto','车商城 H5','H5','','汽车服务 · 车型展示与询价','支持车型浏览、品牌筛选、参数查看和询价。','work-imgRectangle13'],
+  ['installment','分期商城 H5','H5','','电商交易 · 分期购物','呈现商品价格与分期条件，衔接确认订单和支付。','work-imgRectangle12'],
+  ['local','本地生活 H5','H5','','本地生活 · 券包交易 · 到店核销','连接购券、支付、查看凭证、商家核销与退款。','work-imgRectangle14'],
+  ['health','医疗商城 H5','H5','','医疗健康 · 健康商城','整合药品、陪诊、海外医疗与个人服务入口。']
+];
+projects.push(
+  ['work-platform','智易 Work｜平台管理端','后台管理','','企业 AI 服务 · 多租户运营','连接企业租户、AI 服务审核与平台日常运营。'],
+  ['work-enterprise','智易 Work｜企业后台','后台管理','','组织管理 · AI 应用与资源','围绕部门、成员、知识库与额度组织企业 AI 管理任务。']
+);
+projects.push(['channel','恒先锋｜渠道推广运营端','APP','','渠道推广 · 运营工具','面向行业从业者的智能推广与渠道运营工具。']);
+for(const project of projects){
+  const record=workbookProjects[project[0]];
+  if(!record)continue;
+  project[1]=record.name;
+  project[2]=['work-platform','work-enterprise','overseas-admin'].includes(project[0])?'后台管理':record.platform||project[2];
+  project[3]=record.date||'';
+  project[4]=(record.type||project[4]).replace(/\n/g,' · ');
+  project[5]=record.background||project[5];
+  if(record.cover)project[6]=record.cover.src.replace('assets/','').replace('.webp','');
+}
+const app = document.querySelector('#app');
+const motion = matchMedia('(prefers-reduced-motion: reduce)');
+const paths = {首页:'home',项目:'projects',全部项目:'projects',关于我:'about',简历:'resume',联系我:'contact'};
+let initialized = false;
+let printResume = false;
+let platform = '全部项目';
+let topic = '所有类别';
+const workOrder = ['ai3','studio','work','haieasy','ezvend','merchant','loan','charge-h5','charging','retail','pinball','installment','auto','local','box','life','book','drama','arcade','health','box-saas','arcade-h5','grabot','cabinet','ai','ai-web','wine','pos','vertical','overseas-admin','operations','work-platform','work-enterprise','channel'];
+projects.push(
+  ['overseas-admin','海外经销商管理系统','后台管理','','海外渠道 · 运营管理','涵盖经销商准入、资料、订单及经营数据。'],
+  ['operations','恒生活｜运营活动设计','UI运营活动','','本地生活 · 运营活动','覆盖签到与优惠券等运营活动。']
+);
+const categories = {
+  APP: ['APP','macOS / Win'],
+  '终端硬件':['硬件大屏'],
+  '后台管理':['后台管理','Web']
 };
-const isArchive = document.body.dataset.page === 'archive';
-let selectedType = '全部', selectedIndustry = '全部';
-const grid = document.querySelector('#project-grid');
-const types = window.PortfolioCases.types;
-const industries = ['全部',...new Set(data.projects.map(p=>p.industry).filter(Boolean))];
-function featuredCard(p){return `<article class="featured-project real-project"><button class="featured-project-button" data-project="${p.id}" aria-label="查看${p.title}项目详情"><div class="featured-project-heading"><span class="project-phase">${p.phase}</span><h3>${p.title}</h3><p>${p.subtitle}</p><div class="featured-project-tags">${p.tags.slice(0,3).map(tag=>'<span>'+tag+'</span>').join('')}</div></div><div class="featured-project-stage ${p.theme}">${window.PortfolioCases.artwork(p)}</div><span class="featured-view">查看项目 ↗</span></button></article>`}
-function card(p){if(!isArchive)return featuredCard(p);return `<article class="project real-project"><button class="project-cover ${p.theme}" data-project="${p.id}" aria-label="查看${p.title}详情">${window.PortfolioCases.artwork(p)}<span class="cover-arrow">↗</span></button><div class="project-info"><div><span class="project-phase">${p.phase}</span><h3><button data-project="${p.id}">${p.title} <span>↗</span></button></h3><p>${p.subtitle}</p></div><span class="category">${window.PortfolioCases.projectTypes(p).join(' / ')} · ${p.industry}</span></div></article>`}
-function renderFilters(){
- for(const [id,values,selection,field,otherField,other] of [['type-filters',types,selectedType,'category','industry',selectedIndustry],['industry-filters',industries,selectedIndustry,'industry','category',selectedType]]){
- const available=values.filter(value=>value==='全部'||data.projects.some(p=>field==='category'?window.PortfolioCases.projectTypes(p).includes(value):p[field]===value));
- document.getElementById(id).innerHTML=available.map(value=>{const count=data.projects.filter(p=>(value==='全部'||(field==='category'?window.PortfolioCases.projectTypes(p).includes(value):p[field]===value))&&(other==='全部'||(otherField==='category'?window.PortfolioCases.projectTypes(p).includes(other):p[otherField]===other))).length;return `<button data-dimension="${field}" data-value="${value}" aria-pressed="${value===selection}" class="${value===selection?'active':''}" ${count===0?'disabled':''}>${value}<small>${count}</small></button>`}).join('');
- }
+const topics = {
+  AI:/AI|智能体|AIGC/i,
+  金融产品:/金融|分期/,
+  电商产品:/商城|零售|货柜|售货/,
+  海外产品:/海外|EZvend|Haieasy|GRABOT/i,
+  医疗健康:/医疗|健康/,
+  娱乐潮玩:/潮玩|娱乐|弹珠|小说|短剧/,
+  生活方式:/生活|充电|汽车/
+};
+function node(id){return app.querySelector('[data-node-id="'+id+'"]');}
+function action(el,fn){
+  if(!el)return;
+  el.dataset.action='';
+  el.setAttribute('role','button');
+  el.tabIndex=0;
+  el.addEventListener('click',fn);
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();fn(e);}});
 }
-
+function go(el,key){action(el,()=>{location.hash=key;});}
+function notify(text){
+  const notice=document.querySelector('#notice');
+  notice.textContent=text;
+  clearTimeout(notify.timer);
+  notify.timer=setTimeout(()=>{notice.textContent='';},2400);
+}
+function bindNavigation(page){
+  app.querySelectorAll('[data-name="Header"] > div > :is(a,p)').forEach(el=>{
+    const key=paths[el.textContent.trim()];
+    if(key){
+      if(key===page)el.setAttribute('aria-current','page');
+      else go(el,key);
+    }
+  });
+  const ids={'292:1854':'contact','612:13649':'resume','292:1861':'projects','614:16774':'contact','614:16782':'contact','614:16789':'contact','644:13607':'projects'};
+  Object.entries(ids).forEach(([id,key])=>go(node(id),key));
+  action(node('190:15124'),()=>{ printResume=true;location.hash='resume'; });
+  const copy = value => navigator.clipboard.writeText(value).then(()=>notify('已复制'),()=>notify('复制失败，请在简历中查看'));
+  action(node('692:14830'),()=>copy('Sliu6de@163.com'));
+  action(node('330:47676'),()=>copy('15701242481'));
+  ['692:14828','330:47684'].forEach(id=>action(node(id),()=>notify('微信号待补充')));
+  if(page==='about'||page==='home'||page==='projects'){
+    app.querySelectorAll('p').forEach(el=>{
+      if(el.textContent.trim()==='联系我'&&!el.closest('[data-action]'))go(el.parentElement,'contact');
+    });
+  }
+}
+function bindWork(){
+  const grid=node('297:5334');
+  const baseCard=grid.firstElementChild;
+  for(const id of ['work-platform','work-enterprise','channel']){
+    const card=baseCard.cloneNode(true);
+    const evidence=caseEvidence.screens[id]?.[0];
+    const image=card.querySelector('img');
+    if(evidence){image.src=evidence.src;image.alt='智易 Work 平台后台界面';}
+    else{
+      card.firstElementChild.innerHTML='<div class="admin-cover">'+(id==='channel'?'恒先锋<br><span>渠道推广运营端</span>':'智易 Work<br><span>企业后台</span>')+'</div>';
+    }
+    grid.append(card);
+  }
+  const allCards=[...grid.children];
+  const buttons=[...node('297:3022').children];
+  const topicButtons=[...node('297:5437').children];
+  allCards.forEach((card,i)=>{
+    const project=projects.find(p=>p[0]===workOrder[i]);
+    if(!project)return;
+    if(workbookProjects[project[0]]?.cover){
+      const image=card.querySelector('img');
+      if(image){image.src='assets/'+project[6]+'.webp';image.alt=project[1]+'项目封面';}
+    }
+    const info=card.lastElementChild;
+    info.firstElementChild.textContent=project[1].split('｜')[0]+(['ai','ai3'].includes(project[0])?(project[0]==='ai3'?' 3.0':' 2.0、3.0'):'');
+    info.lastElementChild.textContent=project[3];
+    card.dataset.project=project[0];
+    card.setAttribute('aria-label',project[1]);
+    go(card,'project/'+project[0]);
+  });
+  const update=()=>{
+    buttons.forEach(b=>b.setAttribute('aria-pressed',b.textContent.trim()===platform));
+    topicButtons.forEach(b=>b.setAttribute('aria-pressed',b.textContent.trim()===topic));
+    allCards.forEach(c=>{
+      const p=projects.find(p=>p[0]===c.dataset.project);
+      c.hidden=!!p&&!((platform==='全部项目'||(categories[platform]||[platform]).includes(p[2]))&&(!topics[topic]||topics[topic].test(p.slice(1,6).join(' '))));
+    });
+    const empty=grid.querySelector('.no-projects');
+    empty.hidden=allCards.some(c=>!c.hidden);
+    if(!motion.matches)grid.animate([{opacity:.65,transform:'translateY(4px)'},{opacity:1,transform:'none'}],{duration:240,easing:'ease-out'});
+  };
+  const empty=document.createElement('p');
+  empty.className='no-projects';
+  empty.textContent='当前筛选下暂无项目';
+  grid.append(empty);
+  buttons.forEach(b=>action(b,()=>{platform=b.textContent.trim();update();}));
+  topicButtons.forEach(b=>action(b,()=>{topic=b.textContent.trim();update();}));
+  update();
+}
+function prepareLayout(key){
+  const frame=app.querySelector('.artboard');
+  frame.dataset.page=key;
+  const header=frame.querySelector('[data-name="Header"]');
+  const nav=document.createElement('nav');
+  nav.className='site-nav';
+  nav.setAttribute('aria-label','主导航');
+  const links=[['首页','home'],['项目','projects'],['关于我','about'],['简历','resume']];
+  if(key==='contact')links.push(['联系我','contact']);
+  links.forEach(([label,route])=>{
+    const link=document.createElement('a');
+    link.href='#'+route;
+    link.textContent=label;
+    if(route===(key==='work'||key==='detail'?'projects':key))link.setAttribute('aria-current','page');
+    nav.append(link);
+  });
+  header?.remove();
+  app.prepend(nav);
+  if(key==='home'){
+    const hero=document.createElement('section');
+    hero.className='compact-hero';
+    hero.innerHTML='<img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳"><h1>我是 <em>宋冰艳</em><br>5年 UI 设计经验</h1><p>设计项目超 50+ 并上线</p><div><a href="#contact">联系面试</a><a href="#resume">查看简历</a></div>';
+    node('297:2783').before(hero);
+  }
+  if(key==='about'){
+    const collage=node('330:47878');
+    collage.className='personal-toolkit';
+    collage.innerHTML=`
+      <a class="tool-folder tool-sites" href="#home"><div class="tool-preview sites-preview"><img src="assets/figma/home-imgRectangle2.webp" alt=""><img src="assets/figma/home-imgContainer2.webp" alt=""></div><span class="folder-front"></span><strong>我的网站</strong></a>
+      <a class="tool-folder tool-plugins" href="https://shiyong-figma-plugins.abcgajgwhb.chatgpt.site/"><div class="tool-preview plugin-preview"><small>拾用 · Figma 插件导航</small><span>PSD ↔ Figma</span></div><span class="folder-front"></span><strong>我的插件</strong></a>
+      <a class="tool-folder tool-articles" href="#about/workflows"><div class="tool-preview article-preview"><small>六六 UI 设计师</small><span>Codex + Figma 工作流</span></div><span class="folder-front"></span><strong>学习文章</strong></a>
+      <span class="tool-sticker sticker-ai" aria-hidden="true">✦ AI 工作流</span>
+      <span class="tool-sticker sticker-ui" aria-hidden="true">六六<br>UI 设计师</span>
+      <span class="tool-sticker sticker-system" aria-hidden="true">设计规范</span>
+      <span class="tool-sticker sticker-cross" aria-hidden="true">跨端适配</span>
+      <span class="tool-sticker sticker-figma" aria-hidden="true">Figma<br>可编辑</span>`;
+  }
+  if(key==='home')node('612:13644')?.remove();
+}
+const caseNotes={
+  ai:['梳理对话首页、侧边栏和智能体入口，支持写作、视频和图片生成。','将侧边栏从点击图标展开改为向右滑动打开，并适配 iPad。'],
+  ai3:['升级黑白蓝视觉系统，并统一手机和 iPad 的界面样式。','梳理输入、思考中和回复的交互状态。'],
+  ezvend:['梳理精细化补货与快捷补货两种流程，以及新品申请和货道图导入。','复用现有组件，适配英语和印尼语，并跟进界面走查。'],
+  merchant:['围绕扫码开门、库存和订单管理组织商家端入口。'],
+  life:['梳理首页、商城和 AI 入口，设计优惠券拉新、小橙币签到等活动界面。'],
+  pos:['梳理刷卡授权、开门购物和支付流程，并覆盖欠款补缴与设备异常状态。'],
+  'overseas-admin':['按准入、资料、订单、经营数据和渠道管理组织后台模块。']
+};
+function caseView(project){
+  const [id,title,platform,date,scope,summary,cover]=project;
+  const study=caseStudies[id];
+  const record=workbookProjects[id];
+  const next=projects.find(p=>p[0]===workOrder[(workOrder.indexOf(id)+1)%workOrder.length]);
+  const screens=caseEvidence.screens[id]||[];
+  const hero=cover?'assets/'+cover+'.webp':screens[0]?.src;
+  const sections=[['overview','项目概览'],['decisions','设计拆解'],['ai-method','AI 协作'],['review','交付与复盘'],...(screens.length?[['interfaces','设计稿展示']]:[])];
+  const gallery=screens.map((screen,i)=>`<figure class="evidence-screen ${screen.w/screen.h>1.1?'wide-screen':''}"><button type="button" class="case-enlarge" data-image="${screen.src}" aria-label="放大${screen.label}"><img loading="lazy" src="${screen.src}" alt="${screen.label}"></button><figcaption><strong>${screen.label}</strong></figcaption></figure>`).join('');
+  return `<article class="project-case editorial-case" data-kind="${platform==='后台管理'?'admin':platform==='硬件大屏'?'hardware':'product'}">
+    <div class="case-topline"><a class="case-back" href="#projects">全部项目</a><span>${platform} · UI 设计作品</span></div>
+    <header class="editorial-heading"><p class="case-scope">${scope}</p><h1>${title}</h1><p class="case-lead">${study.angle}</p><div class="case-facts"><div><span>服务人群</span><p>${study.audience}</p></div><div><span>设计范围</span><p>${study.scope}</p></div>${date?`<div><span>项目日期</span><p>${date}</p></div>`:''}${record?.status?'<div><span>上线状态</span><p>'+record.status+'</p></div>':''}</div></header>
+    ${hero?`<figure class="editorial-hero"><button type="button" class="case-enlarge" data-image="${hero}" aria-label="放大项目主图"><img src="${hero}" alt="${title}项目展示"></button></figure>`:''}
+    <nav class="case-sections" aria-label="项目详情目录">${sections.map(([key,label])=>`<a href="#${key}" data-section="${key}">${label}</a>`).join('')}</nav>
+    <section id="overview" class="editorial-section"><div class="section-title"><p>业务与任务</p><h2>先理解业务，<br>再组织操作。</h2></div><div class="section-body"><p class="large-copy">${summary}</p>${study.problem!==summary?'<p>'+study.problem+'</p>':''}</div></section>
+    <section class="flow-band"><h2>核心任务路径</h2><ol class="case-flow">${study.flow.map(step=>`<li>${step}</li>`).join('')}</ol></section>
+    ${record?.responsibility?'<section class="editorial-section personal-role"><div class="section-title"><p>个人贡献</p><h2>我负责的设计工作</h2></div><div class="section-body"><p class="responsibility-copy">'+record.responsibility+'</p>'+(record.team?'<p class="case-source">'+record.team+'</p>':'')+'</div></section>':''}
+    <section id="decisions" class="decision-section"><p class="section-kicker">设计拆解</p><h2>把复杂关系，转化为清晰选择。</h2><div class="editorial-decisions">${study.decisions.map(d=>`<article><h3>${d.title}</h3><p>${d.body}</p></article>`).join('')}</div></section>
+    <section id="ai-method" class="editorial-section ai-section"><div class="section-title"><p>${study.aiStatus}</p><h2>让 AI 加速整理，<br>让设计判断落地。</h2></div><div class="section-body"><p>${study.ai}</p><div class="ai-responsibilities"><div><h3>工具辅助</h3><p>内容归纳、场景扩展、样本生成与规范整理。</p></div><div><h3>设计师负责</h3><p>业务边界、操作优先级、视觉表达和最终交付核验。</p></div></div></div></section>
+    <section id="review" class="editorial-section review-section"><div class="section-title"><p>交付与复盘</p><h2>让方案具备<br>可检查的细节。</h2></div><div class="section-body"><h3>本项目的检查重点</h3><p>${study.verify}</p><h3>面向交付继续核对</h3><p>依据关键任务检查页面入口、状态反馈、返回路径和组件一致性，结合开发走查与使用反馈持续修正。</p><p class="case-source">案例资料 · ${study.evidence}。</p></div></section>
+    <aside class="case-contact"><div><h2>欢迎交流项目中的设计判断</h2><p>从业务梳理、界面设计到跨端适配与交付。</p></div><a href="#contact">联系我</a></aside>
+    <a class="case-next" href="#project/${next[0]}"><span>继续浏览</span><strong>${next[1]}</strong></a>
+    ${screens.length?`<section id="interfaces" class="interface-section"><div class="interface-heading"><div><p class="section-kicker">设计稿展示</p><h2>项目界面与设计细节</h2></div></div>${study.screenNote?`<div class="screen-reading"><h3>${study.screenNote.title}</h3><p>${study.screenNote.body}</p></div>`:`<div class="screen-reading"><h3>页面范围与信息组织</h3><p>${study.scope}。以下设计分析结合现有项目说明与已读取的画板结构整理。</p></div>`}<div class="screen-gallery">${gallery}</div></section>`:''}
+    <dialog class="image-dialog" aria-label="设计稿大图"><button class="dialog-close" aria-label="关闭大图">关闭</button><img alt="设计稿大图"></dialog>
+  </article>`;
+}
+function bindCase(){
+  app.querySelectorAll('[data-section]').forEach(link=>link.addEventListener('click',event=>{
+    event.preventDefault();
+    document.getElementById(link.dataset.section)?.scrollIntoView({behavior:motion.matches?'instant':'smooth',block:'start'});
+  }));
+  const dialog=app.querySelector('.image-dialog');
+  app.querySelectorAll('.case-enlarge').forEach(button=>button.addEventListener('click',()=>{
+    const image=dialog.querySelector('img');
+    image.src=button.dataset.image;
+    image.alt=button.querySelector('img').alt;
+    dialog.showModal();
+  }));
+  dialog?.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+  dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+}
 function render(){
- const projects=isArchive?data.projects.filter(p=>(selectedType==='全部'||window.PortfolioCases.projectTypes(p).includes(selectedType))&&(selectedIndustry==='全部'||p.industry===selectedIndustry)):data.projects.filter(p=>p.featured);
- grid.innerHTML=projects.map(card).join('');
- document.querySelector('#filter-status').textContent=`${isArchive?'找到':'精选'} ${projects.length} 个作品`;
- if(!projects.length)grid.innerHTML='<div class="empty-state"><span>⌕</span><h3>这个分类的作品还未添加</h3><p>可以选择其他类型或行业，继续浏览作品。</p><button data-reset>查看全部作品 ↗</button></div>';
- if(isArchive)renderFilters();
+  const [page,id]=(location.hash.slice(1)||'home').split('/');
+  const project=page==='project'&&projects.find(p=>p[0]===id);
+  const key=page==='projects'||(page==='project'&&!project)?'work':project?'detail':page;
+  const board=artboards[key]||artboards.home;
+  app.innerHTML='<div class="artboard" style="height:'+board.height+'px">'+(project?caseView(project):board.html)+'</div>';
+  prepareLayout(key);
+  bindNavigation(page);
+  if(key==='home'){
+    ['292:2441','297:2604','297:2631','297:2650','298:6570','298:6589'].forEach((n,i)=>{
+      const id=['ai','ezvend','life','grabot','merchant','studio'][i];
+      const card=node(n);
+      const record=workbookProjects[id];
+      if(record?.cover&&card.querySelector('img'))card.querySelector('img').src=record.cover.src;
+      go(card,'project/'+id);
+    });
+  }
+  if(key==='work')bindWork();
+  if(project)bindCase();
+  if(key==='resume'&&printResume){
+    printResume=false;
+    setTimeout(()=>window.print(),450);
+  }
+  if(key==='about'&&id==='workflows')node('330:46795')?.scrollIntoView({block:'start'});
+  else window.scrollTo({top:0,behavior:'instant'});
+  if(initialized){
+    const frame=app.querySelector('.artboard');
+    frame.tabIndex=-1;
+    frame.focus({preventScroll:true});
+  }
 }
-function resetFilters(){selectedType='全部';selectedIndustry='全部';render()}
-render();
-document.querySelectorAll('[data-total-count]').forEach(el=>el.textContent=String(data.projects.length).padStart(2,'0'));
-document.addEventListener('click',e=>{const filter=e.target.closest('[data-dimension]');if(filter){if(filter.dataset.dimension==='category')selectedType=filter.dataset.value;else selectedIndustry=filter.dataset.value;render()}if(e.target.closest('[data-reset]'))resetFilters()});
-const dialog=document.querySelector('#detail-dialog');
-
-let caseObserver;
-function showProject(id){
- const p=data.projects.find(p=>p.id===id);if(!p)return;
- const index=data.projects.indexOf(p),previous=data.projects[(index-1+data.projects.length)%data.projects.length],next=data.projects[(index+1)%data.projects.length];
- dialog.classList.add('project-dialog');
- document.querySelector('#dialog-content').innerHTML=window.PortfolioCases.render(p,index,data.projects,visuals);
- dialog.setAttribute('aria-labelledby','case-title');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;document.querySelector('.case-content').scrollTop=0;
- const address=new URL(location.href);address.searchParams.set('project',p.id);history.replaceState(null,'',address);
- caseObserver?.disconnect();
- const scroller=matchMedia('(max-width:700px)').matches?dialog:document.querySelector('.case-content');
- caseObserver=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('[data-case-anchor]').forEach(a=>a.toggleAttribute('aria-current',a.dataset.caseAnchor===entry.target.id));}}},{root:scroller,rootMargin:'0px 0px -65% 0px',threshold:0});
- document.querySelectorAll('.case-chapter').forEach(section=>caseObserver.observe(section));
+function route(){
+  if(initialized&&document.startViewTransition&&!motion.matches)document.startViewTransition(render);
+  else render();
+  initialized=true;
 }
-document.addEventListener('click',e=>{const anchor=e.target.closest('[data-case-anchor]');if(anchor){document.getElementById(anchor.dataset.caseAnchor)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});document.querySelectorAll('[data-case-anchor]').forEach(a=>a.removeAttribute('aria-current'));anchor.setAttribute('aria-current','location');}const button=e.target.closest('[data-project]'),switcher=e.target.closest('[data-case-switch]');if(button)showProject(button.dataset.project);if(switcher)showProject(switcher.dataset.caseSwitch);if(e.target.closest('[data-close-project]'))dialog.close()});
-document.querySelector('.close-dialog').onclick=()=>dialog.close();dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove('visible'),3500)}
-if(document.querySelector('#resume-button')) document.querySelector('#resume-button').onclick=()=>{if(data.resumeUrl)window.open(data.resumeUrl,'_blank','noopener');else toast('简历尚未添加。请在 content.js 中配置你的简历文件。')};
-if(data.email && document.querySelector('#contact-hint'))document.querySelector('#contact-hint').textContent=data.email;
 
-const socialGrid=document.querySelector('#social-grid');
-if(socialGrid){
- socialGrid.innerHTML=(data.social||[]).map((social)=>`<a class="social-card" href="learning.html?platform=${encodeURIComponent(social.name)}"><span class="social-icon ${social.tone}">${social.mark}</span><span class="social-copy"><strong>${social.name}</strong><small>浏览学习内容</small></span><span class="social-arrow">↗</span></a>`).join('');
- document.querySelector('.social-note').innerHTML='<a href="learning.html">查看全部学习内容 ↗</a>';
+addEventListener('hashchange',route);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!app.querySelector('dialog[open]')&&location.hash.startsWith('#project/'))location.hash='projects';});
+route();
+function fitPaper(){
+  app.style.setProperty('--paper-scale',Math.min(1,app.clientWidth/1200));
 }
-// 支持从链接直达项目详情。
-const linkedProject=new URLSearchParams(location.search).get('project');
-if(linkedProject&&data.projects.some(p=>p.id===linkedProject))showProject(linkedProject);
-
-document.addEventListener('click',event=>{const wechat=event.target.closest('[data-case-wechat]');if(wechat){const panel=document.querySelector('.case-wechat-panel');panel.hidden=!panel.hidden;wechat.setAttribute('aria-expanded',String(!panel.hidden))}if(event.target.closest('[data-case-resume]')){document.querySelector('.case-footer-status').textContent='简历文件待上传。'}});
-
-// Shared full-size viewer keeps screen evidence readable on desktop and mobile.
-const imageViewer=document.createElement('dialog');imageViewer.className='case-image-viewer';imageViewer.setAttribute('aria-label','设计稿放大预览');
-imageViewer.innerHTML='<div class="image-viewer-toolbar"><p id="image-caption"></p><button type="button" data-image-scale aria-label="切换图片原尺寸">原尺寸</button><button type="button" data-image-close aria-label="关闭设计稿预览">关闭 ×</button></div><div class="image-viewer-canvas"><img alt=""></div>';
-document.body.append(imageViewer);
-document.addEventListener('click',e=>{const trigger=e.target.closest('[data-case-image]');if(trigger){const image=imageViewer.querySelector('img');image.src=trigger.dataset.caseImage;image.alt=trigger.dataset.imageCaption;imageViewer.querySelector('#image-caption').textContent=trigger.dataset.imageCaption;imageViewer.classList.remove('image-original');imageViewer.showModal();imageViewer.querySelector('.image-viewer-canvas').scrollTop=0;}if(e.target.closest('[data-image-close]'))imageViewer.close();if(e.target.closest('[data-image-scale]'))imageViewer.classList.toggle('image-original');});
-imageViewer.addEventListener('click',e=>{if(e.target===imageViewer)imageViewer.close()});
-dialog.addEventListener('close',()=>{caseObserver?.disconnect();const address=new URL(location.href);address.searchParams.delete('project');history.replaceState(null,'',address);});
+addEventListener('resize',fitPaper);
+fitPaper();
