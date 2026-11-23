@@ -309,7 +309,11 @@ const workbookProjects = {
     "responsibility": "负责酒柜大屏相关UI设计与迭代，覆盖商品列表、详情、活动规则与结果、优惠领取以及取货码输入；梳理价格、规格、活动信息和主要操作的关系，明确购买与取货的入口及反馈。",
     "status": "已上线",
     "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-    "cover": null
+    "cover": {
+      "src": "assets/latest-projects/wine-render-cover.webp",
+      "width": 969,
+      "height": 848
+    }
   },
   "pos": {
     "row": 17,
@@ -337,7 +341,11 @@ const workbookProjects = {
     "responsibility": "负责盲盒机大屏相关版本的UI迭代，调整待机、列表、详情、购物车、支付及出货页面的信息层级，适配横屏与竖屏展示；重点梳理多商品出货进度及部分失败反馈，保持设备端与手机端的服务衔接。",
     "status": "已上线",
     "team": "本人负责 UI 设计；协作产品经理、研发工程师、测试及运营人员",
-    "cover": null
+    "cover": {
+      "src": "assets/latest-projects/blindbox-render-cover.webp",
+      "width": 971,
+      "height": 850
+    }
   },
   "charge-h5": {
     "row": 19,
