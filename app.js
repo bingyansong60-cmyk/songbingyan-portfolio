@@ -52,7 +52,7 @@ let initialized = false;
 let printResume = false;
 let platform = '全部项目';
 let topic = '所有类别';
-const workOrder = ['ai3','studio','work','haieasy','ezvend','merchant','loan','charge-h5','charging','retail','pinball','installment','auto','local','box','life','book','drama','arcade','health','box-saas','arcade-h5','grabot','cabinet','ai','ai-web','wine','pos','vertical','overseas-admin','operations','work-platform','work-enterprise','channel'];
+const workOrder = ["ai3", "work", "life", "ezvend", "merchant", "studio", "loan", "cabinet", "charging", "arcade", "box", "box-saas", "pinball", "grabot", "wine", "pos", "vertical", "charge-h5", "arcade-h5", "drama", "book", "auto", "installment", "local", "health", "work-platform", "work-enterprise", "haieasy", "ai", "ai-web", "retail", "overseas-admin", "operations", "channel"];
 projects.push(
   ['overseas-admin','海外经销商管理系统','后台管理','','海外渠道 · 运营管理','涵盖经销商准入、资料、订单及经营数据。'],
   ['operations','恒生活｜运营活动设计','UI运营活动','','本地生活 · 运营活动','覆盖签到与优惠券等运营活动。']
@@ -111,28 +111,28 @@ function bindNavigation(page){
 function bindWork(){
   const grid=node('297:5334');
   const baseCard=grid.firstElementChild;
-  for(const id of ['work-platform','work-enterprise','channel']){
-    const card=baseCard.cloneNode(true);
-    const evidence=caseEvidence.screens[id]?.[0];
-    const image=card.querySelector('img');
-    if(evidence){image.src=evidence.src;image.alt='智易 Work 平台后台界面';}
-    else{
-      card.firstElementChild.innerHTML='<div class="admin-cover">'+(id==='channel'?'恒先锋<br><span>渠道推广运营端</span>':'智易 Work<br><span>企业后台</span>')+'</div>';
-    }
-    grid.append(card);
-  }
+  const originalCards=[...grid.children];
+  const fallbackCards=Object.fromEntries(['ai3','studio','work','haieasy','ezvend','merchant','loan','charge-h5','charging','retail','pinball','installment','auto','local','box','life','book','drama','arcade','health','box-saas','arcade-h5','grabot','cabinet','ai','ai-web','wine','pos','vertical','overseas-admin','operations'].map((id,i)=>[id,originalCards[i]]));
+  grid.replaceChildren(...workOrder.map(id=>(fallbackCards[id]||baseCard).cloneNode(true)));
   const allCards=[...grid.children];
   const buttons=[...node('297:3022').children];
-  const topicButtons=[...node('297:5437').children];
+  const topicButtons=[];
+  node('297:5437')?.remove();
+  topic='所有类别';
   allCards.forEach((card,i)=>{
     const project=projects.find(p=>p[0]===workOrder[i]);
     if(!project)return;
-    if(workbookProjects[project[0]]?.cover){
-      const image=card.querySelector('img');
-      if(image){image.src='assets/'+project[6]+'.webp';image.alt=project[1]+'项目封面';}
+    const record=workbookProjects[project[0]];
+    const source=record?.cover?.src||(project[6]?'assets/'+project[6]+'.webp':null);
+    if(source){
+      const holder=card.firstElementChild;
+      holder.replaceChildren();
+      const image=document.createElement('img');image.src=source;image.alt=project[1]+'项目封面';image.loading='lazy';holder.append(image);
+    }else if(!fallbackCards[project[0]]){
+      card.firstElementChild.innerHTML='<div class="admin-cover">'+project[1]+'</div>';
     }
     const info=card.lastElementChild;
-    info.firstElementChild.textContent=project[1].split('｜')[0]+(['ai','ai3'].includes(project[0])?(project[0]==='ai3'?' 3.0':' 2.0、3.0'):'');
+    info.firstElementChild.textContent=project[1];
     info.lastElementChild.textContent=project[3];
     card.dataset.project=project[0];
     card.setAttribute('aria-label',project[1]);
@@ -222,7 +222,6 @@ function caseView(project){
     <div class="case-topline"><a class="case-back" href="#projects">全部项目</a><span>${platform} · UI 设计作品</span></div>
     <header class="editorial-heading"><p class="case-scope">${scope}</p><h1>${title}</h1><p class="case-lead">${study.angle}</p><div class="case-facts"><div><span>服务人群</span><p>${study.audience}</p></div><div><span>设计范围</span><p>${study.scope}</p></div>${date?`<div><span>项目日期</span><p>${date}</p></div>`:''}${record?.status?'<div><span>上线状态</span><p>'+record.status+'</p></div>':''}</div></header>
     ${hero?`<figure class="editorial-hero"><button type="button" class="case-enlarge" data-image="${hero}" aria-label="放大项目主图"><img src="${hero}" alt="${title}项目展示"></button></figure>`:''}
-    <nav class="case-sections" aria-label="项目详情目录">${sections.map(([key,label])=>`<a href="#${key}" data-section="${key}">${label}</a>`).join('')}</nav>
     <section id="overview" class="editorial-section"><div class="section-title"><p>项目背景</p><h2>业务是什么，<br>设计负责什么。</h2></div><div class="section-body"><p class="large-copy">${summary}</p>${study.problem!==summary?'<p>'+study.problem+'</p>':''}</div></section>
     <section class="flow-band"><h2>核心任务路径</h2><ol class="case-flow">${study.flow.map(step=>`<li>${step}</li>`).join('')}</ol></section>
     ${record?.responsibility?'<section class="editorial-section personal-role"><div class="section-title"><p>个人贡献</p><h2>我负责的设计工作</h2></div><div class="section-body"><p class="responsibility-copy">'+record.responsibility+'</p>'+(record.team?'<p class="case-source">'+record.team+'</p>':'')+'</div></section>':''}
@@ -256,6 +255,7 @@ function render(){
   const [page,id]=(location.hash.slice(1)||'home').split('/');
   const project=page==='project'&&projects.find(p=>p[0]===id);
   const key=page==='projects'||(page==='project'&&!project)?'work':project?'detail':page;
+  if(page==='article'){renderArticle(id);return;}
   const board=artboards[key]||artboards.home;
   app.innerHTML='<div class="artboard" style="height:'+board.height+'px">'+(project?caseView(project):board.html)+'</div>';
   prepareLayout(key);
@@ -279,7 +279,25 @@ function render(){
       go(card,'project/'+id);
     });
   }
+  if(key==='home'){
+    const grid=node('297:2685');
+    ['work','pos'].forEach(id=>{
+      const card=grid.firstElementChild.cloneNode(true);
+      card.removeAttribute('data-node-id');
+      card.querySelectorAll('[data-node-id]').forEach(el=>el.removeAttribute('data-node-id'));
+      const project=projects.find(p=>p[0]===id);
+      const titleGroup=card.lastElementChild.firstElementChild;
+      titleGroup.firstElementChild.querySelector('p').textContent=project[1];
+      const summary=card.querySelector('.project-card-summary');if(summary)summary.textContent=cardDescriptions[id]||project[5];
+      const image=card.querySelector('img');image.src=workbookProjects[id].cover.src;image.alt=project[1]+'项目封面';image.loading='lazy';
+      const tag=card.lastElementChild.lastElementChild.querySelector('p');if(tag)tag.textContent=id==='work'?'AI 办公':'终端硬件';
+      // Cloning excludes event listeners; bind only this project's destination.
+      go(card,'project/'+id);card.setAttribute('aria-label',project[1]);grid.append(card);
+    });
+  }
   if(key==='work')bindWork();
+  bindArticles();
+  installMotion();
   if(project)bindCase();
   if(key==='resume'&&printResume){
     printResume=false;
@@ -299,6 +317,30 @@ function route(){
   initialized=true;
 }
 
+
+const workflowArticles = [
+ {id:'ui-redesign',node:'288:1607',title:'ChatGPT 做 UI 界面改版，并生成源文件工作流',intro:'让 AI 辅助前期梳理，把精力留给业务理解、体验判断与设计细节。',parts:[['先整理现有界面','把页面目标、服务人群、原有信息结构和需要保留的品牌元素写清楚。提供现有界面作为依据，明确哪些内容可以调整，哪些业务规则必须保留。'],['让 AI 帮忙拆解问题','围绕信息层级、操作路径和视觉一致性整理改版方向。逐条检查建议是否适合真实业务，再选择值得推进的方案。'],['在 Figma 中完成设计','基于已有组件和变量整理界面，检查字体、间距、圆角、色彩及多状态表现。可编辑的源文件需要真实图层结构，不能只放一张效果图。'],['交付前人工核验','对照原需求检查遗漏、长文案、空状态、异常状态和适配边界。AI 给出的是辅助方案，最终设计质量由设计师负责。']]},
+ {id:'codex-figma',node:'288:1615',title:'UI 设计师的 Codex + Figma 工作流',intro:'从明确任务到检查结果，把 AI 接入自己的设计过程。',parts:[['准备设计上下文','提供明确的页面范围、参考设计和组件规范，说明要解决的任务。涉及原稿时先约定读取与修改边界。'],['把需求拆成可检查的步骤','先完成结构与信息层级，再调整组件状态、视觉细节和适配，避免一次提出过多相互依赖的修改。'],['用现有规范约束输出','沿用项目的颜色变量、字体层级和组件，让新页面与已有产品保持一致。'],['检查与沉淀','核对图层是否可编辑、组件是否正确、布局是否完整。把有效的方法整理成可复用流程，而不是直接接受第一次结果。']]},
+ {id:'gemini-interface',node:'288:1622',title:'Gemini 生成界面，再导入 Figma 的流程',intro:'在方向不明确时，用 AI 生成方案辅助探索，再回到 Figma 完成整理。',parts:[['描述具体场景','说明产品类型、用户目标、页面内容与视觉方向。已有品牌样式应一起提供，避免得到脱离项目的概念图。'],['比较方案方向','从信息结构、主次关系和操作逻辑选择方案。生成图只用于辅助判断，不能替代业务流程。'],['导入后检查可编辑结构','核对文字、图片、图标与组件是否保留独立图层；如果导入的是整张图片，需要继续整理为真正可维护的设计。'],['回到产品规范','统一字体、色彩、组件状态和间距，再检查多尺寸适配及开发可实现性。']]},
+ {id:'lottery-design',node:'288:1629',title:'ChatGPT + Figma 制作抽奖页面和中奖弹窗',intro:'从活动规则出发，把页面、反馈与动效组织成完整体验。',parts:[['明确活动规则','先梳理抽奖次数、奖品内容、参与条件及领奖流程，再安排页面内容，避免只有热闹的视觉。'],['设计完整反馈','分别考虑抽奖前、进行中、中奖、未中奖和次数不足等状态。中奖弹窗说明奖品与下一步动作。'],['补充适度动效','入场、抽奖过程和结果反馈各有目的。控制持续时间，保留关闭和返回能力，不让动画影响操作。'],['检查活动交付','核对奖品文案、按钮去向、弹窗遮罩和小屏表现，再整理素材与状态说明。']]},
+ {id:'editable-source',node:'288:1638',title:'Codex 到 Figma 生成源文件的工作流',intro:'重点是可编辑、可维护和符合项目规范，而不只是生成一张界面。',parts:[['提供结构化需求','明确页面结构、文本内容、尺寸及复用组件，让输出有具体依据。'],['建立真实图层','页面里的文字、图标、按钮和内容区域需要有清晰结构，重复元素优先使用组件。'],['核对设计规范','检查自动布局、颜色变量、字体层级和图层命名，确保后续可以继续修改。'],['人工完成最后一轮','逐项走查对齐、间距、溢出及交互状态，把可用的输出整理成完整交付文件。']]},
+ {id:'miniapp-redesign',node:'288:1645',title:'用 ChatGPT 辅助小程序 UI 改版',intro:'把生成思路与真实产品约束结合，让改版能继续落地。',parts:[['梳理原有页面','整理已有功能、操作路径及需要保留的内容，明确此次改版的范围。'],['辅助生成设计方向','让 AI 围绕信息层级、模块布局和视觉风格提供候选思路，再根据业务进行筛选。'],['落成可编辑界面','在 Figma 中结合现有组件完成细化，统一导航、卡片、按钮及反馈样式。'],['检查完整性','核对小程序的页面跳转、系统栏、安全区、长文案及空状态，把视觉方案补全为可交付设计。']]}
+];
+function bindArticles(){workflowArticles.forEach(article=>{const card=node(article.node);if(card){go(card,'article/'+article.id);card.setAttribute('aria-label','阅读文章：'+article.title);}});}
+function renderArticle(id){
+ const article=workflowArticles.find(a=>a.id===id);
+ if(!article){location.hash='home';return;}
+ app.innerHTML='<article class="workflow-article"><a class="article-back" href="#home">返回首页</a><header><p class="section-kicker">六六 UI 设计师 · AI 设计工作流</p><h1>'+article.title+'</h1><p class="article-intro">'+article.intro+'</p></header><p class="article-context">依据首页分享主题整理的站内流程说明。</p>'+article.parts.map(([title,body])=>'<section><h2>'+title+'</h2><p>'+body+'</p></section>').join('')+'<footer><a href="#article/'+workflowArticles[(workflowArticles.indexOf(article)+1)%workflowArticles.length].id+'">阅读下一篇工作流</a><a href="#home">返回首页</a></footer></article>';
+ window.scrollTo({top:0,behavior:'instant'});installMotion();
+}
+function installMotion(){
+ revealObserver?.disconnect();
+ if(motion.matches||!('IntersectionObserver' in window))return;
+ revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('has-entered');revealObserver.unobserve(entry.target);}}),{threshold:.06,rootMargin:'0px 0px -24px 0px'});
+ app.querySelectorAll('[data-project],.editorial-section,.decision-section,.flow-band,.evidence-screen,.case-contact,.case-next,.workflow-article section,[data-node-id="288:1606"]>div').forEach((el,i)=>{el.classList.add('motion-enter');el.style.setProperty('--enter-delay',Math.min(i%3*50,100)+'ms');revealObserver.observe(el);});
+}
+
+let revealObserver;
 addEventListener('hashchange',route);
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!app.querySelector('dialog[open]')&&location.hash.startsWith('#project/'))location.hash='projects';});
 route();
