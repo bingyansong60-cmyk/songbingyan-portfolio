@@ -175,21 +175,13 @@ function prepareLayout(key){
     nav.append(link);
   });
   header?.remove();
-  app.prepend(nav);
+  if(key!=='detail')app.prepend(nav);
   if(key==='home'){
     const hero=document.createElement('section');
     hero.className='compact-hero';
     hero.innerHTML='<img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳"><h1>我是 <em>宋冰艳</em><br>5年 UI 设计经验</h1><p>设计项目超 50+ 并上线</p><div><a href="#contact">联系面试</a><a href="#resume">查看简历</a></div>';
     node('297:2783').before(hero);
-    const desk=document.createElement('section');
-    desk.className='designer-desk';
-    desk.setAttribute('aria-label','我的设计工作台');
-    desk.innerHTML=`<div class="desk-heading"><span>ABOUT MY DESIGN</span><h2>认真设计，也保持好奇。</h2><p>把复杂业务，变成清晰好用的界面。</p></div>
-      <a class="desk-badge desk-item" href="#about" aria-label="了解宋冰艳"><span class="badge-strap">SONG BINGYAN · UI DESIGNER</span><div class="badge-shell"><div class="badge-slot"></div><span class="desk-eyebrow">HELLO, I'M</span><h3>宋冰艳</h3><p>UI 设计师<br>AI 产品 · 多端体验 · 设计规范</p><img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳的个人照片"><span class="badge-footer">5 年设计经验 · 持续探索</span></div></a>
-      <a class="desk-record desk-item" href="#projects" aria-label="查看跨端设计项目"><div class="vinyl-disc"><span>UI<br>DESIGN</span></div><small>我的设计播放列表</small><h3>从界面，到体验</h3><p>APP / Web / 小程序 / 智能硬件</p><span class="record-note">探索我的项目</span></a>
-      <a class="desk-folder desk-item" href="#projects" aria-label="打开我的项目文件夹"><div class="desk-folder-back"></div><div class="desk-folder-sheet"><img src="${workbookProjects.ai3.cover.src}" alt="恒智易 AI 项目预览"><span>恒智易 AI · 智能体创作平台</span></div><div class="desk-folder-front"><span>精选项目</span><strong>我的作品集</strong><small>AI 产品 / 海外零售 / 企业后台</small></div><span class="folder-caption">把每一次思考，沉淀成作品</span></a>
-      <div class="desk-terminal desk-item"><div class="terminal-bar"><i></i><i></i><i></i><span>bingyan — design workflow</span></div><div class="terminal-content"><p><b>~ $</b> whoami</p><strong>宋冰艳 · UI 设计师</strong><p><b>~ $</b> cat workflow</p><div class="terminal-steps">理解业务 → 梳理流程<br>视觉设计 → 组件规范 → 交付走查</div><p><b>~ $</b> explore AI</p><div class="terminal-steps">AI 辅助构思、素材探索与方案推演<br>设计判断与交付质量，由我把关<span class="terminal-caret"></span></div></div></div>`;
-    hero.after(desk);
+
 
   }
   if(key==='about'){
