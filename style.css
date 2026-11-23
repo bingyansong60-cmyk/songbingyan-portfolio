@@ -419,3 +419,5 @@ body{margin:0;color:#111;font-family:"PingFang SC","Microsoft YaHei","Noto Sans 
 .motion-enter.has-entered{opacity:1;translate:0 0}
 @media(max-width:640px){.motion-enter{translate:0 18px}.motion-enter.has-entered{translate:0 0}}
 @media(prefers-reduced-motion:reduce){.motion-enter{opacity:1;translate:none;transition:none}}
+
+.project-visit-link{margin-left:auto;align-self:center;white-space:nowrap;font-size:14px;line-height:1.5;color:#75757d;text-decoration:none;cursor:pointer;transition:color .2s}.project-visit-link:hover{color:#111;text-decoration:underline;text-underline-offset:4px}.project-visit-link:focus-visible{outline:2px solid #786de8;outline-offset:4px}
