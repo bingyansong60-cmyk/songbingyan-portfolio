@@ -177,6 +177,9 @@ function prepareLayout(key){
   header?.remove();
   if(key!=='detail')app.prepend(nav);
   if(key==='home'){
+    app.querySelector('img[src="assets/figma/home-imgImage6.webp"]')?.remove();
+    node('612:13666')?.setAttribute('data-name','宋冰艳个人照片');
+    ['612:13640','612:13672'].forEach(id=>node(id)?.classList.add('hero-flower'));
     const hero=document.createElement('section');
     hero.className='compact-hero';
     hero.innerHTML='<img src="assets/figma/home-imgCd43Dcf946985Cd8717Fffd12A5F020C1.webp" alt="宋冰艳"><h1>我是 <em>宋冰艳</em><br>5年 UI 设计经验</h1><p>设计项目超 50+ 并上线</p><div><a href="#contact">联系面试</a><a href="#resume">查看简历</a></div>';
