@@ -409,3 +409,8 @@ body{margin:0;color:#111;font-family:"PingFang SC","Microsoft YaHei","Noto Sans 
 @media(min-width:901px){.editorial-case .case-facts:not(:has(>div:nth-child(4))){grid-template-columns:repeat(3,minmax(0,1fr))}.editorial-case .case-facts:not(:has(>div:nth-child(3))){grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:900px){.editorial-case .case-facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}}
 @media(max-width:480px){.editorial-case .case-facts{grid-template-columns:1fr;gap:24px}}
+/* Keep Song Bingyan's portrait; animate just the decorative flowers. */
+.hero-flower{pointer-events:auto}
+.hero-flower>img{transform-origin:center;transition:transform .8s cubic-bezier(.22,1,.36,1);will-change:transform}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.hero-flower:hover>img{transform:scale(1.2) rotate(150deg)}}
+@media(prefers-reduced-motion:reduce){.hero-flower>img{transition:none;will-change:auto}}
