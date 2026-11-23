@@ -18,6 +18,12 @@ const caseEvidence = {
         "label": "语音切换",
         "w": 375,
         "h": 812
+      },
+      {
+        "src": "assets/latest-projects/ai3-screens-f2f03ebe6b.webp",
+        "label": "恒智易 AI｜智能体创作平台 3.0 · 设计稿总览",
+        "w": 2128,
+        "h": 1992
       }
     ],
     "work": [
@@ -38,6 +44,12 @@ const caseEvidence = {
         "label": "Windows 桌面工作区",
         "w": 1440,
         "h": 900
+      },
+      {
+        "src": "assets/latest-projects/work-screens-0eb876165a.webp",
+        "label": "恒智易 Work｜AI 智能办公工作台 · 设计稿总览",
+        "w": 3580,
+        "h": 2198
       }
     ],
     "ezvend": [
@@ -58,6 +70,12 @@ const caseEvidence = {
         "label": "设备列表 · 停售设备标识",
         "w": 375,
         "h": 812
+      },
+      {
+        "src": "assets/latest-projects/ezvend-screens-5a58a1c951.webp",
+        "label": "EZvend｜海外智能售货运营端 · 设计稿总览",
+        "w": 3580,
+        "h": 2182
       }
     ],
     "ai": [
@@ -176,6 +194,12 @@ const caseEvidence = {
         "label": "抓娃娃设备服务",
         "w": 375,
         "h": 1070
+      },
+      {
+        "src": "assets/latest-projects/arcade-screens-af2d502abe.webp",
+        "label": "恒生活｜智能游艺与潮玩服务小程序 · 设计稿总览",
+        "w": 3560,
+        "h": 2190
       }
     ],
     "pos": [
@@ -206,6 +230,36 @@ const caseEvidence = {
         "label": "企业租户管理",
         "w": 1440,
         "h": 900
+      },
+      {
+        "src": "assets/latest-projects/work-platform-screens-120960a44d.webp",
+        "label": "智易 Work｜平台管理端 · 设计稿总览",
+        "w": 3566,
+        "h": 2202
+      }
+    ],
+    "grabot": [
+      {
+        "src": "assets/latest-projects/grabot-screens-74e6a09ab6.webp",
+        "label": "GRABOT｜海外智能零售品牌官网 · 设计稿总览",
+        "w": 3582,
+        "h": 2196
+      }
+    ],
+    "auto": [
+      {
+        "src": "assets/latest-projects/auto-screens-623cc74813.webp",
+        "label": "车商城H5 · 设计稿总览",
+        "w": 2886,
+        "h": 1886
+      }
+    ],
+    "installment": [
+      {
+        "src": "assets/latest-projects/installment-screens-701e445048.webp",
+        "label": "分期商城H5 · 设计稿总览",
+        "w": 2910,
+        "h": 2200
       }
     ]
   }
