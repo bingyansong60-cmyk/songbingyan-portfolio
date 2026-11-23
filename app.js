@@ -34,6 +34,7 @@ projects.push(
   ['work-enterprise','智易 Work｜企业后台','后台管理','','组织管理 · AI 应用与资源','围绕部门、成员、知识库与额度组织企业 AI 管理任务。']
 );
 projects.push(['channel','恒先锋｜渠道推广运营端','APP','','渠道推广 · 运营工具','面向行业从业者的智能推广与渠道运营工具。']);
+const cardDescriptions = Object.fromEntries(projects.map(p=>[p[0],p[5]]));
 for(const project of projects){
   const record=workbookProjects[project[0]];
   if(!record)continue;
@@ -255,8 +256,18 @@ function render(){
   bindNavigation(page);
   if(key==='home'){
     ['292:2441','297:2604','297:2631','297:2650','298:6570','298:6589'].forEach((n,i)=>{
-      const id=['ai','ezvend','life','grabot','merchant','studio'][i];
+      const id=['ai3','ezvend','life','grabot','merchant','studio'][i];
       const card=node(n);
+      const project=projects.find(p=>p[0]===id);
+      const textGroup=card.lastElementChild.firstElementChild;
+      const title=textGroup.firstElementChild.querySelector('p');
+      if(title)title.textContent=project[1];
+      const summary=document.createElement('p');
+      summary.className='project-card-summary';
+      summary.textContent=cardDescriptions[id]||project[5];
+      textGroup.lastElementChild.replaceWith(summary);
+      const tag=card.lastElementChild.lastElementChild.querySelector('p');
+      if(tag)tag.textContent={ai3:'AI APP',ezvend:'海外零售',life:'数字生活',grabot:'品牌官网',merchant:'商家运营',studio:'AI 影像'}[id];
       const record=workbookProjects[id];
       if(record?.cover&&card.querySelector('img'))card.querySelector('img').src=record.cover.src;
       go(card,'project/'+id);
