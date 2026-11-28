@@ -238,7 +238,7 @@
 window.addEventListener('DOMContentLoaded',()=>window.mountDetailShell({
 root:document.getElementById('ezvend-detail'),backHref:'../../index.html#projects',
 sections:[['top','项目概览'],['workflow','业务与任务'],['restock','双模式补货'],['planogram','陈列复用'],['capture','新品采集'],['system','设计规范'],['reflection','项目沉淀'],['gallery','设计稿展示']],
-onDemo:()=>{document.querySelector('[data-plan="device"]').click();document.getElementById('planogram').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});document.querySelector('[data-plan="device"]').focus({preventScroll:true});}
+onDemo:()=>window.open('../../demos/ezvend/', '_blank', 'noopener,noreferrer')
 }));
 </script></body>
 </html>
