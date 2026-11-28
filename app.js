@@ -311,7 +311,7 @@ function render(){
   }
   if(key==='work')bindWork();
   bindArticles();
-  if(project){bindCase();window.mountDetailShell({root:app.querySelector('.project-case'),sections:[['overview','项目背景'],['strategy','设计策略'],['decisions','关键决策'],['ai-method','AI 协作'],['delivery','设计交付'],['review','复盘与验证'],...(caseEvidence.screens[project[0]]?.length?[['interfaces','设计稿展示']]:[])],demo:(caseEvidence.screens[project[0]]||[]).filter(x=>!x.label.includes('总览'))});}
+  if(project){bindCase();window.mountDetailShell({root:app.querySelector('.project-case'),onDemo:project[0]==='grabot'?()=>window.open('https://bingyansong60-cmyk.github.io/songbingyan-portfolio/demos/grabot/','_blank','noopener,noreferrer'):undefined,sections:[['overview','项目背景'],['strategy','设计策略'],['decisions','关键决策'],['ai-method','AI 协作'],['delivery','设计交付'],['review','复盘与验证'],...(caseEvidence.screens[project[0]]?.length?[['interfaces','设计稿展示']]:[])],demo:(caseEvidence.screens[project[0]]||[]).filter(x=>!x.label.includes('总览'))});}
   if(key==='resume'&&printResume){
     printResume=false;
     setTimeout(()=>window.print(),450);
