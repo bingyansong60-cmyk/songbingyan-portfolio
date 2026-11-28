@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>恒智易 Work · 整套交互演示</title>
+  <style>
+html,body,main {margin:0;width:100%;height:100%;overflow:hidden}
+.work-desktop {
+  --chrome-height:32px;
+  box-sizing:border-box; position:relative; isolation:isolate; display:grid;
+  grid-template-rows:minmax(0,1fr) auto; width:100%; height:100%; overflow:hidden;
+  color:#f6f6f7; background:#28302c;
+  font:14px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+.work-desktop::before {
+  content:""; position:absolute; z-index:-1; inset:0; pointer-events:none;
+  background:linear-gradient(#0009,#0009),url("media/work-desktop.avif") center center/cover no-repeat;
+}
+.work-desktop *,.work-desktop *::after {box-sizing:border-box}
+.work-area {position:relative; min-height:0; margin:clamp(12px,3.6vh,46px) clamp(8px,2.8vw,64px) 0; container-type:size; display:grid; place-items:center}
+.work-window {
+  display:grid; grid-template-rows:var(--chrome-height) minmax(0,1fr);
+  width:min(100cqw,1200px,calc((100cqh - var(--chrome-height) - 10px)*1.6 + 10px));
+  max-height:100%; padding:0 4px 4px; overflow:hidden; border:1px solid #ffffff29;
+  border-radius:12px; background:#070808;
+  box-shadow:0 24px 70px -18px #0009,0 4px 12px #0005;
+}
+.work-titlebar {position:relative; display:grid; align-items:center; padding:0 8px}
+.work-titlebar h2 {margin:0; text-align:center; color:#c8c8cb; font:inherit; font-size:12px; font-weight:500; pointer-events:none}
+.work-controls {position:absolute; z-index:1; left:6px; display:flex}
+.work-desktop .work-control {
+  position:relative; display:grid; place-items:center; width:20px; height:30px;
+  border:0; border-radius:5px; outline-offset:-2px; padding:0; margin:0; min-height:0;
+  background:transparent; color:#181818; backdrop-filter:none; text-decoration:none; cursor:pointer;
+}
+.work-control::before {content:""; position:absolute; width:12px; height:12px; border-radius:50%; background:var(--control)}
+.work-close {--control:#f14545}.work-minimize {--control:#f0c711}.work-enlarge {--control:#46dc28}
+.work-control span {position:relative; opacity:0; color:#232323; font:700 10px/1 Arial,sans-serif}
+.work-controls:hover span,.work-control:focus-visible span {opacity:1}
+.work-desktop :is(button,a):focus-visible {outline:2px solid #d8e6ff}
+.work-display {width:100%; aspect-ratio:16/10; overflow:auto; border-radius:7px; background:#fff; overscroll-behavior:contain}
+.work-display iframe {display:block; width:100%; height:100%; border:0; background:#fff}
+.work-desktop-footer {position:relative; padding:9px 16px max(11px,env(safe-area-inset-bottom)); text-align:center}
+.work-desktop-footer small {font-size:11px; line-height:1.5; color:#e7e7e7; text-shadow:0 1px 4px #000}
+.work-restore {position:absolute; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:10px; padding:8px 16px 8px 8px; background:#151718ed; border:1px solid #ffffff45; border-radius:14px; color:white; font:inherit; cursor:pointer}
+.work-restore b {padding:5px 9px; border-radius:8px; background:#126dff; color:white}
+.work-desktop [hidden] {display:none}
+.work-expanded .work-area {margin:0}
+.work-expanded .work-window {width:100%; height:100%; border-radius:0}
+.work-expanded .work-display {aspect-ratio:auto; height:100%}
+@media (max-width:700px) {
+  .work-desktop {--chrome-height:36px}
+  .work-desktop .work-control {width:25px; height:34px}
+  .work-expanded .work-display iframe {min-width:840px; min-height:max(525px,100%);}
+  .work-desktop-footer small {font-size:10px}
+}
+  </style>
+</head>
+<body>
+  <main></main>
+  <script>
+    const base = new URL('.',document.baseURI);
+  function mountWork(container, demo, onClose) {
+    const desktop = document.createElement('div');
+    desktop.className = 'work-desktop';
+    desktop.innerHTML = `
+      <div class="work-area">
+        <section class="work-window" aria-label="恒智易 Work 应用窗口">
+          <header class="work-titlebar">
+            <div class="work-controls">
+              <a class="work-control work-close viewer-return" aria-label="关闭窗口，返回作品" title="关闭窗口，返回作品"><span aria-hidden="true">×</span></a>
+              <button type="button" class="work-control work-minimize" aria-label="最小化窗口" title="最小化窗口"><span aria-hidden="true">−</span></button>
+              <button type="button" class="work-control work-enlarge" aria-label="放大窗口" title="放大窗口" aria-pressed="false"><span aria-hidden="true">⤢</span></button>
+            </div>
+            <h2>恒智易 Work</h2>
+          </header>
+          <div class="work-display"></div>
+        </section>
+      </div>
+      <footer class="work-desktop-footer">
+        <button class="work-restore" type="button" hidden><b aria-hidden="true">W</b>重新打开 Work</button>
+        <small>本演示依据设计稿制作，便于体验主要流程。界面细节以设计稿为准。</small>
+      </footer>`;
+    const find = selector => desktop.querySelector(selector);
+    const back = find('.work-close');
+    back.href = new URL('../../cases/work/',base);
+    if (onClose) back.addEventListener('click', event => { event.preventDefault(); onClose(); });
+    const appWindow = find('.work-window');
+    const restore = find('.work-restore');
+    const minimize = find('.work-minimize');
+    const enlarge = find('.work-enlarge');
+    const app = document.createElement('iframe');
+    app.title = '恒智易 Work 整套交互演示';
+    app.src = new URL(demo.screen,base);
+    find('.work-display').append(app);
+    minimize.addEventListener('click', () => {
+      appWindow.hidden = true;
+      restore.hidden = false;
+      restore.focus();
+    });
+    restore.addEventListener('click', () => {
+      appWindow.hidden = false;
+      restore.hidden = true;
+      minimize.focus();
+    });
+    enlarge.addEventListener('click', () => {
+      const expanded = desktop.classList.toggle('work-expanded');
+      enlarge.setAttribute('aria-pressed',String(expanded));
+      enlarge.title = expanded ? '还原窗口' : '放大窗口';
+      enlarge.setAttribute('aria-label',enlarge.title);
+    });
+    container.replaceChildren(desktop);
+    return () => desktop.remove();
+  }
+
+
+    mountWork(document.querySelector('main'), {screen:'AI-Work-Interactive.html'});
+  </script>
+</body>
+</html>
